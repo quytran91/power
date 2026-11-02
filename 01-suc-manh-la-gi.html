@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="auto" class="chap">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fbf8f3">
+<script>try{var t=JSON.parse(localStorage.getItem("suc-manh.theme")||'"auto"');if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<title>Chương 01 · Sức mạnh là gì? – Sức Mạnh</title>
+<style>
+:root{
+  --bg:#fbf8f3; --paper:#fff; --ink:#1d1b26; --ink2:#46435a; --muted:#6d6a7c; --line:#e9e4da;
+  --red:#d12f45; --red-bg:#fff0f2; --red-bd:#f7c3cb;
+  --orange:#c25e0a; --orange-bg:#fff5e8; --orange-bd:#f6d3a6;
+  --gold:#b98200; --gold-bg:#fff8e1; --gold-bd:#f1dc94;
+  --green:#16794a; --green-bg:#ecfaf2; --green-bd:#b5e6cb;
+  --teal:#0f7c86; --teal-bg:#e9f8f9; --teal-bd:#aee0e4;
+  --blue:#2563c9; --blue-bg:#eef4ff; --blue-bd:#bcd2fb;
+  --purple:#6d3fc0; --purple-bg:#f4efff; --purple-bd:#d6c6fa;
+  --pink:#c02a74; --pink-bg:#fff0f7; --pink-bd:#f6c1dc;
+  --on-c:#fff; --mix:#000;
+  --radius:22px; --shadow:0 1px 2px rgba(30,20,60,.05),0 10px 30px rgba(30,20,60,.08);
+  --shadow2:0 10px 30px rgba(30,20,60,.16);
+  --glass:rgba(255,255,255,.9);
+  --hero:radial-gradient(1100px 500px at 8% -10%,#e2ebff 0,transparent 60%),radial-gradient(900px 520px at 100% 0,#f3e5ff 0,transparent 55%),radial-gradient(900px 420px at 50% 115%,#ffeccc 0,transparent 60%);
+  --blob1:#bcd2fb; --blob2:#ffd6a3;
+  --b1:#8ab4ff; --b2:#ff9ccf; --b3:#c9a7ff; --b4:#7fe0d8; --b5:#ffd27a;
+  --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,"Noto Sans","Helvetica Neue",Arial,sans-serif;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Noto Serif",Georgia,"Times New Roman",serif;
+  --emo:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif;
+  --fs:19px; --lh:1.85;
+  --mk1:#fff4a8; --mk2:#ffd84a; --mk-ink:#1d1b26;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#13111b; --paper:#1c1927; --ink:#ece8f6; --ink2:#c3bed6; --muted:#958fab; --line:#2f2b40;
+    --red:#f2788a; --red-bg:#2c1a21; --red-bd:#5a2c38; --orange:#f39a5b; --orange-bg:#2c2016; --orange-bd:#5a3d22;
+    --gold:#e6bd4f; --gold-bg:#2a2414; --gold-bd:#57491f; --green:#55c98f; --green-bg:#152820; --green-bd:#28513d;
+    --teal:#4cc4cc; --teal-bg:#132628; --teal-bd:#245055; --blue:#7fa9f7; --blue-bg:#161f33; --blue-bd:#2c3f66;
+    --purple:#ad8ef2; --purple-bg:#211a35; --purple-bd:#43356b; --pink:#f17ab6; --pink-bg:#2c1826; --pink-bd:#5b2f4c;
+    --on-c:#15121d; --mix:#fff;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35); --shadow2:0 10px 30px rgba(0,0,0,.45);
+    --glass:rgba(28,25,39,.9);
+    --hero:radial-gradient(1100px 500px at 8% -10%,#1d2648 0,transparent 60%),radial-gradient(900px 520px at 100% 0,#2c1d48 0,transparent 55%),radial-gradient(900px 420px at 50% 115%,#3a2a12 0,transparent 60%);
+    --blob1:#2a3a72; --blob2:#5a3a14;
+    --b1:#2a4a9a; --b2:#7a2a5a; --b3:#4a2f8a; --b4:#1f6a66; --b5:#6a5214;
+    --mk1:#6b520c; --mk2:#8c6a08; --mk-ink:#fff6d8;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#13111b; --paper:#1c1927; --ink:#ece8f6; --ink2:#c3bed6; --muted:#958fab; --line:#2f2b40;
+  --red:#f2788a; --red-bg:#2c1a21; --red-bd:#5a2c38; --orange:#f39a5b; --orange-bg:#2c2016; --orange-bd:#5a3d22;
+  --gold:#e6bd4f; --gold-bg:#2a2414; --gold-bd:#57491f; --green:#55c98f; --green-bg:#152820; --green-bd:#28513d;
+  --teal:#4cc4cc; --teal-bg:#132628; --teal-bd:#245055; --blue:#7fa9f7; --blue-bg:#161f33; --blue-bd:#2c3f66;
+  --purple:#ad8ef2; --purple-bg:#211a35; --purple-bd:#43356b; --pink:#f17ab6; --pink-bg:#2c1826; --pink-bd:#5b2f4c;
+  --on-c:#15121d; --mix:#fff;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35); --shadow2:0 10px 30px rgba(0,0,0,.45);
+  --glass:rgba(28,25,39,.9);
+  --hero:radial-gradient(1100px 500px at 8% -10%,#1d2648 0,transparent 60%),radial-gradient(900px 520px at 100% 0,#2c1d48 0,transparent 55%),radial-gradient(900px 420px at 50% 115%,#3a2a12 0,transparent 60%);
+  --blob1:#2a3a72; --blob2:#5a3a14;
+  --b1:#2a4a9a; --b2:#7a2a5a; --b3:#4a2f8a; --b4:#1f6a66; --b5:#6a5214;
+  --mk1:#6b520c; --mk2:#8c6a08; --mk-ink:#fff6d8;
+  color-scheme:dark;
+}
+.c-purple{--c:var(--purple);--cbg:var(--purple-bg);--cbd:var(--purple-bd)}
+.c-green{--c:var(--green);--cbg:var(--green-bg);--cbd:var(--green-bd)}
+.c-blue{--c:var(--blue);--cbg:var(--blue-bg);--cbd:var(--blue-bd)}
+.c-orange{--c:var(--orange);--cbg:var(--orange-bg);--cbd:var(--orange-bd)}
+.c-red{--c:var(--red);--cbg:var(--red-bg);--cbd:var(--red-bd)}
+.c-teal{--c:var(--teal);--cbg:var(--teal-bg);--cbd:var(--teal-bd)}
+.c-pink{--c:var(--pink);--cbg:var(--pink-bg);--cbd:var(--pink-bd)}
+.c-gold{--c:var(--gold);--cbg:var(--gold-bg);--cbd:var(--gold-bd)}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.75 var(--sans);-webkit-font-smoothing:antialiased;transition:background .3s,color .3s;overflow-x:hidden}
+a{color:var(--blue);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid #f0a020;outline-offset:3px;border-radius:6px}
+p{margin:0 0 1em}
+button{font:inherit;color:inherit}
+.skip{position:absolute;left:-999px;top:0;background:#000;color:#fff;padding:8px 14px;z-index:99}.skip:focus{left:8px}
+#progress{position:fixed;top:0;left:0;height:4px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,#FF3B30,#FF8A00,#E8A500,#28B446,#00B3A6,#0A84FF,#9B51E0,#FF2D78);z-index:90}
+
+/* icon glow + motion (dùng chung) */
+.num,.cn,.badge{position:relative}
+.num::after,.cn::after,.badge::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;box-shadow:0 0 16px 3px color-mix(in srgb,var(--c) 55%,transparent),0 0 40px 10px color-mix(in srgb,var(--c) 26%,transparent);opacity:.5;animation:halo 3.4s ease-in-out infinite alternate}
+.cn::after{box-shadow:0 0 12px 2px color-mix(in srgb,var(--c) 50%,transparent),0 0 26px 6px color-mix(in srgb,var(--c) 22%,transparent)}
+@keyframes halo{to{opacity:1}}
+.nv{display:inline-block;animation:wiggle 4.2s ease-in-out infinite;text-shadow:0 0 10px rgba(255,255,255,.55)}
+.nv.emo{font-family:var(--emo);font-size:1.15em;text-shadow:none;filter:drop-shadow(0 0 6px rgba(255,236,170,.9))}
+@keyframes wiggle{0%,100%{transform:translateY(0) rotate(0)}25%{transform:translateY(-2px) rotate(-5deg)}50%{transform:translateY(1px) rotate(0)}75%{transform:translateY(-1px) rotate(4deg)}}
+.stk{position:absolute;top:-13px;right:-15px;font-size:24px;line-height:1;font-family:var(--emo);filter:drop-shadow(0 0 6px rgba(255,226,150,.95)) drop-shadow(0 2px 3px rgba(0,0,0,.18));animation:floaty 3.6s ease-in-out infinite;z-index:2}
+.cn .stk{font-size:17px;top:-9px;right:-10px}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-5px) rotate(8deg)}}
+@keyframes twinkle{0%,100%{opacity:1}50%{opacity:.55}}
+
+/* floating buttons / dock */
+#fabs{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:65;display:flex;flex-direction:column;gap:10px}
+#fabs button{width:50px;height:50px;border-radius:50%;cursor:pointer;border:1.5px solid var(--line);background:var(--paper);box-shadow:var(--shadow2);font-family:var(--emo);font-size:21px;line-height:1;display:grid;place-items:center;transition:transform .18s,box-shadow .18s}
+#fabs button:hover{transform:translateY(-3px) scale(1.07)}
+#fabs button[aria-pressed="true"]{background:var(--purple-bg);border-color:var(--purple)}
+#fabs .fab-top{opacity:0;pointer-events:none;transition:opacity .25s}
+#fabs .fab-top.on{opacity:1;pointer-events:auto}
+@media (max-width:720px){
+  #fabs{left:50%;right:auto;transform:translateX(-50%);bottom:calc(10px + env(safe-area-inset-bottom));flex-direction:row;gap:4px;padding:6px 10px;border-radius:999px;background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);box-shadow:var(--shadow2)}
+  #fabs button{width:42px;height:42px;font-size:18px;border:0;box-shadow:none;background:transparent}
+  #fabs button[aria-pressed="true"]{background:var(--purple-bg)}
+  #fabs .fab-top{opacity:1;pointer-events:auto}
+}
+
+.toast{position:fixed;left:50%;top:70px;transform:translateX(-50%);z-index:95;background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:999px;font-weight:700;font-size:15px;box-shadow:0 10px 30px rgba(0,0,0,.25);white-space:nowrap}
+.burst{position:fixed;z-index:96;pointer-events:none;font-family:var(--emo);font-size:24px;line-height:1;transform:translate(-50%,-50%);filter:drop-shadow(0 0 6px rgba(255,210,120,.85));animation:burst 1.1s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes burst{to{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1.35) rotate(30deg);opacity:0}}
+#resume{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:70;width:min(560px,calc(100vw - 24px));display:flex;gap:12px;align-items:center;padding:12px 12px 12px 18px;border-radius:18px;background:var(--ink);color:var(--bg);box-shadow:0 18px 44px rgba(0,0,0,.3);font-size:15px;line-height:1.45;animation:up .5s cubic-bezier(.2,.8,.2,1)}
+#resume[hidden]{display:none}
+@keyframes up{from{opacity:0;transform:translate(-50%,20px)}}
+#resume p{margin:0;flex:1}
+#resume .go{flex:0 0 auto;font:800 14.5px var(--sans);padding:10px 16px;border-radius:999px;border:0;cursor:pointer;background:linear-gradient(120deg,var(--purple),var(--pink));color:#fff}
+#resume .x{flex:0 0 auto;border:0;background:none;color:var(--bg);opacity:.75;font-size:18px;cursor:pointer;padding:6px}
+#lightbox{position:fixed;inset:0;z-index:99;background:rgba(10,8,20,.92);display:grid;place-items:center;padding:20px}
+#lightbox[hidden]{display:none}
+#lightbox img{max-width:100%;max-height:100%;border-radius:12px}
+.lb-close{position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:#000;font-size:20px;cursor:pointer}
+
+/* image prompt placeholder */
+.prompt{width:100%;font-size:15px;line-height:1.5}
+.prompt .pl{margin:0 0 8px;font-weight:700;color:var(--c,var(--purple))}
+.prompt code{font-size:14px;background:var(--paper);border:1px solid var(--cbd,var(--line));padding:1px 7px;border-radius:6px}
+.prompt summary{cursor:pointer;color:var(--ink2);font-weight:600}
+.prompt pre{white-space:pre-wrap;word-break:break-word;font:14px/1.55 ui-monospace,Menlo,Consolas,monospace;background:var(--paper);border:1px solid var(--cbd,var(--line));border-radius:12px;padding:12px 14px;margin:10px 0 0;color:var(--ink2)}
+.copy{margin-top:12px;font:800 14.5px var(--sans);padding:10px 18px;border-radius:999px;border:0;cursor:pointer;color:var(--on-c);background:var(--c,var(--purple))}
+
+/* emoji Apple (ảnh) */
+img.em{display:inline-block;width:1.2em;height:1.2em;vertical-align:-.22em;margin:0 .04em;object-fit:contain;-webkit-user-drag:none;user-select:none;pointer-events:none}
+@keyframes bounce{0%,100%{transform:translateY(0) scale(1)}30%{transform:translateY(-7px) scale(1.18) rotate(-8deg)}60%{transform:translateY(1px) scale(.96)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pop{0%{scale:.3;opacity:0}70%{scale:1.12;opacity:1}100%{scale:1}}
+@keyframes rise{0%{transform:translateY(0) rotate(0) scale(.6);opacity:0}12%{opacity:.8}85%{opacity:.7}100%{transform:translateY(-1100px) rotate(var(--r,200deg)) scale(1.05);opacity:0}}
+.fx{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
+.fx i{position:absolute;bottom:-50px;left:var(--x);font-style:normal;font-size:var(--s,26px);line-height:1;filter:drop-shadow(0 0 10px rgba(255,255,255,.8));animation:rise var(--t,14s) linear var(--dl,0s) infinite}
+#progress{box-shadow:0 0 12px rgba(155,81,224,.7)}
+#fabs button{animation:pop .6s cubic-bezier(.2,1.6,.4,1) both}
+#fabs button:nth-child(2){animation-delay:.08s}#fabs button:nth-child(3){animation-delay:.16s}#fabs button:nth-child(4){animation-delay:.24s}#fabs button:nth-child(5){animation-delay:.32s}#fabs button:nth-child(6){animation-delay:.4s}
+#fabs button:hover img.em{animation:bounce .6s ease}
+html.still *,html.still *::before,html.still *::after{animation:none!important;transition:none!important}
+html.still .rv,html.still .rv *,html.still header.book *,html.still .hero *{opacity:1!important;transform:none!important;translate:none!important;scale:none!important;rotate:none!important}
+html.still .rv,html.still .rv p,html.still h1 .w,html.still .sec-head h2{filter:none!important}
+html.still .zoom{clip-path:none!important}
+html.still mark{background-size:100% 80%!important}
+html.still .fx{display:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media print{#fabs,#resume,#progress,.toast,#toolbar,.pic.empty,.cover.empty,#findbar{display:none!important}}
+
+:root{--h1:#7B3FE4;--h2:#B83AD6;--h3:#FF5FA2;--h4:#5B6CFF}
+body{padding-bottom:40px}
+#blobs{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;filter:blur(60px);opacity:.5}
+:root[data-theme="dark"] #blobs{opacity:.34}
+#blobs i{position:absolute;display:block;border-radius:50%}
+#blobs i:nth-child(1){width:46vmin;height:46vmin;left:-8vmin;top:4vmin;background:var(--b1);animation:drift1 34s ease-in-out infinite}
+#blobs i:nth-child(2){width:38vmin;height:38vmin;right:-6vmin;top:18vmin;background:var(--b2);animation:drift2 41s ease-in-out infinite}
+#blobs i:nth-child(3){width:42vmin;height:42vmin;left:24vmin;bottom:-12vmin;background:var(--b3);animation:drift3 47s ease-in-out infinite}
+#blobs i:nth-child(4){width:30vmin;height:30vmin;right:14vmin;bottom:4vmin;background:var(--b4);animation:drift1 39s ease-in-out infinite reverse}
+#blobs i:nth-child(5){width:26vmin;height:26vmin;left:52vmin;top:-8vmin;background:var(--b5);animation:drift2 44s ease-in-out infinite}
+@keyframes drift1{50%{transform:translate(8vmin,6vmin) scale(1.12)}}
+@keyframes drift2{50%{transform:translate(-7vmin,9vmin) scale(.9)}}
+@keyframes drift3{50%{transform:translate(6vmin,-8vmin) scale(1.08)}}
+
+/* toolbar */
+#toolbar{position:sticky;top:0;z-index:60;backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--line)}
+.tb{display:flex;gap:8px;align-items:center;max-width:1180px;margin:0 auto;padding:10px 20px}
+.tb-title{font-size:13px;font-weight:800;letter-spacing:.04em;color:var(--ink2);text-decoration:none;margin-right:auto;display:flex;align-items:center;gap:7px;white-space:nowrap}
+#nowsec{font-size:13px;font-weight:700;color:var(--muted);margin-right:auto;max-width:34ch;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.btn{font:650 13px/1.2 var(--sans);padding:9px 15px;cursor:pointer;background:var(--paper);color:var(--ink);border:1.5px solid var(--line);border-radius:999px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:transform .16s,box-shadow .16s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px);border-color:var(--c);box-shadow:0 6px 18px color-mix(in srgb,var(--c) 26%,transparent)}
+
+/* hero */
+header.book{position:relative;overflow:hidden;text-align:center;padding:66px 18px 60px;color:#fff;background:linear-gradient(120deg,var(--h1),var(--h2),var(--h3),var(--h4),var(--h1));background-size:300% 300%;animation:heroShift 26s ease infinite}
+@keyframes heroShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+header.book::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 120%,rgba(0,0,0,.34),transparent 70%);pointer-events:none}
+header.book .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto}
+.fl{position:absolute;font-size:40px;line-height:1;pointer-events:none;filter:drop-shadow(0 0 14px rgba(255,255,255,.85));z-index:1;animation:pop .9s cubic-bezier(.2,1.6,.4,1) .5s both}
+.fl>img{animation:float1 7s ease-in-out infinite}
+.fl.f1{left:2%;top:4%}.fl.f2{right:3%;top:30%;animation-delay:.7s}.fl.f2>img{animation-name:float2;animation-duration:8.5s}
+@keyframes float1{50%{transform:translate(12px,-18px) rotate(14deg) scale(1.12)}}
+@keyframes float2{50%{transform:translate(-14px,14px) rotate(-14deg) scale(1.1)}}
+.kicker{display:inline-flex;align-items:center;gap:8px;margin:0 0 20px;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.45);padding:7px 16px;border-radius:999px;backdrop-filter:blur(6px)}
+.chapno{display:block;width:max-content;margin:0 auto 14px;font-size:13px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;background:rgba(255,255,255,.95);color:#1c1b2e;padding:6px 18px;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.15)}
+header.book h1{margin:0;font-size:clamp(36px,7.4vw,72px);line-height:1.08;font-weight:850;letter-spacing:-.02em;text-shadow:0 4px 26px rgba(0,0,0,.3);text-wrap:balance}
+.rule-orn{display:flex;align-items:center;justify-content:center;gap:10px;margin:24px auto 0;max-width:300px}
+.rule-orn span{height:3px;flex:1;border-radius:3px;background:linear-gradient(90deg,transparent,#fff)}
+.rule-orn span:last-child{background:linear-gradient(90deg,#fff,transparent)}
+.rule-orn b{font-family:var(--emo);font-size:20px;animation:twinkle 3.6s ease-in-out infinite}
+.sub{max-width:640px;margin:20px auto 0;font-size:17.5px;line-height:1.7;color:rgba(255,255,255,.96)}
+.author{display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-size:13px;font-weight:750;letter-spacing:.1em;text-transform:uppercase;background:rgba(0,0,0,.22);padding:8px 18px;border-radius:999px}
+.stats{display:grid;grid-template-columns:repeat(var(--sn,4),1fr);gap:12px;max-width:640px;margin:30px auto 0}
+.stat{background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.45);border-radius:20px;padding:14px 8px 12px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:transform .2s}
+.stat:hover{transform:translateY(-4px) scale(1.04)}
+.stat .se{display:block;font-family:var(--emo);font-size:24px;line-height:1;margin-bottom:6px;animation:floaty 4s ease-in-out infinite}
+.stat:nth-child(2) .se{animation-delay:-1s}.stat:nth-child(3) .se{animation-delay:-2s}.stat:nth-child(4) .se{animation-delay:-3s}
+.stat b{display:block;font-size:28px;font-weight:850;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat small{display:block;font-size:11.5px;font-weight:700;letter-spacing:.04em;opacity:.95;margin-top:3px;line-height:1.35}
+
+/* main */
+main.wrap{max-width:820px;margin:0 auto;padding:34px 18px 10px}
+.fig{margin:0 0 30px;background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:18px;box-shadow:var(--shadow)}
+.fig-lbl{display:inline-flex;align-items:center;gap:8px;margin:2px 0 14px;font-size:12px;font-weight:850;letter-spacing:.1em;text-transform:uppercase;color:#fff;padding:8px 16px;border-radius:999px;background:linear-gradient(100deg,var(--h1),var(--h3));box-shadow:0 6px 18px color-mix(in srgb,var(--h1) 35%,transparent)}
+.fig .zoom{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;border-radius:18px;overflow:hidden}
+.fig .zoom img{display:block;width:100%;height:auto}
+.fig figcaption{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);font-size:14.5px;color:var(--muted)}
+.fig.empty .prompt{padding:4px 4px 2px}
+
+.sec-head{display:flex;gap:18px;align-items:center;margin:44px 0 18px}
+.sec-head:first-child{margin-top:8px}
+.badge{flex:0 0 auto;width:56px;height:56px;border-radius:18px;display:grid;place-items:center;font:850 21px var(--sans);color:#fff;background:linear-gradient(145deg,var(--h1),var(--h2));--c:var(--h1)}
+.sec-head h2{margin:0;font-size:clamp(24px,3.4vw,34px);line-height:1.2;font-weight:850;letter-spacing:-.01em;text-wrap:balance}
+.body-card{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:30px 36px 14px;box-shadow:var(--shadow);margin:0 0 24px}
+.body-card p{font-size:var(--fs);line-height:var(--lh);margin:0 0 1.05em}
+main>section:first-of-type .body-card:first-of-type>p:first-child::first-letter,main>.body-card:first-of-type>p:first-child::first-letter{float:left;font:800 3.3em/.86 var(--sans);margin:.08em .12em 0 0;background:linear-gradient(145deg,var(--h1),var(--h3));-webkit-background-clip:text;background-clip:text;color:transparent}
+mark{color:var(--mk-ink);font-weight:600;background-color:transparent;background-image:linear-gradient(100deg,var(--mk1),var(--mk2));background-repeat:no-repeat;background-position:0 75%;background-size:100% 80%;padding:.02em .12em;border-radius:5px;-webkit-box-decoration-break:clone;box-decoration-break:clone;transition:background-size 1.3s cubic-bezier(.65,0,.25,1) .55s}
+.js .rv:not(.in) mark{background-size:0% 80%}
+mark.flash{animation:flash 1.6s ease 2}
+@keyframes flash{50%{box-shadow:0 0 0 6px rgba(255,214,90,.6)}}
+.hit{background:#ffd75a;color:#000;border-radius:3px}.hit.cur{background:#ff9f1a;box-shadow:0 0 0 3px rgba(255,159,26,.4)}
+
+.quote{display:grid;grid-template-columns:56px minmax(0,1fr);gap:14px;margin:0 0 24px;align-items:start}
+.avatar{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font:850 17px var(--sans);color:#fff;background:linear-gradient(145deg,var(--purple),var(--pink));box-shadow:0 0 0 4px var(--paper),0 0 0 6px var(--purple-bd),0 8px 20px rgba(109,63,192,.3)}
+.qcard{position:relative;background:var(--gold-bg);border:1.5px solid var(--gold-bd);border-radius:24px;padding:20px 24px 16px;box-shadow:var(--shadow)}
+.qcard::before{content:"";position:absolute;left:-9px;top:20px;width:16px;height:16px;background:var(--gold-bg);border-left:1.5px solid var(--gold-bd);border-bottom:1.5px solid var(--gold-bd);transform:rotate(45deg)}
+.qtag{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:850;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:999px;background:#ffd60a;color:#3a2c00}
+.cpy{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:12px;border:1.5px solid var(--gold-bd);background:var(--paper);cursor:pointer;font-family:var(--emo);font-size:16px}
+.qbody{margin-top:12px;font-size:calc(var(--fs) + 1px);line-height:1.75}
+.qbody p:last-child{margin-bottom:0}
+.quote cite{display:block;margin-top:12px;padding-top:10px;border-top:1px dashed var(--gold-bd);font-style:normal;font-weight:800;color:var(--purple);font-size:15.5px}
+
+.fnr{font-size:.62em;line-height:0;vertical-align:super;margin-left:1px}
+.fnr a{font-weight:800;text-decoration:none;color:var(--purple);background:var(--purple-bg);border:1px solid var(--purple-bd);border-radius:6px;padding:0 4px}
+.notes{margin:0 0 24px;padding:18px 24px 12px;border-radius:22px;background:var(--paper);border:1px dashed var(--line);box-shadow:var(--shadow)}
+.notes h3{margin:0 0 10px;font-size:13px;font-weight:850;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.notes ol{list-style:none;margin:0;padding:0}
+.notes li{font-size:15.5px;line-height:1.65;color:var(--ink2);margin:0 0 8px;scroll-margin-top:90px}
+.notes li:target{background:var(--gold-bg);border-radius:10px;padding:6px 10px}
+.fnb{font-weight:800;text-decoration:none;color:var(--purple)}
+.quote cite .cn1{display:block}
+.quote cite .cr{display:block;margin-top:2px;font-weight:600;font-size:14px;font-style:italic;color:var(--muted)}
+main>.body-card:first-of-type>p.lead:first-child::first-letter{float:none;font:inherit;margin:0}
+.body-card p.lead{font-size:calc(var(--fs) * 1.5);line-height:1.35;font-weight:850;letter-spacing:-.01em;background:linear-gradient(100deg,var(--h1),var(--h3),var(--h2));-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:.7em}
+.sum{margin:44px 0 24px;padding:26px 26px 20px;border-radius:28px;background:linear-gradient(160deg,var(--gold-bg),var(--paper) 62%);border:2px solid var(--gold-bd);box-shadow:var(--shadow);scroll-margin-top:80px}
+.sum-h{display:flex;gap:14px;align-items:center;margin:0 0 18px}
+.sum-ic{flex:0 0 auto;width:54px;height:54px;border-radius:18px;display:grid;place-items:center;font-size:26px;background:linear-gradient(145deg,#ffc400,#ff7a00);box-shadow:0 8px 22px rgba(255,140,0,.35),0 0 30px rgba(255,190,0,.35)}
+.sum-h h2{margin:0;font-size:clamp(18px,2.5vw,23px);font-weight:850;letter-spacing:.05em;line-height:1.3}
+.sum ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.sum li{position:relative;padding:12px 16px 12px 42px;border-radius:16px;background:var(--paper);border:1px solid var(--gold-bd);font-size:calc(var(--fs) - 1px);line-height:1.65;transition:box-shadow .3s}
+.sum li:hover{box-shadow:0 10px 26px rgba(255,150,0,.18)}
+.sum li::before{content:"";position:absolute;left:17px;top:calc(.82em + 6px);width:11px;height:11px;border-radius:50%;background:linear-gradient(145deg,#ffc400,#ff6a00);box-shadow:0 0 0 4px rgba(255,160,0,.2);animation:dotPulse 2.4s ease-in-out infinite;animation-delay:calc(var(--li)*-.2s)}
+@keyframes dotPulse{50%{box-shadow:0 0 0 7px rgba(255,160,0,.1)}}
+.totop{display:flex;justify-content:flex-end;margin:0 0 10px}
+.totop a{font:700 14px var(--sans);color:var(--ink2);text-decoration:none;background:var(--paper);border:1.5px solid var(--line);padding:8px 16px;border-radius:999px;box-shadow:var(--shadow)}
+.pending{background:var(--paper);border:2px dashed color-mix(in srgb,var(--h1) 45%,var(--line));border-radius:26px;padding:26px 28px;font-size:17px;line-height:1.65;color:var(--ink2);margin:0 0 24px}
+.pending b{color:var(--ink)}
+
+.done-card{text-align:center;margin:36px 0 10px;padding:26px 20px;border-radius:26px;background:linear-gradient(var(--paper),var(--paper)) padding-box,linear-gradient(120deg,var(--h1),var(--h3),var(--h4)) border-box;border:2px solid transparent;box-shadow:var(--shadow)}
+.done-card p{margin:0 0 14px;font-weight:700;color:var(--ink2)}
+.mark{font:800 16px var(--sans);padding:13px 24px;border-radius:999px;cursor:pointer;border:0;color:#fff;background:linear-gradient(120deg,var(--h1),var(--h3));box-shadow:0 10px 26px color-mix(in srgb,var(--h1) 35%,transparent);transition:transform .2s}
+.mark:hover{transform:translateY(-2px)}
+.mark .m-on{display:none}.mark[aria-pressed="true"] .m-off{display:none}.mark[aria-pressed="true"] .m-on{display:inline}
+.mark[aria-pressed="true"]{background:var(--green)}
+
+.pager{max-width:820px;margin:30px auto 0;padding:0 18px;display:grid;grid-template-columns:1fr auto 1fr;gap:14px}
+.pager a{display:block;text-decoration:none;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:16px 18px 18px;box-shadow:var(--shadow);transition:transform .2s}
+.pager a:hover{transform:translateY(-3px)}
+.pager .pl{display:inline-flex;gap:8px;align-items:center;font-size:11.5px;font-weight:850;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);padding:8px 14px;border-radius:999px;background:var(--bg);border:1px solid var(--line);margin-bottom:10px}
+.pager b{display:block;font-size:15.5px;line-height:1.4}
+.pager .nx{text-align:right}
+.pager .ghost{visibility:hidden}
+footer{max-width:820px;margin:34px auto 0;padding:22px 18px 110px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:14.5px}
+footer .fe{font-family:var(--emo);font-size:30px;display:block;margin-bottom:8px}
+footer b{color:var(--ink)}
+
+/* find bar + highlight sheet */
+#findbar{position:fixed;top:64px;left:50%;transform:translateX(-50%);z-index:70;width:min(520px,calc(100vw - 24px));display:flex;gap:6px;align-items:center;padding:8px;border-radius:18px;background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);box-shadow:var(--shadow2)}
+#findbar[hidden]{display:none}
+#findbar input{flex:1;min-width:0;font:16px var(--sans);padding:9px 12px;border-radius:12px;border:1.5px solid var(--line);background:var(--paper);color:var(--ink)}
+#findbar span{font-size:13px;font-weight:700;color:var(--muted);min-width:3.5em;text-align:center}
+#findbar button{width:38px;height:38px;border-radius:12px;border:1.5px solid var(--line);background:var(--paper);cursor:pointer;font-size:16px}
+#hlsheet{position:fixed;right:16px;bottom:90px;z-index:70;width:min(420px,calc(100vw - 24px));max-height:60vh;overflow:auto;padding:16px 18px;border-radius:22px;background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);box-shadow:var(--shadow2)}
+#hlsheet[hidden]{display:none}
+#hlsheet h3{margin:0 0 10px;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+#hlsheet ol{margin:0;padding-left:20px}
+#hlsheet li{margin:0 0 10px;font-size:15px;line-height:1.5;cursor:pointer}
+#hlsheet li:hover{color:var(--purple)}
+
+/* ================= MOTION — căng đét ================= */
+/* ánh sáng quét ngang hero */
+header.book::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.3) 50%,transparent 65%);transform:translateX(-100%);animation:sweep 6s ease-in-out 1.6s infinite}
+@keyframes sweep{0%{transform:translateX(-100%)}45%,100%{transform:translateX(100%)}}
+
+header.book .fx i{opacity:.75}
+/* hero vào cảnh */
+header.book .kicker{animation:dropIn .8s cubic-bezier(.2,1.5,.4,1) both}
+header.book .chapno{animation:dropIn .9s cubic-bezier(.2,1.7,.4,1) .12s both}
+@keyframes dropIn{from{opacity:0;translate:0 -40px;scale:.6}}
+header.book h1 .w{display:inline-block;animation:wordPop 1s cubic-bezier(.2,1.5,.35,1) both;animation-delay:calc(.28s + var(--d)*.1s)}
+@keyframes wordPop{from{opacity:0;translate:0 60px;rotate:8deg;scale:.5;filter:blur(10px)}}
+.rule-orn span{animation:grow 1s cubic-bezier(.2,.8,.2,1) .75s both}
+.rule-orn span:first-child{transform-origin:100% 50%}.rule-orn span:last-child{transform-origin:0 50%}
+@keyframes grow{from{scale:0 1}}
+.rule-orn b{display:inline-block;animation:spinIn 1.1s cubic-bezier(.2,1.6,.4,1) .85s both}
+.rule-orn b img{animation:twinkle 2.4s ease-in-out infinite,spin 9s linear infinite}
+@keyframes spinIn{from{opacity:0;scale:0;rotate:-300deg}}
+header.book .sub{animation:fadeUp 1s ease .95s both}
+header.book .author{animation:popIn .8s cubic-bezier(.2,1.7,.4,1) 1.1s both}
+@keyframes fadeUp{from{opacity:0;translate:0 22px;filter:blur(6px)}}
+@keyframes popIn{from{opacity:0;scale:.4}}
+.stat{animation:flipUp .9s cubic-bezier(.2,1.4,.4,1) both;animation-delay:calc(1.2s + var(--k,0)*.11s)}
+@keyframes flipUp{from{opacity:0;translate:0 40px;rotate:x -80deg}}
+.stat .se img{animation:bounce 2.6s ease-in-out infinite;animation-delay:calc(var(--k,0)*.35s)}
+.stat:hover{transform:translateY(-6px) scale(1.07)}
+
+/* nhãn + thẻ chung */
+.js .rv{transition:opacity .8s ease,translate 1s cubic-bezier(.2,1.25,.3,1),scale 1s cubic-bezier(.2,1.25,.3,1),filter .8s ease}
+.js .rv:not(.in){opacity:0;translate:0 50px;scale:.94;filter:blur(8px)}
+
+/* đoạn văn trong thẻ hiện so le */
+.js .body-card p{transition:opacity .7s ease,translate .8s cubic-bezier(.2,1.1,.3,1);transition-delay:calc(.12s + var(--pi,0)*.09s)}
+.js .body-card:not(.in) p{opacity:0;translate:0 26px}
+.body-card{transition:box-shadow .3s,translate 1s cubic-bezier(.2,1.25,.3,1),scale 1s cubic-bezier(.2,1.25,.3,1),opacity .8s,filter .8s}
+.body-card:hover{box-shadow:0 18px 44px color-mix(in srgb,var(--h1) 18%,transparent),var(--shadow)}
+main>.body-card:first-of-type>p:first-child::first-letter,main>section:first-of-type .body-card:first-of-type>p:first-child::first-letter{background-size:200% 200%}
+
+/* hình minh họa: mở rèm + vệt sáng + Ken Burns */
+.fig .zoom{position:relative;clip-path:inset(0 0 0 0 round 18px);transition:clip-path 1.5s cubic-bezier(.75,0,.2,1) .25s}
+.js .fig.rv:not(.in) .zoom{clip-path:inset(0 100% 0 0 round 18px)}
+.fig .zoom::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:radial-gradient(120% 95% at 50% 38%,transparent 52%,rgba(12,6,32,.38) 100%);box-shadow:inset 0 0 46px rgba(12,6,32,.28)}
+.fig .zoom img{transform-origin:50% 30%;translate:0 var(--py,0%);animation:pushIn 20s cubic-bezier(.45,0,.55,1) infinite alternate;will-change:scale,translate}
+@keyframes pushIn{from{scale:var(--zmin,1.06)}to{scale:var(--zmax,1.14)}}
+@keyframes shine{0%{transform:translateX(-120%)}30%,100%{transform:translateX(120%)}}
+.fig-lbl{transition:opacity .7s .3s,translate .8s cubic-bezier(.2,1.5,.4,1) .3s}
+.js .fig.rv:not(.in) .fig-lbl{opacity:0;translate:-40px 0}
+.fig-lbl img{animation:bounce 2.2s ease-in-out infinite}
+
+/* tiêu đề phần nhỏ */
+.sec-head .badge{transition:scale .9s cubic-bezier(.2,1.7,.4,1),rotate .9s cubic-bezier(.2,1.2,.3,1)}
+.js .sec-head.rv:not(.in) .badge{scale:0;rotate:-200deg}
+.sec-head h2{transition:opacity .7s .15s,translate .9s cubic-bezier(.2,1.3,.3,1) .15s,filter .7s .15s}
+.js .sec-head.rv:not(.in) h2{opacity:0;translate:50px 0;filter:blur(6px)}
+.js .sec-head.rv{filter:none!important;scale:none!important;translate:none!important}
+
+/* trích dẫn trượt vào + vòng sáng xoay quanh ảnh đại diện */
+.quote .qcard{transition:opacity .8s,translate 1s cubic-bezier(.2,1.3,.3,1),rotate 1s cubic-bezier(.2,1.3,.3,1)}
+.js .quote.rv:not(.in) .qcard{opacity:0;translate:70px 0;rotate:3deg}
+.quote .avatar{position:relative;transition:opacity .6s,scale .9s cubic-bezier(.2,1.7,.4,1) .2s,rotate .9s .2s}
+.js .quote.rv:not(.in) .avatar{opacity:0;scale:0;rotate:-160deg}
+.avatar::before{content:"";position:absolute;inset:-6px;border-radius:50%;padding:3px;background:conic-gradient(var(--purple),var(--pink),#ffb800,var(--teal),var(--purple));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:spin 3.2s linear infinite}
+.qtag img{animation:bounce 2.4s ease-in-out infinite}
+.js .quote.rv{filter:none!important;scale:none!important;translate:none!important}
+
+/* thẻ “đã đọc xong”: viền gradient xoay + nút phát sáng */
+@property --ang{syntax:'<angle>';inherits:false;initial-value:0deg}
+.done-card{background:linear-gradient(var(--paper),var(--paper)) padding-box,conic-gradient(from var(--ang),var(--h1),var(--h3),var(--h4),var(--h2),var(--h1)) border-box;animation:rot 4s linear infinite}
+@keyframes rot{to{--ang:360deg}}
+.mark{position:relative;overflow:hidden;animation:glow 2.4s ease-in-out infinite}
+.mark::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);transform:translateX(-120%);animation:shine 3.6s ease-in-out 1s infinite}
+@keyframes glow{50%{box-shadow:0 0 0 8px color-mix(in srgb,var(--h1) 18%,transparent),0 14px 34px color-mix(in srgb,var(--h1) 45%,transparent)}}
+.done-card p img{animation:spin 6s linear infinite}
+
+/* phần trước / sau */
+.pager a{transition:transform .35s cubic-bezier(.2,1.5,.4,1),box-shadow .3s,opacity .8s,translate 1s cubic-bezier(.2,1.25,.3,1)}
+.pager a:hover{transform:translateY(-6px) rotate(-1deg);box-shadow:0 18px 40px color-mix(in srgb,var(--h1) 22%,transparent)}
+.pager a:hover .pl img{animation:bounce .7s ease}
+.js .pager a.rv:nth-child(2){transition-delay:.1s}.js .pager a.rv:nth-child(3){transition-delay:.2s}
+
+/* thanh công cụ + chân trang */
+.btn:hover img.em{animation:bounce .6s ease}
+.tb-title img{animation:bounce 3s ease-in-out infinite}
+footer .fe img{animation:floaty 3.5s ease-in-out infinite}
+.notes h3 img,.pending img{animation:bounce 2.6s ease-in-out infinite}
+
+/* câu mở đầu + hộp tóm tắt */
+.body-card p.lead{background-size:200% 100%;animation:leadShift 6s ease-in-out infinite alternate}
+@keyframes leadShift{to{background-position:100% 0}}
+.js .sum.rv li{transition:opacity .6s,translate .75s cubic-bezier(.2,1.35,.3,1),box-shadow .3s;transition-delay:calc(.25s + var(--li,0)*.08s)}
+.js .sum.rv:not(.in) li{opacity:0;translate:-36px 0}
+.js .sum.rv:not(.in) .sum-ic{scale:0;rotate:-180deg}
+.sum-ic{transition:scale .9s cubic-bezier(.2,1.7,.4,1) .1s,rotate .9s .1s}
+.sum-ic img{animation:bounce 2.6s ease-in-out infinite}
+.quote cite .cr{transition:opacity .6s .5s}
+.js .quote.rv:not(.in) cite .cr{opacity:0}
+/* ================= HÌNH MINH HỌA ĐỘNG (SVG) ================= */
+:root{--c1:#FF3B30;--c1l:#FFE9E7;--c2:#FF8A00;--c2l:#FFF1DF;--c3:#E8A500;--c3l:#FFF8DC;--c4:#28B446;--c4l:#E6F8EA;--c5:#00B3A6;--c5l:#DFF7F5;--c6:#0A84FF;--c6l:#E4F0FF;--c7:#9B51E0;--c7l:#F3E9FD;--c8:#FF2D78;--c8l:#FFE7EF;--gy:#8e8aa3;--gyl:#f2f0f7}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--c1:#FF6961;--c1l:#3A1E1C;--c2:#FFA64D;--c2l:#3A2A14;--c3:#FFCC33;--c3l:#3A3214;--c4:#4CD964;--c4l:#173A20;--c5:#40D9CC;--c5l:#123634;--c6:#4DA3FF;--c6l:#152B45;--c7:#BF8CFF;--c7l:#2C1F45;--c8:#FF6B9E;--c8l:#3D1828;--gy:#8a85a3;--gyl:#25222f}}
+:root[data-theme="dark"]{--c1:#FF6961;--c1l:#3A1E1C;--c2:#FFA64D;--c2l:#3A2A14;--c3:#FFCC33;--c3l:#3A3214;--c4:#4CD964;--c4l:#173A20;--c5:#40D9CC;--c5l:#123634;--c6:#4DA3FF;--c6l:#152B45;--c7:#BF8CFF;--c7l:#2C1F45;--c8:#FF6B9E;--c8l:#3D1828;--gy:#8a85a3;--gyl:#25222f}
+
+figure.dia{position:relative;margin:30px 0;padding:22px 20px 18px;background:var(--paper);border-radius:26px;box-shadow:var(--shadow);overflow:hidden;isolation:isolate}
+figure.dia::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:3px;pointer-events:none;background:conic-gradient(from var(--ang),var(--c1),var(--c3),var(--c2),var(--c4),var(--c5),var(--c6),var(--c7),var(--c8),var(--c1));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:rot 6s linear infinite}
+figure.dia::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(70% 60% at 100% 0%,color-mix(in srgb,var(--h1) 12%,transparent),transparent 70%),radial-gradient(60% 55% at 0% 100%,color-mix(in srgb,var(--h3) 12%,transparent),transparent 70%)}
+figure.dia .fig-lbl{background:linear-gradient(100deg,var(--c8),var(--c7));box-shadow:0 6px 18px color-mix(in srgb,var(--c8) 30%,transparent)}
+figure.dia svg{display:block;width:100%;height:auto;max-width:600px;margin:10px auto 0;overflow:visible}
+.st{fill:var(--ink);font-family:var(--sans)}.st2{fill:var(--ink2);font-family:var(--sans)}.sw{fill:#fff;font-family:var(--sans)}
+/* lật 3D khi cuộn tới */
+.js figure.dia.rv{transition:opacity .8s ease,transform 1.1s cubic-bezier(.2,1.25,.3,1),scale 1s cubic-bezier(.2,1.25,.3,1),filter .8s ease,translate 1s cubic-bezier(.2,1.25,.3,1)}
+.js figure.dia.rv:not(.in){transform:perspective(800px) rotateX(28deg)}
+figure.dia:not(.in) svg *{animation-play-state:paused}
+figure.dia .fig-lbl{transition:opacity .7s .35s,translate .8s cubic-bezier(.2,1.5,.4,1) .35s}
+.js figure.dia.rv:not(.in) .fig-lbl{opacity:0;translate:-40px 0}
+
+/* bộ chuyển động trong hình */
+.dia .a-pulse{animation:dPulse 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.14)}}
+.dia .a-glow{animation:dGlow 3s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dGlow{0%,100%{opacity:.55;transform:scale(.94)}50%{opacity:1;transform:scale(1.06)}}
+.dia .a-dash{stroke-dasharray:6 7;animation:dDash 1.1s linear infinite}
+.dia .a-dash-in{stroke-dasharray:6 7;animation:dDash 1.1s linear infinite}
+@keyframes dDash{to{stroke-dashoffset:-26}}
+.dia .a-float{animation:dFloat 4.6s ease-in-out infinite;transform-box:fill-box}
+.dia .a-float2{animation:dFloat 6s ease-in-out infinite reverse;transform-box:fill-box}
+@keyframes dFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.dia .a-bob{animation:dBob 3s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dBob{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-6px) rotate(3deg)}}
+.dia .a-hop{animation:dHop 1.8s cubic-bezier(.3,1.6,.5,1) infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes dHop{0%,100%{transform:translateY(0) scale(1)}40%{transform:translateY(-11px) scale(1.08,.94)}60%{transform:translateY(0) scale(1.1,.9)}}
+.dia .a-spin{animation:dSpin 26s linear infinite;transform-box:fill-box;transform-origin:center}
+.dia .a-spin-slow{animation:dSpin 40s linear infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dSpin{to{transform:rotate(360deg)}}
+.dia .a-rip{animation:dRip 3s ease-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dRip{0%{transform:scale(.7);opacity:.9}100%{transform:scale(1.9);opacity:0}}
+.dia .a-tw{animation:dTw 2.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dTw{0%,100%{transform:scale(.4) rotate(0);opacity:.3}50%{transform:scale(1.25) rotate(45deg);opacity:1}}
+.dia .a-draw{stroke-dasharray:100;animation:dDraw 6s ease-in-out infinite}
+@keyframes dDraw{0%{stroke-dashoffset:100}55%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:-100}}
+.dia .a-fall{animation:dFall 5s ease-in infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dFall{0%,35%{transform:none;opacity:1}75%{transform:translateY(26px) rotate(var(--rot,8deg));opacity:0}76%{transform:translateY(-14px);opacity:0}100%{transform:none;opacity:1}}
+.dia .a-rain{animation:dRain 1.1s linear infinite}
+@keyframes dRain{0%{transform:translateY(-6px);opacity:0}30%{opacity:.9}100%{transform:translateY(12px);opacity:0}}
+.dia .a-rise{animation:dRise 3.6s ease-in-out infinite;transform-box:fill-box}
+@keyframes dRise{0%,100%{transform:translateY(5px)}50%{transform:translateY(-5px)}}
+.dia .a-fade{animation:dFade 4.4s ease-in-out infinite}
+@keyframes dFade{0%,30%{opacity:1;transform:none}60%,80%{opacity:.25;transform:translateY(8px)}100%{opacity:1;transform:none}}
+.dia .a-sink{animation:dSink 4.5s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes dSink{0%,100%{transform:rotate(-3deg) translateY(0)}50%{transform:rotate(-9deg) translateY(5px)}}
+.dia .a-sway2{animation:dSway 3.6s ease-in-out infinite;transform-box:fill-box;transform-origin:100% 50%}
+@keyframes dSway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+.dia .a-pop{animation:dPop 8s cubic-bezier(.3,1.6,.5,1) infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dPop{0%{transform:scale(.3);opacity:0}8%,88%{transform:scale(1);opacity:1}100%{transform:scale(.3);opacity:0}}
+.dia .a-swapA{animation:dSwapA 7s ease-in-out infinite}
+.dia .a-swapB{animation:dSwapB 7s ease-in-out infinite}
+@keyframes dSwapA{0%,40%{opacity:1}50%,90%{opacity:.18}100%{opacity:1}}
+@keyframes dSwapB{0%,40%{opacity:.18}50%,90%{opacity:1}100%{opacity:.18}}
+.dia .a-knob{animation:dKnob 6s cubic-bezier(.5,1.5,.5,1) infinite}
+@keyframes dKnob{0%,40%{transform:translateX(0)}50%,90%{transform:translateX(34px)}100%{transform:translateX(0)}}
+.dia .a-on{animation:dOn 6s ease infinite}
+.dia .a-off{animation:dOff 6s ease infinite}
+@keyframes dOn{0%,40%{opacity:0}50%,90%{opacity:1}100%{opacity:0}}
+@keyframes dOff{0%,40%{opacity:1}50%,90%{opacity:0}100%{opacity:1}}
+.dia .a-bar{animation:dBar 9s ease infinite;transform-box:fill-box;transform-origin:50% 0}
+@keyframes dBar{0%{transform:scaleY(0);opacity:0}6%,80%{transform:scaleY(1);opacity:1}92%,100%{transform:scaleY(0);opacity:0}}
+html.still .dia svg *{animation:none!important}
+
+/* ảnh chèn giữa bài */
+figure.inimg{margin:-6px 0 28px;border-radius:24px;overflow:hidden;background:var(--paper);box-shadow:var(--shadow);border:1px solid var(--line)}
+figure.inimg .zoom{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;overflow:hidden}
+figure.inimg img{display:block;width:100%;height:auto;animation:inBreathe 7s ease-in-out infinite;transform-origin:50% 50%}
+@keyframes inBreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
+.js figure.inimg.rv:not(.in){transform:perspective(800px) rotateX(-18deg)}
+.js figure.inimg.rv{transition:opacity .8s ease,transform 1.1s cubic-bezier(.2,1.25,.3,1),scale 1s cubic-bezier(.2,1.25,.3,1),filter .8s ease,translate 1s cubic-bezier(.2,1.25,.3,1)}
+html.still figure.inimg img{animation:none}
+
+/* chương 2 */
+.dia .a-launch{animation:dLaunch 3.4s ease-in-out infinite}
+@keyframes dLaunch{0%,100%{transform:translateY(6px)}50%{transform:translateY(-22px)}}
+.dia .a-flame{animation:dFlick .35s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes dFlick{0%,100%{transform:scale(1,1)}50%{transform:scale(.82,1.18)}}
+.dia .a-fill{animation:dFillX 6s ease-in-out infinite;transform-box:fill-box;transform-origin:0 50%}
+@keyframes dFillX{0%{transform:scaleX(0)}55%,90%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+.dia .a-fillup{animation:dFillY 7.2s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes dFillY{0%,6%{transform:scaleY(.06)}70%,92%{transform:scaleY(1)}100%{transform:scaleY(.06)}}
+.dia .a-listin{animation:dListIn 7.2s ease-out infinite both}
+@keyframes dListIn{0%{opacity:0;transform:translateX(-16px)}8%,88%{opacity:1;transform:none}96%,100%{opacity:0;transform:none}}
+.dia .a-slide{animation:dSlide 6s cubic-bezier(.5,1.4,.5,1) infinite}
+@keyframes dSlide{0%,25%{transform:translateX(0)}55%,90%{transform:translateX(152px)}100%{transform:translateX(0)}}
+.dia .a-eq{animation:dEq 1s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes dEq{from{transform:scaleY(.22)}to{transform:scaleY(1)}}
+.dia .a-knobspin{animation:dKnob2 4s cubic-bezier(.5,1.3,.5,1) infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dKnob2{0%,15%{transform:rotate(-120deg)}55%,85%{transform:rotate(120deg)}100%{transform:rotate(-120deg)}}
+.dia .a-tip{animation:dTip 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:20% 80%}
+@keyframes dTip{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(6deg)}}
+.dia .a-ticker{animation:dTicker 12s linear infinite}
+@keyframes dTicker{to{transform:translateX(-372px)}}
+.dia .a-strike{stroke-dasharray:100;animation:dStrike 5s ease-in-out infinite}
+@keyframes dStrike{0%,10%{stroke-dashoffset:100}35%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:100}}
+
+figure.inimg.tall{max-width:540px;margin-left:auto;margin-right:auto;margin-top:6px}
+
+/* chương 3 */
+.dia .a-slide2{animation:dSlide2 6s cubic-bezier(.5,1.3,.5,1) infinite}
+@keyframes dSlide2{0%,40%{transform:translateX(0)}50%,90%{transform:translateX(260px)}100%{transform:translateX(0)}}
+.dia .a-flipA{animation:dFlipA 6s ease-in-out infinite both;transform-box:fill-box;transform-origin:center}
+.dia .a-flipB{animation:dFlipB 6s ease-in-out infinite both;transform-box:fill-box;transform-origin:center}
+@keyframes dFlipA{0%,40%{transform:scaleX(1)}48%,92%{transform:scaleX(0)}100%{transform:scaleX(1)}}
+@keyframes dFlipB{0%,48%{transform:scaleX(0)}56%,92%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+.dia .a-spinfast{animation:dSpin 2.2s linear infinite;transform-box:fill-box;transform-origin:center}
+.dia .a-tilt{animation:dTilt 5s cubic-bezier(.5,1.4,.5,1) infinite;transform-origin:220px 96px}
+@keyframes dTilt{0%,15%{transform:rotate(0)}45%,90%{transform:rotate(-9deg)}100%{transform:rotate(0)}}
+.dia .a-panL{animation:dPanL 5s cubic-bezier(.5,1.4,.5,1) infinite}
+.dia .a-panR{animation:dPanR 5s cubic-bezier(.5,1.4,.5,1) infinite}
+@keyframes dPanL{0%,15%{transform:translateY(0)}45%,90%{transform:translateY(19px)}100%{transform:translateY(0)}}
+@keyframes dPanR{0%,15%{transform:translateY(0)}45%,90%{transform:translateY(-19px)}100%{transform:translateY(0)}}
+
+/* chương 4 */
+.dia .a-echo{animation:dEcho 1.8s ease-out infinite}
+@keyframes dEcho{0%{opacity:0;transform:translateX(-8px)}30%{opacity:1}100%{opacity:0;transform:translateX(10px)}}
+.dia .a-copy{animation:dCopy 3s ease-in-out infinite}
+@keyframes dCopy{0%,10%{transform:translateX(-30px);opacity:0}40%,70%{transform:translateX(0);opacity:1}100%{transform:translateX(30px);opacity:0}}
+.dia .a-sway-h{animation:dSwayH 2.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 0}
+@keyframes dSwayH{0%,100%{transform:rotate(-10deg)}50%{transform:rotate(10deg)}}
+.dia .a-blink{animation:dBlink 2.4s ease-in-out infinite}
+@keyframes dBlink{0%,100%{opacity:.25}50%{opacity:.55}}
+/* nhãn bước trong thẻ nội dung */
+.body-card p.step{display:inline-flex;align-items:center;margin:.4em 0 .7em;padding:7px 18px 7px 8px;border-radius:999px;font-weight:850;letter-spacing:.08em;color:#fff;background:linear-gradient(100deg,var(--h1),var(--h3));box-shadow:0 8px 22px color-mix(in srgb,var(--h1) 32%,transparent);font-size:calc(var(--fs) - 2px)}
+.body-card p.step::before{content:"";width:12px;height:12px;border-radius:50%;background:#fff;margin:0 10px 0 6px;box-shadow:0 0 0 4px rgba(255,255,255,.35);animation:dotPulse 2s ease-in-out infinite}
+
+/* chương 5 */
+.dia .a-field{animation:dField 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dField{0%,100%{transform:scale(.92)}50%{transform:scale(1.06)}}
+.dia .a-shrinkin{animation:dShrinkIn 4.4s cubic-bezier(.6,0,.4,1) infinite both}
+@keyframes dShrinkIn{0%,20%{transform:none;opacity:1}75%{transform:translate(var(--dx),var(--dy)) scale(.05);opacity:.2}76%,100%{transform:translate(var(--dx),var(--dy)) scale(0);opacity:0}}
+.dia .a-check{animation:dCheck 7s ease infinite both}
+@keyframes dCheck{0%,5%{opacity:0;transform:scale(.3)}12%,90%{opacity:1;transform:none}100%{opacity:0}}
+.dia .a-pour{animation:dPour 7s ease-in-out infinite}
+@keyframes dPour{0%,8%{transform:translateY(190px)}70%,90%{transform:translateY(0)}100%{transform:translateY(190px)}}
+.dia .a-wave{animation:dWaveX 1.6s linear infinite}
+@keyframes dWaveX{to{transform:translateX(-40px)}}
+.dia .a-vanish{animation:dVanish 7s ease-in-out infinite}
+.dia .a-vanish:nth-of-type(1){}
+@keyframes dVanish{0%,20%{opacity:1;transform:none}60%,92%{opacity:0;transform:translateY(-8px) scale(.85)}100%{opacity:1;transform:none}}
+.dia .a-gallop{animation:dGallop .9s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes dGallop{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-4px) rotate(-6deg)}}
+.dia .a-grow{animation:dGrow 3.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dGrow{0%,100%{transform:scale(.8)}60%{transform:scale(1.25)}}
+.dia .a-shrink{animation:dShrink2 3.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dShrink2{0%,15%{transform:scale(1);opacity:1}70%,90%{transform:scale(.3);opacity:.25}100%{transform:scale(1);opacity:1}}
+
+
+@media (max-width:860px){#nowsec{display:none}}
+@media (max-width:720px){
+  .tb{padding:8px 12px}
+  .tb .btn[data-act]{display:none}
+  .bl{display:none}
+  .tb a.btn .bl{display:inline}
+  header.book{padding:44px 14px 42px}
+  header.book .wrap::before,header.book .wrap::after{font-size:26px}
+  .kicker{font-size:10.5px;letter-spacing:.08em;padding:6px 12px}
+  .sub{font-size:16px}
+  .stats{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+  .stat{flex:0 1 calc(33.33% - 6px);padding:10px 4px 9px;border-radius:16px}
+  .stat .se{font-size:19px;margin-bottom:4px}.stat b{font-size:21px}.stat small{font-size:10.5px}
+  .pager .pl{font-size:10.5px;letter-spacing:.06em;padding:6px 10px}
+  .sum{padding:20px 14px 14px;border-radius:22px}
+  .sum li{padding:10px 12px 10px 36px}
+  .sum li::before{left:14px}
+  .sum-ic{width:46px;height:46px;font-size:22px;border-radius:15px}
+  .pager b{font-size:14.5px}
+  main.wrap{padding:24px 12px 6px}
+  .body-card{padding:22px 18px 8px;border-radius:22px}
+  .sec-head{gap:14px;margin-top:34px}
+  .badge{width:46px;height:46px;border-radius:15px;font-size:18px}
+  .quote{grid-template-columns:minmax(0,1fr)}
+  .avatar{width:44px;height:44px;font-size:15px;margin-left:14px;margin-bottom:-6px;position:relative;z-index:1}
+  .qcard::before{display:none}
+  .qcard{padding:18px 18px 14px}
+  .pager{grid-template-columns:1fr 1fr;padding:0 12px}
+  .pager .mid{grid-column:1/-1;grid-row:1}
+  .pager .ghost{display:none}
+  #hlsheet{right:12px;bottom:80px}
+  #findbar{top:58px}
+  footer{padding-bottom:120px}
+}
+</style>
+</head>
+<body data-slug="01-suc-manh-la-gi" data-name="Sức mạnh là gì?">
+<div id="blobs" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+<div id="progress" aria-hidden="true"></div>
+<div id="toolbar"><div class="tb">
+  <a class="tb-title" href="index.html"><img class="em" src="emoji/1f4d8.png" alt="📘" draggable="false"> Sức Mạnh</a>
+  <span id="nowsec" aria-live="polite"></span>
+  <a class="btn" href="index.html"><img class="em" src="emoji/1f5c2-fe0f.png" alt="🗂️" draggable="false"><span class="bl"> Mục lục sách</span></a>
+  <button class="btn" type="button" data-act="dark" aria-pressed="false"><img class="em" src="emoji/1f319.png" alt="🌙" draggable="false"><span class="bl"> Chế độ đọc tối</span></button>
+  <button class="btn" type="button" data-act="print"><img class="em" src="emoji/1f5a8-fe0f.png" alt="🖨️" draggable="false"><span class="bl"> In / Lưu PDF</span></button>
+  <button class="btn" type="button" data-act="top"><img class="em" src="emoji/2b06-fe0f.png" alt="⬆️" draggable="false"><span class="bl"> Về đầu trang</span></button>
+</div></div>
+
+<header class="book c-purple" id="top">
+  <div class="fx" aria-hidden="true"><i style="--x:85.9%;--t:14.4s;--dl:-2.4s;--s:26px;--r:-180deg"><img class="em" src="emoji/1f496.png" alt="💖" draggable="false"></i><i style="--x:63.1%;--t:17.3s;--dl:-17.3s;--s:19px;--r:277deg"><img class="em" src="emoji/1f30c.png" alt="🌌" draggable="false"></i><i style="--x:16.5%;--t:15.9s;--dl:-15.7s;--s:33px;--r:-112deg"><img class="em" src="emoji/2728.png" alt="✨" draggable="false"></i><i style="--x:79.0%;--t:17.5s;--dl:-3.3s;--s:27px;--r:121deg"><img class="em" src="emoji/1f30d.png" alt="🌍" draggable="false"></i><i style="--x:9.8%;--t:18.9s;--dl:-7.5s;--s:32px;--r:119deg"><img class="em" src="emoji/2728.png" alt="✨" draggable="false"></i><i style="--x:35.6%;--t:18.8s;--dl:-17.1s;--s:19px;--r:291deg"><img class="em" src="emoji/1f4ab.png" alt="💫" draggable="false"></i><i style="--x:25.7%;--t:13.4s;--dl:-5.6s;--s:30px;--r:-257deg"><img class="em" src="emoji/1f31f.png" alt="🌟" draggable="false"></i><i style="--x:4.3%;--t:18.0s;--dl:-1.9s;--s:34px;--r:-185deg"><img class="em" src="emoji/1f496.png" alt="💖" draggable="false"></i><i style="--x:34.7%;--t:18.4s;--dl:-16.8s;--s:28px;--r:-209deg"><img class="em" src="emoji/1f496.png" alt="💖" draggable="false"></i><i style="--x:94.3%;--t:14.6s;--dl:-12.9s;--s:33px;--r:-142deg"><img class="em" src="emoji/1f30c.png" alt="🌌" draggable="false"></i><i style="--x:39.1%;--t:17.2s;--dl:-13.8s;--s:29px;--r:113deg"><img class="em" src="emoji/2728.png" alt="✨" draggable="false"></i><i style="--x:47.9%;--t:17.6s;--dl:-12.7s;--s:32px;--r:-114deg"><img class="em" src="emoji/1f30d.png" alt="🌍" draggable="false"></i></div>
+  <div class="wrap"><span class="fl f1" aria-hidden="true"><img class="em" src="emoji/1f496.png" alt="💖" draggable="false"></span><span class="fl f2" aria-hidden="true"><img class="em" src="emoji/1f30c.png" alt="🌌" draggable="false"></span>
+    <p class="kicker"><img class="em" src="emoji/1f3a8.png" alt="🎨" draggable="false"> Sách · Sức Mạnh</p>
+    <p class="chapno"><img class="em" src="emoji/1f4d6.png" alt="📖" draggable="false"> Chương 01</p>
+    <h1><span class="w" style="--d:0">Sức</span> <span class="w" style="--d:1">mạnh</span> <span class="w" style="--d:2">là</span> <span class="w" style="--d:3">gì?</span></h1>
+    <div class="rule-orn" aria-hidden="true"><span></span><b><img class="em" src="emoji/2728.png" alt="✨" draggable="false"></b><span></span></div>
+    <p class="sub">“Sức mạnh giúp bạn có được mọi điều tích cực và tốt đẹp trong đời chính là tình yêu!”</p>
+    <p class="author"><img class="em" src="emoji/270d-fe0f.png" alt="✍️" draggable="false"> Rhonda Byrne</p>
+    <div class="stats" style="--sn:6"><div class="stat" style="--k:0"><span class="se" aria-hidden="true"><img class="em" src="emoji/1f9ed.png" alt="🧭" draggable="false"></span><b data-t="1/12">1/12</b><small>chương</small></div><div class="stat" style="--k:1"><span class="se" aria-hidden="true"><img class="em" src="emoji/23f1-fe0f.png" alt="⏱️" draggable="false"></span><b data-n="21">21</b><small>phút đọc</small></div><div class="stat" style="--k:2"><span class="se" aria-hidden="true"><img class="em" src="emoji/1f4c4.png" alt="📄" draggable="false"></span><b data-n="45">45</b><small>đoạn văn</small></div><div class="stat" style="--k:3"><span class="se" aria-hidden="true"><img class="em" src="emoji/1f9e9.png" alt="🧩" draggable="false"></span><b data-n="7">7</b><small>phần nhỏ</small></div><div class="stat" style="--k:4"><span class="se" aria-hidden="true"><img class="em" src="emoji/1f4ac.png" alt="💬" draggable="false"></span><b data-n="11">11</b><small>trích dẫn</small></div><div class="stat" style="--k:5"><span class="se" aria-hidden="true"><img class="em" src="emoji/1f3a8.png" alt="🎨" draggable="false"></span><b data-n="9">9</b><small>hình minh họa</small></div></div>
+  </div>
+</header>
+
+<main class="wrap c-purple" id="doc">
+<figure class="fig rv"><span class="fig-lbl"><img class="em" src="emoji/1f3a8.png" alt="🎨" draggable="false"> Hình minh họa · Chương 1</span><button class="zoom" type="button" aria-label="Phóng to ảnh"><img src="images/chuong_01.jpg" width="1536" height="1024" alt="Ảnh minh họa: Sức mạnh là gì?" decoding="async"></button></figure>
+<figure class="quote rv"><div class="avatar" aria-hidden="true">AB</div><div class="qcard"><span class="qtag"><img class="em" src="emoji/1f4ac.png" alt="💬" draggable="false"> Trích dẫn</span><button class="cpy" type="button" aria-label="Sao chép trích dẫn"><img class="em" src="emoji/1f4cb.png" alt="📋" draggable="false"></button><div class="qbody"><p>“Tôi không thể nói sức mạnh ấy là gì; tôi chỉ biết rằng nó tồn tại.”</p></div><cite><b class="cn1">Alexander Graham Bell (1847–1922)</b><span class="cr">Người phát minh ra điện thoại</span></cite></div></figure>
+<article class="body-card rv"><p style="--pi:0">Cuộc sống thật đơn giản. Cuộc sống của bạn chỉ gồm hai loại điều: những điều tích cực và những điều tiêu cực. Mỗi lĩnh vực trong đời bạn — sức khỏe, tiền bạc, các mối quan hệ, công việc hay hạnh phúc — đều có thể ở trạng thái tích cực hoặc tiêu cực đối với bạn. Hoặc bạn có nhiều tiền, hoặc bạn thiếu tiền. Hoặc bạn dồi dào sức khỏe, hoặc sức khỏe của bạn không tốt. Các mối quan hệ của bạn hạnh phúc hoặc đầy khó khăn. Công việc của bạn thú vị và thành công, hoặc chẳng đem lại niềm vui hay thành quả. Hoặc bạn tràn đầy hạnh phúc, hoặc phần lớn thời gian bạn cảm thấy không vui. Bạn có những năm tốt đẹp và những năm khó khăn, những giai đoạn thuận lợi và những giai đoạn bất lợi, những ngày vui và những ngày buồn.</p></article>
+<figure class="dia rv" id="hinh-1"><span class="fig-lbl"><img class="em" src="emoji/1f3a8.png" alt="🎨" draggable="false"> Hình 1 · Hai loại điều trong cuộc sống</span><svg viewBox="0 0 440 242" role="img" aria-label="Năm lĩnh vực sức khỏe, tiền bạc, các mối quan hệ, công việc, hạnh phúc — mỗi lĩnh vực là một công tắc bật qua lại giữa tiêu cực và tích cực"><defs></defs><image href="emoji/1f33f.png" x="21.0" y="21.0" width="26" height="26"/><text x="58" y="39" class="st" font-size="14" font-weight="800" text-anchor="start">sức khỏe</text><rect x="206" y="19" width="66" height="30" rx="15" fill="var(--gy)"/><rect x="206" y="19" width="66" height="30" rx="15" fill="var(--c4)" class="a-on" style="animation-delay:0.0s"/><g class="a-knob" style="animation-delay:0.0s"><circle cx="222" cy="34" r="11" fill="#fff"/></g><text x="290" y="39" class="st a-off" font-size="13.5" font-weight="800" style="animation-delay:0.0s;fill:var(--gy)">tiêu cực</text><text x="290" y="39" class="st a-on" font-size="13.5" font-weight="800" style="animation-delay:0.0s;fill:var(--c4)">tích cực</text><image href="emoji/1f4b0.png" x="21.0" y="65.0" width="26" height="26"/><text x="58" y="83" class="st" font-size="14" font-weight="800" text-anchor="start">tiền bạc</text><rect x="206" y="63" width="66" height="30" rx="15" fill="var(--gy)"/><rect x="206" y="63" width="66" height="30" rx="15" fill="var(--c4)" class="a-on" style="animation-delay:0.7s"/><g class="a-knob" style="animation-delay:0.7s"><circle cx="222" cy="78" r="11" fill="#fff"/></g><text x="290" y="83" class="st a-off" font-size="13.5" font-weight="800" style="animation-delay:0.7s;fill:var(--gy)">tiêu cực</text><text x="290" y="83" class="st a-on" font-size="13.5" font-weight="800" style="animation-delay:0.7s;fill:var(--c4)">tích cực</text><image href="emoji/1f91d.png" x="21.0" y="109.0" width="26" height="26"/><text x="58" y="127" class="st" font-size="14" font-weight="800" text-anchor="start">các mối quan hệ</text><rect x="206" y="107" width="66" height="30" rx="15" fill="var(--gy)"/><rect x="206" y="107" width="66" height="30" rx="15" fill="var(--c4)" class="a-on" style="animation-delay:1.4s"/><g class="a-knob" style="animation-delay:1.4s"><circle cx="222" cy="122" r="11" fill="#fff"/></g><text x="290" y="127" class="st a-off" font-size="13.5" font-weight="800" style="animation-delay:1.4s;fill:var(--gy)">tiêu cực</text><text x="290" y="127" class="st a-on" font-size="13.5" font-weight="800" style="animation-delay:1.4s;fill:var(--c4)">tích cực</text><image href="emoji/1f4bc.png" x="21.0" y="153.0" width="26" height="26"/><text x="58" y="171" class="st" font-size="14" font-weight="800" text-anchor="start">công việc</text><rect x="206" y="151" width="66" height="30" rx="15" fill="var(--gy)"/><rect x="206" y="151" width="66" height="30" rx="15" fill="var(--c4)" class="a-on" style="animation-delay:2.1s"/><g class="a-knob" style="animation-delay:2.1s"><circle cx="222" cy="166" r="11" fill="#fff"/></g><text x="290" y="171" class="st a-off" font-size="13.5" font-weight="800" style="animation-delay:2.1s;fill:var(--gy)">tiêu cực</text><text x="290" y="171" class="st a-on" font-size="13.5" font-weight="800" style="animation-delay:2.1s;fill:var(--c4)">tích cực</text><image href="emoji/1f60a.png" x="21.0" y="197.0" width="26" height="26"/><text x="58" y="215" class="st" font-size="14" font-weight="800" text-anchor="start">hạnh phúc</text><rect x="206" y="195" width="66" height="30" rx="15" fill="var(--gy)"/><rect x="206" y="195" width="66" height="30" rx="15" fill="var(--c4)" class="a-on" style="animation-delay:2.8s"/><g class="a-knob" style="animation-delay:2.8s"><circle cx="222" cy="210" r="11" fill="#fff"/></g><text x="290" y="215" class="st a-off" font-size="13.5" font-weight="800" style="animation-delay:2.8s;fill:var(--gy)">tiêu cực</text><text x="290" y="215" class="st a-on" font-size="13.5" font-weight="800" style="animation-delay:2.8s;fill:var(--c4)">tích cực</text></svg></figure>
+<article class="body-card rv"><p style="--pi:0">Nếu trong cuộc sống của bạn có nhiều điều tiêu cực hơn điều tích cực, thì hẳn có điều gì đó không ổn, và chính bạn biết điều ấy. Bạn thấy những người khác hạnh phúc, mãn nguyện, có cuộc sống đầy những điều tuyệt vời; rồi có điều gì đó mách bảo bạn rằng mình cũng xứng đáng có được tất cả những điều ấy. Và bạn đúng. Bạn thực sự xứng đáng với một cuộc đời tràn ngập những điều tốt đẹp.</p><p style="--pi:1">Phần lớn những người có cuộc sống tuyệt vời không nhận ra chính xác họ đã làm gì để có được cuộc sống ấy. Nhưng họ đã làm một điều gì đó. Họ đã sử dụng sức mạnh tạo nên mọi điều tốt đẹp trong cuộc sống...</p><p style="--pi:2">Không có ngoại lệ: mỗi người có cuộc sống tuyệt vời đều đã sử dụng tình yêu để tạo nên cuộc sống ấy. <mark>Sức mạnh giúp bạn có được mọi điều tích cực và tốt đẹp trong đời chính là tình yêu!</mark></p></article>
+<figure class="dia rv" id="hinh-2"><span class="fig-lbl"><img class="em" src="emoji/1f3a8.png" alt="🎨" draggable="false"> Hình 2 · Sức mạnh chính là tình yêu</span><svg viewBox="0 0 440 256" role="img" aria-label="Một trái tim lớn ghi chữ tình yêu đang đập và tỏa sáng ở giữa; các đường nét đứt nối tới tiền bạc, sức khỏe, các mối quan hệ, công việc, hạnh phúc và mọi điều tốt đẹp"><defs></defs><line x1="220" y1="122" x2="392" y2="122" stroke="var(--c8)" stroke-width="2.2" stroke-linecap="round" class="a-dash"/><line x1="220" y1="122" x2="318" y2="206" stroke="var(--c8)" stroke-width="2.2" stroke-linecap="round" class="a-dash"/><line x1="220" y1="122" x2="122" y2="206" stroke="var(--c8)" stroke-width="2.2" stroke-linecap="round" class="a-dash"/><line x1="220" y1="122" x2="48" y2="122" stroke="var(--c8)" stroke-width="2.2" stroke-linecap="round" class="a-dash"/><line x1="220" y1="122" x2="122" y2="38" stroke="var(--c8)" stroke-width="2.2" stroke-linecap="round" class="a-dash"/><line x1="220" y1="122" x2="318" y2="38" stroke="var(--c8)" stroke-width="2.2" stroke-linecap="round" class="a-dash"/><circle cx="220" cy="122" r="44" fill="none" stroke="var(--c8)" stroke-width="2.5" class="a-rip" style="animation-delay:0s"/><circle cx="220" cy="122" r="44" fill="none" stroke="var(--c8)" stroke-width="2.5" class="a-rip" style="animation-delay:1s"/><circle cx="220" cy="122" r="44" fill="none" stroke="var(--c8)" stroke-width="2.5" class="a-rip" style="animation-delay:2s"/><g class="a-spin"><line x1="278.0" y1="122.0" x2="292.0" y2="122.0" stroke="var(--c3)" stroke-width="2.5" stroke-linecap="round"/><line x1="273.6" y1="144.2" x2="286.5" y2="149.6" stroke="var(--c3)" stroke-width="2.5" stroke-linecap="round"/><line x1="261.0" y1="163.0" x2="270.9" y2="172.9" stroke="var(--c3)" stroke-width="2.5" stroke-linecap="round"/><line x1="242.2" y1="175.6" x2="247.6" y2="188.5" stroke="var(--c3)" stroke-width="2.5" stroke-linecap="round"/><line x1="220.0" y1="180.0" x2="220.0" y2="194.0" stroke="var(--c3)" stroke-width="2.5" stroke-linecap="round"/><line x1="197.8" y1="175.6" x2="192.4" y2="188.5" stroke="var(--c3)" stroke-width="2.5" stroke-linecap="round"/><line x1="179.0" y1="163.0" x2="169.1" y2="172.9" stroke="var(--c3)" stroke-width="2.5" stroke-linecap="round"/><line x1="166.4" y1="144.2" x2="153.5" y2="149.6" stroke="var(--c3)" stroke-width="2.5" stroke-linecap="round"/><line x1="162.0" y1="122.0" x2="148.0" y2="122.0" stroke="var(--c3)" stroke-width="2.5" stroke-linecap="round"/><line x1="166.4" y1="99.8" x2="153.5" y2="94.4" stroke="var(--c3)" stroke-width="2.5" stroke-linecap="round"/><line x1="179.0" y1="81.0" x2="169.1" y2="71.1" stroke="var(--c3)" stroke-width="2.5" stroke-linecap="round"/><line x1="197.8" y1="68.4" x2="192.4" y2="55.5" stroke="var(--c3)" stroke-width="2.5" stroke-linecap="round"/><line x1="220.0" y1="64.0" x2="220.0" y2="50.0" stroke="var(--c3)" stroke-width="2.5" stroke-linecap="round"/><line x1="242.2" y1="68.4" x2="247.6" y2="55.5" stroke="var(--c3)" stroke-width="2.5" stroke-linecap="round"/><line x1="261.0" y1="81.0" x2="270.9" y2="71.1" stroke="var(--c3)" stroke-width="2.5" stroke-linecap="round"/><line x1="273.6" y1="99.8" x2="286.5" y2="94.4" stroke="var(--c3)" stroke-width="2.5" stroke-linecap="round"/></g><circle cx="220" cy="122" r="52" fill="var(--paper)"/><g class="a-pulse"><path d="M220,107.4 c-18.6,-27.900000000000002 -62.0,-12.4 -43.4,21.7 l43.4,40.300000000000004 l43.4,-40.300000000000004 c18.6,-34.1 -24.8,-49.6 -43.4,-21.7 Z" fill="var(--c8)" class="" style=""/><text x="220" y="128" class="sw" font-size="14" font-weight="850" text-anchor="middle">tình yêu</text></g><circle cx="392" cy="122" r="22" fill="var(--paper)" stroke="var(--c8)" stroke-width="2"/><g class="a-bob" style="animation-delay:-0.0s"><image href="emoji/1f4b0.png" x="379.0" y="109.0" width="26" height="26"/></g><text x="392" y="160" class="st" font-size="11.5" font-weight="800" text-anchor="middle" style="fill:var(--c7)">tiền bạc</text><circle cx="318" cy="206" r="22" fill="var(--paper)" stroke="var(--c8)" stroke-width="2"/><g class="a-bob" style="animation-delay:-0.5s"><image href="emoji/1f33f.png" x="305.0" y="193.0" width="26" height="26"/></g><text x="318" y="244" class="st" font-size="11.5" font-weight="800" text-anchor="middle" style="fill:var(--c7)">sức khỏe</text><circle cx="122" cy="206" r="22" fill="var(--paper)" stroke="var(--c8)" stroke-width="2"/><g class="a-bob" style="animation-delay:-1.0s"><image href="emoji/1f91d.png" x="109.0" y="193.0" width="26" height="26"/></g><text x="122" y="244" class="st" font-size="11.5" font-weight="800" text-anchor="middle" style="fill:var(--c7)">các mối quan hệ</text><circle cx="48" cy="122" r="22" fill="var(--paper)" stroke="var(--c8)" stroke-width="2"/><g class="a-bob" style="animation-delay:-1.5s"><image href="emoji/1f4bc.png" x="35.0" y="109.0" width="26" height="26"/></g><text x="48" y="160" class="st" font-size="11.5" font-weight="800" text-anchor="middle" style="fill:var(--c7)">công việc</text><circle cx="122" cy="38" r="22" fill="var(--paper)" stroke="var(--c8)" stroke-width="2"/><g class="a-bob" style="animation-delay:-2.0s"><image href="emoji/1f60a.png" x="109.0" y="25.0" width="26" height="26"/></g><text x="122" y="8" class="st" font-size="11.5" font-weight="800" text-anchor="middle" style="fill:var(--c7)">hạnh phúc</text><circle cx="318" cy="38" r="22" fill="var(--paper)" stroke="var(--c8)" stroke-width="2"/><g class="a-bob" style="animation-delay:-2.5s"><image href="emoji/2728.png" x="305.0" y="25.0" width="26" height="26"/></g><text x="318" y="8" class="st" font-size="11.5" font-weight="800" text-anchor="middle" style="fill:var(--c7)">mọi điều tốt đẹp</text></svg></figure>
+<article class="body-card rv"><p style="--pi:0">Từ thuở xa xưa, tình yêu đã được nói đến và viết về trong mọi tôn giáo, cũng như trong lời của những nhà tư tưởng, triết gia, nhà tiên tri và nhà lãnh đạo vĩ đại. Nhưng nhiều người trong chúng ta chưa thực sự hiểu những lời thông thái ấy. Dù giáo huấn của họ hướng đến con người ở thời đại của mình, sự thật và thông điệp họ gửi đến thế giới vẫn không thay đổi cho tới hôm nay: đó là tình yêu. <mark>Bởi khi yêu thương, bạn đang sử dụng sức mạnh lớn lao nhất trong vũ trụ.</mark></p></article>
+<section id="p1"><div class="sec-head rv"><div class="badge"><span class="nv">01</span></div><h2>Sức mạnh của tình yêu</h2></div>
+<figure class="quote rv"><div class="avatar" aria-hidden="true">PM</div><div class="qcard"><span class="qtag"><img class="em" src="emoji/1f4ac.png" alt="💬" draggable="false"> Trích dẫn</span><button class="cpy" type="button" aria-label="Sao chép trích dẫn"><img class="em" src="emoji/1f4cb.png" alt="📋" draggable="false"></button><div class="qbody"><p>“Tình yêu là một yếu tố tuy không thể nhìn thấy bằng mắt thường nhưng có thật như không khí hay nước. Nó là một sức mạnh sống động, luôn hoạt động và chuyển động... Nó di chuyển thành những con sóng và dòng chảy như đại dương.”</p></div><cite><b class="cn1">Prentice Mulford (1834–1891)</b><span class="cr">Tác giả thuộc phong trào Tư tưởng Mới</span></cite></div></figure>
+<article class="body-card rv"><p style="--pi:0">Thứ tình yêu mà các nhà tư tưởng vĩ đại và những bậc cứu thế trên thế giới nói đến rất khác với cách phần lớn mọi người hiểu về tình yêu. Nó rộng lớn hơn nhiều so với tình yêu dành cho gia đình, bạn bè và những điều mình yêu thích. Bởi tình yêu không chỉ là một cảm xúc: tình yêu là một sức mạnh tích cực. Tình yêu không yếu đuối, mong manh hay mềm yếu. <mark>Tình yêu là sức mạnh tích cực của sự sống!</mark> Tình yêu là cội nguồn của mọi điều tích cực và tốt đẹp. Trong cuộc sống không có hàng trăm sức mạnh tích cực khác nhau; chỉ có một sức mạnh như thế.</p><p style="--pi:1">Những lực lớn của tự nhiên, như lực hấp dẫn và lực điện từ, không thể được cảm nhận trực tiếp bằng các giác quan của chúng ta, nhưng sức mạnh của chúng là điều không thể phủ nhận. Tương tự, sức mạnh của tình yêu vô hình đối với chúng ta, nhưng theo tác giả, nó còn lớn hơn bất cứ lực nào trong tự nhiên. Có thể thấy dấu vết sức mạnh ấy ở khắp nơi trên thế giới: không có tình yêu thì không có sự sống.</p><p style="--pi:2">Hãy nghĩ về điều đó một lát: Thế giới sẽ ra sao nếu không có tình yêu? Trước hết, chính bạn sẽ không tồn tại; nếu không có tình yêu, bạn đã không thể chào đời. Gia đình và bạn bè của bạn cũng sẽ không được sinh ra. Hơn thế nữa, sẽ không có lấy một con người nào trên cả hành tinh. Nếu sức mạnh của tình yêu ngừng tồn tại ngay hôm nay, nhân loại sẽ dần suy giảm và cuối cùng biến mất.</p><p style="--pi:3">Mỗi phát minh, khám phá và công trình do con người tạo ra đều bắt nguồn từ tình yêu trong trái tim một con người. Nếu không có tình yêu của anh em nhà Wright, chúng ta đã không thể bay bằng máy bay. Nếu không có tình yêu của các nhà khoa học, nhà phát minh và những người khám phá, chúng ta đã không có điện, hệ thống sưởi hay ánh sáng; cũng không thể lái ô tô, sử dụng điện thoại, thiết bị gia dụng hoặc bất kỳ công nghệ nào đang giúp cuộc sống ngày nay dễ dàng và tiện nghi hơn.</p><p style="--pi:4">Nếu không có tình yêu của các kiến trúc sư và những người xây dựng, sẽ không có nhà cửa, các tòa nhà hay thành phố. Không có tình yêu, sẽ không có thuốc men, bác sĩ hay phòng cấp cứu. Cũng sẽ không có giáo viên, trường học hay giáo dục. Sẽ không có sách, tranh vẽ hay âm nhạc, bởi mỗi thứ ấy đều được tạo nên từ sức mạnh tích cực của tình yêu. Ngay lúc này, hãy nhìn quanh bạn. Bất cứ thứ gì do con người tạo ra mà bạn nhìn thấy đều đã không tồn tại nếu thiếu tình yêu.</p></article>
+<figure class="dia rv" id="hinh-3"><span class="fig-lbl"><img class="em" src="emoji/1f3a8.png" alt="🎨" draggable="false"> Hình 3 · Mọi thứ con người tạo ra đều bắt nguồn từ tình yêu</span><svg viewBox="0 0 440 262" role="img" aria-label="Từ trái tim của một con người, các đường nét đứt dẫn tới máy bay, điện, nhà cửa, thuốc men, trường học, sách, tranh vẽ và âm nhạc"><defs></defs><circle cx="70" cy="132" r="54" fill="var(--c8)" fill-opacity=".18" class="a-glow"/><circle cx="70.0" cy="103.8" r="14.0" fill="var(--c7)"/><path d="M51.8,178.0 Q51.8,124.8 70.0,122.0 Q88.2,124.8 88.2,178.0 Z" fill="var(--c7)"/><path d="M70,134.1 c-6.8999999999999995,-10.35 -23.0,-4.6 -16.099999999999998,8.049999999999999 l16.099999999999998,14.95 l16.099999999999998,-14.95 c6.8999999999999995,-12.649999999999999 -9.2,-18.4 -16.099999999999998,-8.049999999999999 Z" fill="var(--c8)" class="a-pulse" style=""/><text x="70" y="218" class="st" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--c8)">tình yêu trong</text><text x="70" y="234" class="st" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--c8)">trái tim</text><line x1="104" y1="132" x2="179" y2="103" stroke="var(--c6)" stroke-width="1.8" stroke-linecap="round" class="a-dash" opacity=".7"/><line x1="104" y1="132" x2="247" y2="103" stroke="var(--c3)" stroke-width="1.8" stroke-linecap="round" class="a-dash" opacity=".7"/><line x1="104" y1="132" x2="315" y2="103" stroke="var(--c2)" stroke-width="1.8" stroke-linecap="round" class="a-dash" opacity=".7"/><line x1="104" y1="132" x2="383" y2="103" stroke="var(--c1)" stroke-width="1.8" stroke-linecap="round" class="a-dash" opacity=".7"/><line x1="104" y1="132" x2="179" y2="161" stroke="var(--c4)" stroke-width="1.8" stroke-linecap="round" class="a-dash" opacity=".7"/><line x1="104" y1="132" x2="247" y2="161" stroke="var(--c7)" stroke-width="1.8" stroke-linecap="round" class="a-dash" opacity=".7"/><line x1="104" y1="132" x2="315" y2="161" stroke="var(--c8)" stroke-width="1.8" stroke-linecap="round" class="a-dash" opacity=".7"/><line x1="104" y1="132" x2="383" y2="161" stroke="var(--c5)" stroke-width="1.8" stroke-linecap="round" class="a-dash" opacity=".7"/><g class="a-pop" style="animation-delay:0.00s"><circle cx="196" cy="86" r="24" fill="var(--c6l)" stroke="var(--c6)" stroke-width="2"/><image href="emoji/2708-fe0f.png" x="182.0" y="72.0" width="28" height="28"/></g><text x="196" y="52" class="st" font-size="11.5" font-weight="800" text-anchor="middle" style="fill:var(--c6)">máy bay</text><g class="a-pop" style="animation-delay:0.35s"><circle cx="264" cy="86" r="24" fill="var(--c3l)" stroke="var(--c3)" stroke-width="2"/><image href="emoji/1f4a1.png" x="250.0" y="72.0" width="28" height="28"/></g><text x="264" y="52" class="st" font-size="11.5" font-weight="800" text-anchor="middle" style="fill:var(--c3)">điện</text><g class="a-pop" style="animation-delay:0.70s"><circle cx="332" cy="86" r="24" fill="var(--c2l)" stroke="var(--c2)" stroke-width="2"/><image href="emoji/1f3e0.png" x="318.0" y="72.0" width="28" height="28"/></g><text x="332" y="52" class="st" font-size="11.5" font-weight="800" text-anchor="middle" style="fill:var(--c2)">nhà cửa</text><g class="a-pop" style="animation-delay:1.05s"><circle cx="400" cy="86" r="24" fill="var(--c1l)" stroke="var(--c1)" stroke-width="2"/><image href="emoji/1f48a.png" x="386.0" y="72.0" width="28" height="28"/></g><text x="400" y="52" class="st" font-size="11.5" font-weight="800" text-anchor="middle" style="fill:var(--c1)">thuốc men</text><g class="a-pop" style="animation-delay:1.40s"><circle cx="196" cy="178" r="24" fill="var(--c4l)" stroke="var(--c4)" stroke-width="2"/><image href="emoji/1f3eb.png" x="182.0" y="164.0" width="28" height="28"/></g><text x="196" y="220" class="st" font-size="11.5" font-weight="800" text-anchor="middle" style="fill:var(--c4)">trường học</text><g class="a-pop" style="animation-delay:1.75s"><circle cx="264" cy="178" r="24" fill="var(--c7l)" stroke="var(--c7)" stroke-width="2"/><image href="emoji/1f4da.png" x="250.0" y="164.0" width="28" height="28"/></g><text x="264" y="220" class="st" font-size="11.5" font-weight="800" text-anchor="middle" style="fill:var(--c7)">sách</text><g class="a-pop" style="animation-delay:2.10s"><circle cx="332" cy="178" r="24" fill="var(--c8l)" stroke="var(--c8)" stroke-width="2"/><image href="emoji/1f3a8.png" x="318.0" y="164.0" width="28" height="28"/></g><text x="332" y="220" class="st" font-size="11.5" font-weight="800" text-anchor="middle" style="fill:var(--c8)">tranh vẽ</text><g class="a-pop" style="animation-delay:2.45s"><circle cx="400" cy="178" r="24" fill="var(--c5l)" stroke="var(--c5)" stroke-width="2"/><image href="emoji/1f3b5.png" x="386.0" y="164.0" width="28" height="28"/></g><text x="400" y="220" class="st" font-size="11.5" font-weight="800" text-anchor="middle" style="fill:var(--c5)">âm nhạc</text></svg></figure>
+<figure class="quote rv"><div class="avatar" aria-hidden="true">RB</div><div class="qcard"><span class="qtag"><img class="em" src="emoji/1f4ac.png" alt="💬" draggable="false"> Trích dẫn</span><button class="cpy" type="button" aria-label="Sao chép trích dẫn"><img class="em" src="emoji/1f4cb.png" alt="📋" draggable="false"></button><div class="qbody"><p>“Nếu lấy tình yêu đi, Trái Đất của chúng ta sẽ trở thành một nấm mồ.”</p></div><cite><b class="cn1">Robert Browning (1812–1889)</b><span class="cr">Nhà thơ</span></cite></div></figure>
+<div class="totop"><a href="#top">↑ Về đầu trang</a></div></section>
+<section id="p2"><div class="sec-head rv"><div class="badge"><span class="nv">02</span></div><h2>Tình yêu là sức mạnh thúc đẩy bạn</h2></div>
+<article class="body-card rv"><p style="--pi:0">Mọi điều bạn muốn trở thành, muốn làm hoặc muốn có đều bắt nguồn từ tình yêu. Nếu không có tình yêu, bạn thậm chí sẽ không muốn cử động. Sẽ không có sức mạnh tích cực nào thúc đẩy bạn thức dậy mỗi sáng để làm việc, vui chơi, khiêu vũ, trò chuyện, học hỏi, nghe nhạc hay làm bất cứ điều gì khác. Bạn sẽ như một bức tượng đá. Chính sức mạnh tích cực của tình yêu khơi dậy trong bạn ý muốn hành động và trao cho bạn khát vọng trở thành, làm hoặc có được điều mình mong muốn. Sức mạnh tích cực của tình yêu có thể tạo ra bất cứ điều tốt đẹp nào, làm cho những điều tốt đẹp gia tăng và thay đổi bất cứ điều tiêu cực nào trong cuộc sống của bạn. Bạn có sức mạnh tác động đến sức khỏe, sự giàu có, sự nghiệp, các mối quan hệ và mọi lĩnh vực trong đời mình. <mark>Và sức mạnh ấy — tình yêu — nằm bên trong bạn!</mark></p><p style="--pi:1">Nhưng nếu bạn có sức mạnh tác động đến cuộc đời mình, và sức mạnh ấy nằm ngay trong bạn, tại sao cuộc đời bạn chưa phi thường? Tại sao không phải mọi lĩnh vực trong đời bạn đều tốt đẹp? Tại sao bạn chưa có được tất cả những gì mình muốn? Tại sao bạn chưa thể làm mọi điều mình từng muốn làm? Tại sao bạn không tràn đầy niềm vui mỗi ngày?</p><p style="--pi:2"><mark>Câu trả lời là: vì bạn có quyền lựa chọn.</mark> Bạn có thể chọn yêu thương và sử dụng sức mạnh tích cực ấy... hoặc không. Dù có nhận ra hay không, mỗi ngày — từng khoảnh khắc trong đời — bạn vẫn luôn đưa ra lựa chọn này. Không có ngoại lệ: mỗi khi một điều tốt đẹp xảy ra trong đời bạn, đó là lúc bạn đã yêu thương và sử dụng sức mạnh tích cực của tình yêu. Và mỗi khi một điều không tốt xảy ra, đó là vì bạn đã không yêu thương, để rồi kết quả là điều tiêu cực. Tình yêu là nguyên nhân của mọi điều tốt đẹp trong đời bạn; thiếu vắng tình yêu là nguyên nhân của mọi điều tiêu cực, của mọi nỗi đau và khổ sở.</p></article>
+<figure class="dia rv" id="hinh-4"><span class="fig-lbl"><img class="em" src="emoji/1f3a8.png" alt="🎨" draggable="false"> Hình 4 · Mỗi khoảnh khắc là một lựa chọn</span><svg viewBox="0 0 440 250" role="img" aria-label="Từ một người, con đường tách đôi: nhánh yêu thương dẫn tới mặt trời — điều tốt đẹp; nhánh không yêu thương dẫn tới mây mưa — điều tiêu cực"><defs></defs><circle cx="56.0" cy="105.5" r="11.5" fill="var(--c6)"/><path d="M41.0,166.5 Q41.0,122.8 56.0,120.5 Q71.0,122.8 71.0,166.5 Z" fill="var(--c6)"/><text x="56" y="194" class="st" font-size="12" font-weight="800" text-anchor="middle">mỗi</text><text x="56" y="210" class="st" font-size="12" font-weight="800" text-anchor="middle">khoảnh khắc</text><g class="a-swapA"><path d="M86,124 C160,124 190,62 330,62" fill="none" stroke="var(--c4)" stroke-width="4.5" stroke-linecap="round"/><circle r="7" fill="var(--c4)"><animateMotion dur="2.4s" repeatCount="indefinite" path="M86,124 C160,124 190,62 330,62"/></circle><text x="208" y="66" class="st" font-size="14" font-weight="800" text-anchor="middle" style="fill:var(--c4)">yêu thương</text><g class="a-pulse" style=""><image href="emoji/2600-fe0f.png" x="347.0" y="37.0" width="50" height="50"/></g><text x="372" y="108" class="st" font-size="12.5" font-weight="800" text-anchor="middle" style="fill:var(--c4)">điều tốt đẹp</text></g><g class="a-swapB"><path d="M86,140 C160,140 190,192 330,192" fill="none" stroke="var(--gy)" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="2 8"/><circle r="7" fill="var(--gy)"><animateMotion dur="2.4s" repeatCount="indefinite" path="M86,140 C160,140 190,192 330,192"/></circle><text x="208" y="222" class="st" font-size="14" font-weight="800" text-anchor="middle" style="fill:var(--gy)">không yêu thương</text><g class="a-sink" style=""><image href="emoji/1f327-fe0f.png" x="347.0" y="167.0" width="50" height="50"/></g><text x="372" y="238" class="st" font-size="12.5" font-weight="800" text-anchor="middle" style="fill:var(--gy)">điều tiêu cực</text></g></svg></figure>
+<article class="body-card rv"><p style="--pi:0">Đáng buồn thay, rõ ràng con người ngày nay — cũng như trong suốt lịch sử nhân loại — vẫn thiếu hiểu biết về sức mạnh của tình yêu và chưa thực sự thấu hiểu sức mạnh ấy.</p></article>
+<figure class="quote rv"><div class="avatar" aria-hidden="true">PC</div><div class="qcard"><span class="qtag"><img class="em" src="emoji/1f4ac.png" alt="💬" draggable="false"> Trích dẫn</span><button class="cpy" type="button" aria-label="Sao chép trích dẫn"><img class="em" src="emoji/1f4cb.png" alt="📋" draggable="false"></button><div class="qbody"><p>“Tình yêu là năng lượng mạnh mẽ nhất, nhưng cũng là năng lượng ít được biết đến nhất trên thế giới.”</p></div><cite><b class="cn1">Pierre Teilhard de Chardin (1881–1955)</b><span class="cr">Linh mục và triết gia</span></cite></div></figure>
+<article class="body-card rv"><p style="--pi:0">Giờ đây, bạn đang được tiếp cận tri thức về sức mạnh duy nhất dẫn tới mọi điều tốt đẹp trong cuộc sống, và bạn có thể dùng sức mạnh ấy để thay đổi toàn bộ cuộc đời mình. Nhưng trước tiên, bạn cần hiểu chính xác tình yêu vận hành như thế nào.</p></article>
+<div class="totop"><a href="#top">↑ Về đầu trang</a></div></section>
+<section id="p3"><div class="sec-head rv"><div class="badge"><span class="nv">03</span></div><h2>Quy luật của tình yêu</h2></div>
+<article class="body-card rv"><p style="--pi:0">Vũ trụ được chi phối bởi các quy luật tự nhiên. Chúng ta có thể bay bằng máy bay vì hoạt động hàng không tuân theo các quy luật tự nhiên. Các định luật vật lý không thay đổi để chúng ta có thể bay; chính chúng ta đã tìm ra cách vận dụng chúng, nhờ đó mới có thể bay. Cũng như các định luật vật lý chi phối hoạt động bay, điện và lực hấp dẫn, có một quy luật chi phối tình yêu. Để sử dụng sức mạnh tích cực của tình yêu và thay đổi cuộc đời mình, bạn cần hiểu quy luật ấy — quy luật mạnh mẽ nhất trong vũ trụ: luật hấp dẫn.</p><p style="--pi:1">Luật hấp dẫn giữ cho mọi ngôi sao trong vũ trụ — từ ngôi sao lớn nhất đến ngôi sao nhỏ nhất — ở vị trí của chúng, và tạo nên hình dạng của từng nguyên tử, phân tử. Lực hút của Mặt Trời giữ các hành tinh trong hệ Mặt Trời, không để chúng văng ra không gian. Lực hút của trọng lực giữ bạn cùng mọi người, mọi loài vật, cây cối và khoáng vật trên Trái Đất. Có thể thấy lực hút khắp nơi trong tự nhiên: từ bông hoa thu hút ong, hạt giống hút chất dinh dưỡng từ đất, cho đến mỗi sinh vật bị thu hút bởi những sinh vật khác cùng loài. Lực hút tác động lên mọi loài vật trên cạn, cá dưới biển và chim trên trời, khiến chúng sinh sôi và tụ lại thành bầy đàn. Lực hút giữ các tế bào trong cơ thể bạn gắn kết với nhau, giữ các vật liệu tạo nên ngôi nhà và những món đồ nội thất bạn ngồi lên; nó cũng giữ chiếc ô tô của bạn trên đường và nước trong cốc. Mọi đồ vật bạn sử dụng đều giữ được hình dạng nguyên vẹn nhờ lực hút.</p></article>
+<figure class="dia rv" id="hinh-5"><span class="fig-lbl"><img class="em" src="emoji/1f3a8.png" alt="🎨" draggable="false"> Hình 5 · Lực hút giữ mọi thứ ở đúng vị trí</span><svg viewBox="0 0 440 268" role="img" aria-label="Mặt Trời ở giữa, ba hành tinh quay theo quỹ đạo; ở góc, một chú ong bay quanh bông hoa — luật hấp dẫn, quy luật của tình yêu"><defs></defs><path d="M142,118 A78,38 0 1 1 142,118.1 Z" fill="none" stroke="var(--c6)" stroke-width="1.4" stroke-dasharray="3 6" opacity=".7"/><circle r="8" fill="var(--c6)"><animateMotion dur="6s" repeatCount="indefinite" path="M142,118 A78,38 0 1 1 142,118.1 Z"/></circle><path d="M98,118 A122,62 0 1 1 98,118.1 Z" fill="none" stroke="var(--c4)" stroke-width="1.4" stroke-dasharray="3 6" opacity=".7"/><circle r="7" fill="var(--c4)"><animateMotion dur="10s" repeatCount="indefinite" path="M98,118 A122,62 0 1 1 98,118.1 Z"/></circle><path d="M52,118 A168,90 0 1 1 52,118.1 Z" fill="none" stroke="var(--c7)" stroke-width="1.4" stroke-dasharray="3 6" opacity=".7"/><circle r="10" fill="var(--c7)"><animateMotion dur="16s" repeatCount="indefinite" path="M52,118 A168,90 0 1 1 52,118.1 Z"/></circle><circle cx="220" cy="118" r="34" fill="var(--c3)" fill-opacity=".25" class="a-glow"/><g class="a-pulse" style=""><image href="emoji/2600-fe0f.png" x="193.0" y="91.0" width="54" height="54"/></g><image href="emoji/1f338.png" x="383.0" y="199.0" width="30" height="30"/><g><image href="emoji/1f41d.png" x="-10.0" y="-10.0" width="20" height="20"/><animateMotion dur="3.2s" repeatCount="indefinite" path="M398,190 A24,20 0 1 1 397.9,190 Z"/></g><g class="" style=""><rect x="94.7" y="232.5" width="250.6" height="27" rx="13.5" fill="var(--c7)"/><text x="220" y="250.3" class="sw" font-size="12" font-weight="800" text-anchor="middle" style="fill:#fff">luật hấp dẫn · quy luật của tình yêu</text></g></svg></figure>
+<article class="body-card rv"><p style="--pi:0">Sự thu hút là sức mạnh đưa con người đến gần nhau. Nó quy tụ mọi người để hình thành thành phố và quốc gia, các tổ chức, câu lạc bộ và cộng đồng nơi họ cùng chia sẻ những mối quan tâm chung. Đó là sức mạnh thu hút người này đến với khoa học, người khác đến với nghệ thuật nấu ăn; thu hút con người đến với những môn thể thao, những phong cách âm nhạc khác nhau, hoặc những loài vật và thú cưng nhất định. Sự thu hút là sức mạnh kéo bạn về phía những thứ và những nơi bạn yêu thích; cũng là sức mạnh đưa bạn đến gần bạn bè và những người mình yêu thương.</p></article>
+<div class="totop"><a href="#top">↑ Về đầu trang</a></div></section>
+<section id="p4"><div class="sec-head rv"><div class="badge"><span class="nv">04</span></div><h2>Sức hút của tình yêu</h2></div>
+<article class="body-card rv"><p style="--pi:0">Vậy sức hút là gì? Sức hút chính là sức mạnh của tình yêu! Sự thu hút chính là tình yêu. Khi bị món ăn yêu thích hấp dẫn, bạn đang cảm thấy yêu thích món ăn ấy; nếu không có sự thu hút, bạn sẽ chẳng có cảm xúc gì với nó. Món nào đối với bạn cũng như nhau. Bạn sẽ không biết mình thích hay không thích điều gì, vì bạn không bị điều gì thu hút. Bạn sẽ không bị thu hút bởi một người khác, một thành phố cụ thể, một ngôi nhà, chiếc ô tô, môn thể thao, công việc, bản nhạc, bộ quần áo hay bất cứ thứ gì khác. Bởi chính thông qua sức hút mà bạn cảm nhận được tình yêu!</p></article>
+<figure class="quote rv"><div class="avatar" aria-hidden="true">CH</div><div class="qcard"><span class="qtag"><img class="em" src="emoji/1f4ac.png" alt="💬" draggable="false"> Trích dẫn</span><button class="cpy" type="button" aria-label="Sao chép trích dẫn"><img class="em" src="emoji/1f4cb.png" alt="📋" draggable="false"></button><div class="qbody"><p>“Luật hấp dẫn hay quy luật của tình yêu... thực chất là một.”</p></div><cite><b class="cn1">Charles Haanel (1866–1949)</b><span class="cr">Tác giả thuộc phong trào Tư tưởng Mới</span></cite></div></figure>
+<article class="body-card rv"><p style="--pi:0">Luật hấp dẫn là quy luật của tình yêu. Đó là quy luật đầy quyền năng giữ cho mọi thứ hài hòa với nhau, từ vô số thiên hà cho đến từng nguyên tử. Quy luật ấy vận hành trong mọi sự vật, xuyên suốt mọi sự vật trong vũ trụ. Và nó cũng vận hành trong cuộc đời bạn.</p><p style="--pi:1">Xét trên phạm vi vũ trụ, luật hấp dẫn nói rằng: những gì tương đồng sẽ thu hút lẫn nhau. Hiểu một cách đơn giản trong cuộc sống của bạn, điều đó có nghĩa là: <mark>bạn trao đi điều gì, bạn sẽ nhận lại điều ấy.</mark></p><p style="--pi:2">Bất cứ điều gì bạn trao đi trong cuộc sống cũng chính là điều bạn sẽ nhận lại. Theo luật hấp dẫn, bất cứ điều gì bạn trao đi cũng chính là điều bạn thu hút về phía mình.</p></article>
+<figure class="quote rv"><div class="avatar" aria-hidden="true">IN</div><div class="qcard"><span class="qtag"><img class="em" src="emoji/1f4ac.png" alt="💬" draggable="false"> Trích dẫn</span><button class="cpy" type="button" aria-label="Sao chép trích dẫn"><img class="em" src="emoji/1f4cb.png" alt="📋" draggable="false"></button><div class="qbody"><p>“Với mỗi tác động, luôn có một phản tác động có độ lớn bằng nó và ngược chiều.”</p></div><cite><b class="cn1">Isaac Newton (1643–1727)</b><span class="cr">Nhà toán học và vật lý học</span></cite></div></figure>
+<figure class="inimg rv"><button class="zoom" type="button" aria-label="Phóng to ảnh"><img src="images/cho_di_nhan_lai.png" width="1600" height="900" alt="Cho đi — Nhận lại" loading="lazy" decoding="async"></button></figure>
+<article class="body-card rv"><p style="--pi:0">Mỗi hành động cho đi tạo ra một hành động nhận lại tương ứng, và điều bạn nhận được luôn ngang bằng với điều bạn đã trao đi. Bất cứ điều gì bạn trao đi trong cuộc sống đều sẽ trở về với bạn. Đó là tính chất vật lý và toán học của vũ trụ.</p><p style="--pi:1">Bạn trao đi sự tích cực, bạn nhận lại sự tích cực; bạn trao đi sự tiêu cực, bạn nhận lại sự tiêu cực. Trao đi sự tích cực, bạn nhận lại một cuộc đời đầy những điều tích cực. Trao đi sự tiêu cực, bạn nhận lại một cuộc đời đầy những điều tiêu cực. Vậy bạn trao đi sự tích cực hay tiêu cực bằng cách nào? <mark>Thông qua suy nghĩ và cảm xúc của bạn!</mark></p><p style="--pi:2">Ở bất kỳ thời điểm nào, bạn cũng đang trao đi những suy nghĩ tích cực hoặc tiêu cực, những cảm xúc tích cực hoặc tiêu cực. Chúng tích cực hay tiêu cực sẽ quyết định điều bạn nhận lại trong cuộc sống. Theo cách nhìn của cuốn sách, mọi người, mọi hoàn cảnh và mọi sự việc tạo nên từng khoảnh khắc trong đời bạn đều được thu hút đến với bạn bởi những suy nghĩ và cảm xúc bạn phát ra. Cuộc sống không đơn thuần là những chuyện xảy đến với bạn; những gì bạn nhận được trong đời đều dựa trên những gì bạn đã trao đi.</p></article>
+<figure class="quote rv"><div class="avatar" aria-hidden="true">CG</div><div class="qcard"><span class="qtag"><img class="em" src="emoji/1f4ac.png" alt="💬" draggable="false"> Trích dẫn</span><button class="cpy" type="button" aria-label="Sao chép trích dẫn"><img class="em" src="emoji/1f4cb.png" alt="📋" draggable="false"></button><div class="qbody"><p>“Hãy cho đi, rồi các con sẽ được nhận lại... Vì các con đong bằng đấu nào thì sẽ được đong lại bằng đấu ấy.”</p></div><cite><b class="cn1">Chúa Giê-su (khoảng năm 5 trước Công nguyên – khoảng năm 30 sau Công nguyên)</b><span class="cr">Người sáng lập Kitô giáo, theo Lu-ca 6:38</span></cite></div></figure>
+<article class="body-card rv"><p style="--pi:0">Bạn trao đi điều gì thì nhận lại điều ấy. Nếu bạn giúp đỡ và hỗ trợ một người bạn chuyển nhà, rất có thể sự giúp đỡ và hỗ trợ cũng sẽ nhanh chóng trở lại với bạn. Nếu bạn trút cơn giận lên một người thân vì họ khiến bạn thất vọng, cơn giận ấy cũng sẽ trở lại với bạn dưới hình thức những hoàn cảnh xảy ra trong đời.</p></article>
+<figure class="dia rv" id="hinh-6"><span class="fig-lbl"><img class="em" src="emoji/1f3a8.png" alt="🎨" draggable="false"> Hình 6 · Bạn trao đi điều gì, nhận lại điều ấy</span><svg viewBox="0 0 440 250" role="img" aria-label="Một trái tim bay từ người ở bên trái tới vũ trụ ở bên phải theo đường trên — trao đi, rồi quay trở lại theo đường dưới — nhận lại, như tiếng vọng"><defs></defs><path d="M96,112 C170,30 270,30 300,98 C270,218 170,218 96,148" fill="none" stroke="var(--c8)" stroke-width="2.4" stroke-dasharray="6 7" class="a-dash" opacity=".8"/><circle cx="64.0" cy="108.4" r="12.0" fill="var(--c6)"/><path d="M48.4,172.0 Q48.4,126.4 64.0,124.0 Q79.6,126.4 79.6,172.0 Z" fill="var(--c6)"/><text x="64" y="200" class="st" font-size="13" font-weight="800" text-anchor="middle" style="fill:var(--c6)">bạn</text><circle cx="356" cy="124" r="46" fill="none" stroke="var(--c7)" stroke-width="2.5" class="a-rip" style="animation-delay:0.0s"/><circle cx="356" cy="124" r="46" fill="none" stroke="var(--c7)" stroke-width="2.5" class="a-rip" style="animation-delay:1.5s"/><circle cx="356" cy="124" r="54" fill="var(--c7l)" stroke="var(--c7)" stroke-width="2"/><g class="a-bob" style=""><image href="emoji/1fa90.png" x="328.0" y="96.0" width="56" height="56"/></g><text x="356" y="198" class="st" font-size="13" font-weight="800" text-anchor="middle" style="fill:var(--c7)">vũ trụ</text><path d="M318,76 L319.68,80.32 L324,82 L319.68,83.68 L318,88 L316.32,83.68 L312,82 L316.32,80.32 Z" fill="var(--c3)" class="a-tw" style="animation-delay:0.00s"/><path d="M398,86 L399.68,90.32 L404,92 L399.68,93.68 L398,98 L396.32,93.68 L392,92 L396.32,90.32 Z" fill="var(--c3)" class="a-tw" style="animation-delay:0.50s"/><path d="M392,154 L393.68,158.32 L398,160 L393.68,161.68 L392,166 L390.32,161.68 L386,160 L390.32,158.32 Z" fill="var(--c3)" class="a-tw" style="animation-delay:1.00s"/><g><path d="M0,-2.8999999999999995 c-6.8999999999999995,-10.35 -23.0,-4.6 -16.099999999999998,8.049999999999999 l16.099999999999998,14.95 l16.099999999999998,-14.95 c6.8999999999999995,-12.649999999999999 -9.2,-18.4 -16.099999999999998,-8.049999999999999 Z" fill="var(--c8)" class="" style=""/><animateMotion dur="4.2s" repeatCount="indefinite" path="M96,112 C170,30 270,30 300,98 C270,218 170,218 96,148"/></g><text x="200" y="40" class="st" font-size="14" font-weight="800" text-anchor="middle" style="fill:var(--c8)">trao đi</text><text x="200" y="220" class="st" font-size="14" font-weight="800" text-anchor="middle" style="fill:var(--c4)">nhận lại</text><text x="356" y="230" class="st2" font-size="12.5" font-weight="700" text-anchor="middle">như tiếng vọng</text></svg></figure>
+<article class="body-card rv"><p style="--pi:0"><mark>Bạn đang tạo nên cuộc đời mình bằng suy nghĩ và cảm xúc.</mark> Mọi điều bạn nghĩ và cảm nhận đều góp phần tạo nên những chuyện xảy ra và những trải nghiệm trong đời bạn. Nếu bạn nghĩ và cảm thấy: “Hôm nay sẽ là một ngày khó khăn, căng thẳng”, thì bạn sẽ thu hút những con người, hoàn cảnh và sự việc khiến ngày ấy trở nên khó khăn, căng thẳng.</p><p style="--pi:1">Nếu bạn nghĩ và cảm thấy: “Cuộc sống đối xử với mình thật tốt”, bạn sẽ thu hút những con người, hoàn cảnh và sự việc khiến cuộc sống đối xử tốt với bạn.</p></article>
+<div class="totop"><a href="#top">↑ Về đầu trang</a></div></section>
+<section id="p5"><div class="sec-head rv"><div class="badge"><span class="nv">05</span></div><h2>Bạn là một thỏi nam châm</h2></div>
+<article class="body-card rv"><p style="--pi:0">Luật hấp dẫn luôn đem đến cho bạn mọi điều trong cuộc sống dựa trên những gì bạn trao đi. Bạn hút về phía mình và nhận được những hoàn cảnh liên quan đến tiền bạc, sức khỏe, các mối quan hệ, công việc, cùng mọi sự việc và trải nghiệm khác trong đời, dựa trên những suy nghĩ và cảm xúc bạn trao đi. Hãy trao đi những suy nghĩ và cảm xúc tích cực về tiền bạc, bạn sẽ hút về phía mình những hoàn cảnh, con người và sự việc tích cực mang tiền đến cho bạn. Hãy trao đi những suy nghĩ và cảm xúc tiêu cực về tiền bạc, bạn sẽ hút về phía mình những hoàn cảnh, con người và sự việc khiến bạn thiếu tiền.</p></article>
+<figure class="dia rv" id="hinh-7"><span class="fig-lbl"><img class="em" src="emoji/1f3a8.png" alt="🎨" draggable="false"> Hình 7 · Bạn là một thỏi nam châm</span><svg viewBox="0 0 440 250" role="img" aria-label="Một thỏi nam châm hình móng ngựa hút về phía mình tiền bạc, các mối quan hệ, sức khỏe và công việc qua những đường nét đứt hội tụ"><defs></defs><g class="a-sway2"><path d="M168,78 L112,78 A46,46 0 0 0 112,170 L168,170" fill="none" stroke="var(--c1)" stroke-width="26"/><rect x="166" y="65" width="26" height="26" fill="#c9c6d4"/><rect x="166" y="157" width="26" height="26" fill="#c9c6d4"/></g><circle cx="206" cy="124" r="10" fill="var(--c3)" fill-opacity=".25" class="a-glow"/><text x="112" y="216" class="st" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--c1)">suy nghĩ &amp; cảm xúc</text><text x="112" y="232" class="st" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--c1)">bạn trao đi</text><path d="M308,40 C268,40 250,124 212,124" fill="none" stroke="var(--c4)" stroke-width="2" class="a-dash-in" opacity=".75"/><circle r="4.5" fill="var(--c4)"><animateMotion dur="1.9s" begin="-0.00s" repeatCount="indefinite" path="M308,40 C268,40 250,124 212,124"/></circle><g class="a-bob" style="animation-delay:-0.0s"><image href="emoji/1f4b0.png" x="312.0" y="24.0" width="32" height="32"/></g><text x="350" y="44.5" class="st" font-size="12" font-weight="800" text-anchor="start" style="fill:var(--c4)">tiền bạc</text><path d="M308,98 C268,98 250,124 212,124" fill="none" stroke="var(--c8)" stroke-width="2" class="a-dash-in" opacity=".75"/><circle r="4.5" fill="var(--c8)"><animateMotion dur="1.9s" begin="-0.45s" repeatCount="indefinite" path="M308,98 C268,98 250,124 212,124"/></circle><g class="a-bob" style="animation-delay:-0.6s"><image href="emoji/2764-fe0f.png" x="312.0" y="82.0" width="32" height="32"/></g><text x="350" y="102.5" class="st" font-size="12" font-weight="800" text-anchor="start" style="fill:var(--c8)">các mối quan hệ</text><path d="M308,156 C268,156 250,124 212,124" fill="none" stroke="var(--c5)" stroke-width="2" class="a-dash-in" opacity=".75"/><circle r="4.5" fill="var(--c5)"><animateMotion dur="1.9s" begin="-0.90s" repeatCount="indefinite" path="M308,156 C268,156 250,124 212,124"/></circle><g class="a-bob" style="animation-delay:-1.2s"><image href="emoji/1f33f.png" x="312.0" y="140.0" width="32" height="32"/></g><text x="350" y="160.5" class="st" font-size="12" font-weight="800" text-anchor="start" style="fill:var(--c5)">sức khỏe</text><path d="M308,214 C268,214 250,124 212,124" fill="none" stroke="var(--c6)" stroke-width="2" class="a-dash-in" opacity=".75"/><circle r="4.5" fill="var(--c6)"><animateMotion dur="1.9s" begin="-1.35s" repeatCount="indefinite" path="M308,214 C268,214 250,124 212,124"/></circle><g class="a-bob" style="animation-delay:-1.8s"><image href="emoji/1f4bc.png" x="312.0" y="198.0" width="32" height="32"/></g><text x="350" y="218.5" class="st" font-size="12" font-weight="800" text-anchor="start" style="fill:var(--c6)">công việc</text></svg></figure>
+<figure class="quote rv"><div class="avatar" aria-hidden="true">MG</div><div class="qcard"><span class="qtag"><img class="em" src="emoji/1f4ac.png" alt="💬" draggable="false"> Trích dẫn</span><button class="cpy" type="button" aria-label="Sao chép trích dẫn"><img class="em" src="emoji/1f4cb.png" alt="📋" draggable="false"></button><div class="qbody"><p>“Tôi không biết liệu nhân loại có chủ động sống theo quy luật của tình yêu hay không. Nhưng điều đó không làm tôi bận tâm. Quy luật ấy vẫn vận hành như định luật trọng lực, dù chúng ta chấp nhận nó hay không.”</p></div><cite><b class="cn1">Mahatma Gandhi (1869–1948)</b><span class="cr">Lãnh tụ chính trị Ấn Độ</span></cite></div></figure>
+<article class="body-card rv"><p style="--pi:0">Bạn nghĩ và cảm nhận thế nào thì luật hấp dẫn đáp lại như thế ấy, một cách chắc chắn. Dù suy nghĩ và cảm xúc của bạn tốt hay xấu, bạn vẫn đang trao chúng đi. Chúng tự động trở về với bạn, chính xác như tiếng vọng đáp lại những lời bạn nói. Nhưng điều đó cũng có nghĩa là bạn có thể thay đổi cuộc đời bằng cách thay đổi suy nghĩ và cảm xúc của mình. <mark>Hãy trao đi những suy nghĩ và cảm xúc tích cực, và bạn sẽ thay đổi toàn bộ cuộc đời!</mark></p></article>
+<div class="totop"><a href="#top">↑ Về đầu trang</a></div></section>
+<section id="p6"><div class="sec-head rv"><div class="badge"><span class="nv">06</span></div><h2>Suy nghĩ tích cực và tiêu cực</h2></div>
+<article class="body-card rv"><p style="--pi:0">Suy nghĩ của bạn được tạo nên từ những lời bạn nghe thấy trong tâm trí và những lời bạn nói thành tiếng. Khi bạn nói với ai đó: “Hôm nay trời đẹp quá”, trước tiên bạn đã nghĩ điều ấy, rồi mới diễn đạt nó bằng lời. Suy nghĩ của bạn cũng trở thành hành động. Khi thức dậy vào buổi sáng, bạn đã nghĩ đến việc ra khỏi giường trước khi thực sự làm điều đó. Bạn không thể thực hiện một hành động nào mà trước đó chưa nghĩ đến nó.</p><p style="--pi:1">Chính suy nghĩ quyết định lời nói và hành động của bạn sẽ tích cực hay tiêu cực. Nhưng làm sao biết suy nghĩ của mình thuộc loại nào? Suy nghĩ của bạn tích cực khi bạn nghĩ về những điều mình muốn và yêu thích! Suy nghĩ của bạn tiêu cực khi bạn nghĩ về những điều mình không muốn và không yêu thích. Đơn giản chỉ có vậy.</p><p style="--pi:2">Bất cứ điều gì bạn muốn có trong đời, bạn đều muốn nó vì bạn yêu thích nó. Hãy nghĩ về điều này một lát. Bạn đâu muốn những thứ mình không yêu thích, đúng không? Ai cũng chỉ muốn điều mình yêu thích; không ai muốn điều mình không yêu thích.</p><p style="--pi:3">Khi bạn nghĩ hoặc nói về những thứ mình yêu thích, chẳng hạn: “Tôi thích đôi giày đó quá, đẹp thật!”, suy nghĩ của bạn là tích cực. Những suy nghĩ tích cực ấy sẽ trở lại với bạn dưới hình thức những thứ bạn yêu thích, như một đôi giày đẹp. Khi bạn nghĩ hoặc nói về những thứ mình không muốn, không thích, chẳng hạn: “Nhìn giá đôi giày đó kìa, đúng là cắt cổ!”, suy nghĩ của bạn là tiêu cực. Những suy nghĩ tiêu cực ấy sẽ trở lại với bạn dưới hình thức những thứ bạn không thích, chẳng hạn những món đồ quá đắt so với khả năng chi trả của bạn.</p></article>
+<figure class="dia rv" id="hinh-8"><span class="fig-lbl"><img class="em" src="emoji/1f3a8.png" alt="🎨" draggable="false"> Hình 8 · Cùng một đôi giày, hai suy nghĩ</span><svg viewBox="0 0 440 250" role="img" aria-label="Trên: suy nghĩ tôi thích đôi giày đó quá, đẹp thật dẫn tới những thứ bạn yêu thích; dưới: suy nghĩ nhìn giá đôi giày đó kìa, đúng là cắt cổ dẫn tới những thứ quá đắt"><defs><marker id="c18-m0" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--c4)"/></marker><marker id="c18-m1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--gy)"/></marker></defs><g class="a-swapA"><rect x="12" y="29" width="252" height="66" rx="20" fill="var(--c4l)" stroke="var(--c4)" stroke-width="2"/><path d="M40,94 l-8,16 l22,-16 Z" fill="var(--c4)"/><text x="138" y="58" class="st" font-size="13" font-weight="800" text-anchor="middle">“Tôi thích đôi giày đó quá,</text><text x="138" y="77" class="st" font-size="13" font-weight="800" text-anchor="middle">đẹp thật!”</text><path d="M274,62 L310,62" fill="none" stroke="var(--c4)" stroke-width="3" stroke-linecap="round" class="a-dash" style="" marker-end="url(#c18-m0)"/><g class="a-hop" style=""><image href="emoji/1f45f.png" x="344.0" y="34.0" width="44" height="44"/></g><text x="366" y="94" class="st" font-size="11.5" font-weight="800" text-anchor="middle" style="fill:var(--c4)">những thứ</text><text x="366" y="108" class="st" font-size="11.5" font-weight="800" text-anchor="middle" style="fill:var(--c4)">bạn yêu thích</text></g><g class="a-swapB"><rect x="12" y="151" width="252" height="66" rx="20" fill="var(--gyl)" stroke="var(--gy)" stroke-width="2" stroke-dasharray="5 6"/><path d="M40,216 l-8,16 l22,-16 Z" fill="var(--gy)"/><text x="138" y="180" class="st" font-size="13" font-weight="800" text-anchor="middle">“Nhìn giá đôi giày đó kìa,</text><text x="138" y="199" class="st" font-size="13" font-weight="800" text-anchor="middle">đúng là cắt cổ!”</text><path d="M274,184 L310,184" fill="none" stroke="var(--gy)" stroke-width="3" stroke-linecap="round" class="a-dash" style="" marker-end="url(#c18-m1)"/><g class="a-hop" style=""><image href="emoji/1f4b8.png" x="344.0" y="156.0" width="44" height="44"/></g><text x="366" y="216" class="st" font-size="11.5" font-weight="800" text-anchor="middle" style="fill:var(--gy)">quá đắt so với</text><text x="366" y="230" class="st" font-size="11.5" font-weight="800" text-anchor="middle" style="fill:var(--gy)">khả năng chi trả</text></g></svg></figure>
+<article class="body-card rv"><p style="--pi:0">Phần lớn mọi người nghĩ và nói về những điều họ không thích nhiều hơn những điều họ thích. Họ trao đi sự tiêu cực nhiều hơn tình yêu, và vì thế vô tình tự tước đi những điều tốt đẹp trong cuộc sống.</p><p style="--pi:1">Không thể có một cuộc đời tuyệt vời nếu thiếu tình yêu. Những người có cuộc sống tuyệt vời nghĩ và nói về những điều họ yêu thích nhiều hơn những điều họ không yêu thích! Còn những người sống chật vật thì nghĩ và nói về những điều họ không yêu thích nhiều hơn những điều họ yêu thích!</p></article>
+<figure class="quote rv"><div class="avatar" aria-hidden="true">S</div><div class="qcard"><span class="qtag"><img class="em" src="emoji/1f4ac.png" alt="💬" draggable="false"> Trích dẫn</span><button class="cpy" type="button" aria-label="Sao chép trích dẫn"><img class="em" src="emoji/1f4cb.png" alt="📋" draggable="false"></button><div class="qbody"><p>“Một từ giải thoát chúng ta khỏi mọi gánh nặng và nỗi đau của cuộc đời. Từ ấy là tình yêu.”</p></div><cite><b class="cn1">Sophocles (496–406 trước Công nguyên)</b><span class="cr">Nhà viết kịch Hy Lạp</span></cite></div></figure>
+<div class="totop"><a href="#top">↑ Về đầu trang</a></div></section>
+<section id="p7"><div class="sec-head rv"><div class="badge"><span class="nv">07</span></div><h2>Hãy nói về những điều bạn yêu thích</h2></div>
+<article class="body-card rv"><p style="--pi:0">Khi nói về khó khăn tiền bạc, một mối quan hệ trục trặc, bệnh tật, hay thậm chí việc lợi nhuận kinh doanh sụt giảm, bạn đang không nói về những điều mình yêu thích. Khi nói về một tin xấu, một người hoặc một tình huống khiến bạn bực bội hay thất vọng, bạn cũng đang không nói về những điều mình yêu thích. Kể lại rằng mình đã có một ngày tồi tệ, đến muộn một cuộc hẹn, mắc kẹt trong dòng xe cộ hay lỡ chuyến xe buýt là nói về những điều mình không thích. Mỗi ngày có rất nhiều chuyện nhỏ xảy ra; nếu bạn cứ tập trung nói về những chuyện mình không thích, từng chuyện nhỏ ấy sẽ mang thêm vất vả và khó khăn vào cuộc sống của bạn.</p><p style="--pi:1">Bạn cần nói về những tin tốt trong ngày. Hãy nói về cuộc hẹn đã diễn ra tốt đẹp. Hãy nói rằng bạn thích đến đúng giờ. Hãy nói về điều tuyệt vời khi có sức khỏe tốt. Hãy nói về mức lợi nhuận bạn muốn đạt được trong công việc kinh doanh. Hãy nói về những tình huống và những lần tiếp xúc với người khác đã diễn ra tốt đẹp trong ngày. <mark>Bạn cần nói về những điều mình yêu thích để những điều ấy đến với bạn.</mark></p><p style="--pi:2">Nếu cứ lặp lại những điều tiêu cực và than phiền về những điều mình không thích, bạn thực sự đang tự nhốt mình như một con vẹt trong lồng. Mỗi lần nói về điều mình không thích, bạn lại thêm một song sắt vào chiếc lồng ấy và tự ngăn cách mình với mọi điều tốt đẹp.</p><p style="--pi:3">Những người có cuộc sống tuyệt vời nói nhiều hơn về những điều họ yêu thích. Nhờ vậy, họ có thể tiếp cận không giới hạn những điều tốt đẹp trong đời và cảm thấy tự do như chim bay vút lên trời cao. Để có một cuộc đời tuyệt vời, hãy phá những song sắt của chiếc lồng đang giam giữ bạn. Hãy trao đi tình yêu, chỉ nói về những điều mình yêu thích, và tình yêu sẽ giải phóng bạn!</p></article>
+<figure class="dia rv" id="hinh-9"><span class="fig-lbl"><img class="em" src="emoji/1f3a8.png" alt="🎨" draggable="false"> Hình 9 · Chiếc lồng và đôi cánh</span><svg viewBox="0 0 440 256" role="img" aria-label="Bên trái: con vẹt trong lồng, mỗi lời than phiền thêm một song sắt; bên phải: chú chim bay vút lên trời cao — nói về điều mình yêu thích để được tự do"><defs><marker id="c19-m0" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--c8)"/></marker></defs><path d="M50,92 Q50,34 112,34 Q174,34 174,92" fill="none" stroke="var(--gy)" stroke-width="4"/><rect x="40" y="196" width="144" height="12" rx="5" fill="var(--gy)"/><line x1="50" y1="92" x2="174" y2="92" stroke="var(--gy)" stroke-width="4"/><line x1="54" y1="92" x2="54" y2="196" stroke="var(--gy)" stroke-width="3.5" stroke-linecap="round" class="a-bar" style="animation-delay:0.00s"/><line x1="69" y1="92" x2="69" y2="196" stroke="var(--gy)" stroke-width="3.5" stroke-linecap="round" class="a-bar" style="animation-delay:0.45s"/><line x1="84" y1="92" x2="84" y2="196" stroke="var(--gy)" stroke-width="3.5" stroke-linecap="round" class="a-bar" style="animation-delay:0.90s"/><line x1="99" y1="92" x2="99" y2="196" stroke="var(--gy)" stroke-width="3.5" stroke-linecap="round" class="a-bar" style="animation-delay:1.35s"/><line x1="114" y1="92" x2="114" y2="196" stroke="var(--gy)" stroke-width="3.5" stroke-linecap="round" class="a-bar" style="animation-delay:1.80s"/><line x1="129" y1="92" x2="129" y2="196" stroke="var(--gy)" stroke-width="3.5" stroke-linecap="round" class="a-bar" style="animation-delay:2.25s"/><line x1="144" y1="92" x2="144" y2="196" stroke="var(--gy)" stroke-width="3.5" stroke-linecap="round" class="a-bar" style="animation-delay:2.70s"/><line x1="159" y1="92" x2="159" y2="196" stroke="var(--gy)" stroke-width="3.5" stroke-linecap="round" class="a-bar" style="animation-delay:3.15s"/><line x1="174" y1="92" x2="174" y2="196" stroke="var(--gy)" stroke-width="3.5" stroke-linecap="round" class="a-bar" style="animation-delay:3.60s"/><g class="a-sink" style=""><image href="emoji/1f99c.png" x="89.0" y="129.0" width="46" height="46"/></g><text x="112" y="232" class="st" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--gy)">mỗi lời than phiền</text><text x="112" y="248" class="st" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--gy)">= thêm một song sắt</text><path d="M196,140 L236,140" fill="none" stroke="var(--c8)" stroke-width="3" stroke-linecap="round" class="a-dash" style="" marker-end="url(#c19-m0)"/><g class="a-float2"><circle cx="300" cy="196" r="16" fill="var(--c6l)"/><circle cx="322" cy="190" r="20" fill="var(--c6l)"/><circle cx="346" cy="198" r="14" fill="var(--c6l)"/></g><g><image href="emoji/1f54a-fe0f.png" x="-23.0" y="-23.0" width="46" height="46"/><animateMotion dur="6s" repeatCount="indefinite" path="M300,150 C330,90 380,120 360,70 C340,30 290,60 300,150 Z" rotate="0"/></g><path d="M262,47 L263.96,52.04 L269,54 L263.96,55.96 L262,61 L260.04,55.96 L255,54 L260.04,52.04 Z" fill="var(--c3)" class="a-tw" style="animation-delay:0.00s"/><path d="M408,33 L409.96,38.04 L415,40 L409.96,41.96 L408,47 L406.04,41.96 L401,40 L406.04,38.04 Z" fill="var(--c3)" class="a-tw" style="animation-delay:0.50s"/><path d="M414,133 L415.96,138.04 L421,140 L415.96,141.96 L414,147 L412.04,141.96 L407,140 L412.04,138.04 Z" fill="var(--c3)" class="a-tw" style="animation-delay:1.00s"/><path d="M270,113 L271.96,118.04 L277,120 L271.96,121.96 L270,127 L268.04,121.96 L263,120 L268.04,118.04 Z" fill="var(--c3)" class="a-tw" style="animation-delay:1.50s"/><text x="338" y="232" class="st" font-size="12.5" font-weight="800" text-anchor="middle" style="fill:var(--c6)">tự do như chim</text><text x="338" y="248" class="st" font-size="12.5" font-weight="800" text-anchor="middle" style="fill:var(--c6)">bay vút lên trời cao</text></svg></figure>
+<figure class="quote rv"><div class="avatar" aria-hidden="true">CG</div><div class="qcard"><span class="qtag"><img class="em" src="emoji/1f4ac.png" alt="💬" draggable="false"> Trích dẫn</span><button class="cpy" type="button" aria-label="Sao chép trích dẫn"><img class="em" src="emoji/1f4cb.png" alt="📋" draggable="false"></button><div class="qbody"><p>“Các con sẽ biết sự thật, và sự thật sẽ giải phóng các con.”</p></div><cite><b class="cn1">Chúa Giê-su (khoảng năm 5 trước Công nguyên – khoảng năm 30 sau Công nguyên)</b><span class="cr">Người sáng lập Kitô giáo, theo Gio-an 8:32</span></cite></div></figure>
+<article class="body-card rv"><p style="--pi:0">Không điều gì là không thể đối với sức mạnh của tình yêu. Dù bạn là ai, dù đang đối mặt với hoàn cảnh nào, sức mạnh của tình yêu cũng có thể giúp bạn được tự do.</p><p style="--pi:1">Tôi biết một người phụ nữ đã phá vỡ những song sắt giam giữ mình chỉ bằng tình yêu. Sau hai mươi năm sống trong một cuộc hôn nhân có bạo hành, chị rơi vào cảnh nghèo khó và phải một mình nuôi các con. Dù phải đối mặt với nghịch cảnh vô cùng khắc nghiệt, chị không bao giờ để sự oán giận, cơn tức giận hay bất kỳ cảm xúc tiêu cực nào bén rễ trong lòng. Chị không bao giờ nói xấu chồng cũ. Thay vào đó, chị chỉ bày tỏ những suy nghĩ tích cực, nói về ước mơ tìm được một người chồng mới tuyệt vời, đẹp trai, và về ước mơ được đi du lịch châu Âu. Dù không có tiền để đi, chị vẫn nộp đơn xin hộ chiếu, nhận được hộ chiếu và mua vài món đồ nhỏ sẽ cần cho chuyến đi châu Âu mà mình hằng mơ ước.</p><p style="--pi:2">Rồi chị đã gặp được người chồng mới tuyệt vời, đẹp trai ấy. Sau khi kết hôn, họ chuyển đến ngôi nhà nhìn ra biển của anh ở Tây Ban Nha, nơi họ đang sống hạnh phúc đến hôm nay.</p><p style="--pi:3">Người phụ nữ ấy từ chối nói về những điều mình không yêu thích. Chị chọn trao đi tình yêu, nghĩ và nói về những điều mình yêu thích. Nhờ đó, chị thoát khỏi nghịch cảnh và đau khổ, có được một cuộc sống tươi đẹp.</p><p style="--pi:4">Bạn có thể thay đổi cuộc đời mình, vì khả năng nghĩ và nói về những điều mình yêu thích của bạn là không giới hạn. Điều đó cũng cho bạn khả năng không giới hạn để mang mọi điều tốt đẹp vào cuộc sống! Tuy nhiên, sức mạnh bạn có còn lớn hơn việc chỉ nói và nghĩ tích cực về những điều mình yêu thích, bởi luật hấp dẫn đáp lại cả suy nghĩ lẫn cảm xúc của bạn. <mark>Bạn phải cảm nhận tình yêu thì mới có thể sử dụng sức mạnh ấy!</mark></p></article>
+<figure class="quote rv"><div class="avatar" aria-hidden="true">TP</div><div class="qcard"><span class="qtag"><img class="em" src="emoji/1f4ac.png" alt="💬" draggable="false"> Trích dẫn</span><button class="cpy" type="button" aria-label="Sao chép trích dẫn"><img class="em" src="emoji/1f4cb.png" alt="📋" draggable="false"></button><div class="qbody"><p>“Yêu thương là chu toàn luật pháp.”</p></div><cite><b class="cn1">Thánh Phao-lô (khoảng năm 5–67)</b><span class="cr">Tông đồ Kitô giáo, theo Rô-ma 13:10</span></cite></div></figure>
+<div class="totop"><a href="#top">↑ Về đầu trang</a></div></section>
+<section class="sum rv" id="tom-tat"><div class="sum-h"><span class="sum-ic" aria-hidden="true"><img class="em" src="emoji/1f5dd-fe0f.png" alt="🗝️" draggable="false"></span><h2>NHỮNG ĐIỂM CỐT LÕI VỀ SỨC MẠNH</h2></div><ul><li style="--li:0">Tình yêu không yếu đuối, mong manh hay mềm yếu. <mark>Tình yêu là sức mạnh tích cực của sự sống!</mark> Tình yêu là cội nguồn của mọi điều tích cực và tốt đẹp.</li><li style="--li:1">Mọi điều bạn muốn trở thành, muốn làm hoặc muốn có đều bắt nguồn từ tình yêu.</li><li style="--li:2">Sức mạnh tích cực của tình yêu có thể tạo ra bất cứ điều tốt đẹp nào, làm cho những điều tốt đẹp gia tăng và thay đổi bất cứ điều tiêu cực nào trong cuộc sống của bạn.</li><li style="--li:3">Mỗi ngày, trong từng khoảnh khắc, bạn đều lựa chọn yêu thương và sử dụng sức mạnh tích cực ấy... hoặc không.</li><li style="--li:4">Luật hấp dẫn là quy luật của tình yêu, và đó là quy luật đang vận hành trong cuộc đời bạn.</li><li style="--li:5">Bạn trao đi điều gì trong cuộc sống thì sẽ nhận lại điều ấy. Trao đi sự tích cực, bạn sẽ nhận lại sự tích cực; trao đi sự tiêu cực, bạn sẽ nhận lại sự tiêu cực.</li><li style="--li:6">Cuộc sống không đơn thuần là những chuyện xảy đến với bạn; những gì bạn nhận được trong đời đều dựa trên những gì bạn đã trao đi.</li><li style="--li:7">Dù suy nghĩ và cảm xúc của bạn tốt hay xấu, chúng vẫn sẽ tự động trở lại với bạn, chính xác như tiếng vọng đáp lại âm thanh.</li><li style="--li:8">Những người có cuộc sống tuyệt vời nghĩ và nói về những điều họ yêu thích nhiều hơn những điều họ không yêu thích!</li><li style="--li:9">Hãy nói về những tin tốt trong ngày. Hãy nói về những điều bạn yêu thích. Và hãy thu hút những điều ấy đến với mình.</li><li style="--li:10">Khả năng nghĩ và nói về những điều bạn yêu thích của bạn là không giới hạn; vì thế, khả năng thu hút mọi điều tốt đẹp trong cuộc sống đến với bạn cũng không giới hạn!</li><li style="--li:11">Hãy yêu thương, bởi khi yêu thương, bạn đang sử dụng sức mạnh lớn lao nhất trong vũ trụ.</li></ul></section>
+  <div class="done-card rv"><p><img class="em" src="emoji/1f31f.png" alt="🌟" draggable="false"> Bạn đã đi đến cuối phần này.</p><button class="mark" type="button" aria-pressed="false"><span class="m-off"><img class="em" src="emoji/2705.png" alt="✅" draggable="false"> Đánh dấu đã đọc xong</span><span class="m-on"><img class="em" src="emoji/1f389.png" alt="🎉" draggable="false"> Đã đọc xong — giỏi lắm!</span></button></div>
+</main>
+
+<nav class="pager" aria-label="Chuyển phần"><a class="pv rv" href="00-gioi-thieu.html"><span class="pl"><img class="em" src="emoji/2b05-fe0f.png" alt="⬅️" draggable="false"> Phần trước</span><b>Mở đầu — Giới thiệu</b></a><a class="mid rv" href="index.html"><span class="pl"><img class="em" src="emoji/1f5c2-fe0f.png" alt="🗂️" draggable="false"> Mục lục</span><b>Toàn bộ cuốn sách</b></a><a class="nx rv" href="02-suc-manh-va-cam-xuc.html"><span class="pl">Phần sau <img class="em" src="emoji/27a1-fe0f.png" alt="➡️" draggable="false"></span><b>Chương 02 — Sức mạnh và cảm xúc</b></a></nav>
+<footer><span class="fe"><img class="em" src="emoji/1f4d8.png" alt="📘" draggable="false"></span><b>Sức Mạnh</b> — Rhonda Byrne<br>Bản trình bày để đọc riêng hằng ngày. Bản quyền nội dung thuộc về tác giả và nhà xuất bản.</footer>
+
+<div id="findbar" hidden role="search"><input type="search" placeholder="Tìm trong phần này…" aria-label="Tìm trong trang"><span id="fcount">0/0</span><button type="button" data-f="prev" aria-label="Kết quả trước">‹</button><button type="button" data-f="next" aria-label="Kết quả sau">›</button><button type="button" data-f="close" aria-label="Đóng tìm kiếm">✕</button></div>
+<div id="hlsheet" hidden aria-label="Các câu được bôi vàng"><h3><img class="em" src="emoji/1f58d-fe0f.png" alt="🖍️" draggable="false"> Các câu bôi vàng</h3><ol></ol></div>
+<div id="fabs">
+  <button type="button" id="fabFind" aria-label="Tìm trong trang"><img class="em" src="emoji/1f50d.png" alt="🔍" draggable="false"></button>
+  <button type="button" id="fabHl" aria-label="Xem các câu bôi vàng"><img class="em" src="emoji/1f58d-fe0f.png" alt="🖍️" draggable="false"></button>
+  <button type="button" data-act="font" aria-label="Đổi cỡ chữ"><img class="em" src="emoji/1f524.png" alt="🔤" draggable="false"></button>
+  <button type="button" data-act="still" aria-label="Tạm dừng chuyển động"><img class="em" src="emoji/23f8-fe0f.png" alt="⏸️" draggable="false"></button>
+  <button type="button" data-act="dark" data-label="0" aria-label="Chế độ tối"><img class="em" src="emoji/1f319.png" alt="🌙" draggable="false"></button>
+  <button type="button" class="fab-top" data-act="top" aria-label="Về đầu trang"><img class="em" src="emoji/2b06-fe0f.png" alt="⬆️" draggable="false"></button>
+</div>
+<div id="resume" hidden role="status"><p id="resume-t"></p><button class="go" type="button">Đọc tiếp</button><button class="x" type="button" aria-label="Đóng">✕</button></div>
+<div id="lightbox" hidden><button class="lb-close" type="button" aria-label="Đóng">✕</button><img alt=""></div>
+<script>var SM=(function(){
+  var html=document.documentElement,P='suc-manh.';
+  function get(k,d){try{var v=localStorage.getItem(P+k);return v==null?d:JSON.parse(v)}catch(e){return d}}
+  function set(k,v){try{localStorage.setItem(P+k,JSON.stringify(v))}catch(e){}}
+  function dkey(d){d=d||new Date();return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2)}
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  html.classList.add('js');
+
+  /* theme */
+  var mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function isDark(){var t=get('theme','auto');return t==='dark'||(t==='auto'&&!!mq&&mq.matches)}
+  function applyTheme(){html.setAttribute('data-theme',isDark()?'dark':'light');var m=document.querySelector('meta[name=theme-color]');if(m)m.content=isDark()?'#13111b':'#fbf8f3';
+    document.querySelectorAll('[data-act=dark]').forEach(function(b){b.setAttribute('aria-pressed',isDark()?'true':'false');if(b.dataset.label!=='0')b.innerHTML=isDark()?'☀️<span class="bl"> Chế độ đọc sáng</span>':'🌙<span class="bl"> Chế độ đọc tối</span>';else b.textContent=isDark()?'☀️':'🌙'})}
+  function toggleDark(){set('theme',isDark()?'light':'dark');applyTheme()}
+  /* motion */
+  function applyStill(){var s=get('motion','on')==='off'||reduce;html.classList.toggle('still',s);document.querySelectorAll('svg').forEach(function(g){try{g[s?'pauseAnimations':'unpauseAnimations']()}catch(e){}});document.querySelectorAll('[data-act=still]').forEach(function(b){b.setAttribute('aria-pressed',s?'true':'false');b.textContent=s?'▶️':'⏸️';b.title=s?'Bật lại chuyển động':'Tạm dừng chuyển động'})}
+  function toggleStill(){set('motion',get('motion','on')==='off'?'on':'off');applyStill();toast(get('motion','on')==='off'?'⏸️ Đã dừng chuyển động':'▶️ Đã bật chuyển động')}
+  /* font size */
+  var SIZES=[17,19,21,23];
+  function applyFs(){html.style.setProperty('--fs',get('fs',19)+'px')}
+  function cycleFs(){var i=SIZES.indexOf(get('fs',19));var n=SIZES[(i+1)%SIZES.length];set('fs',n);applyFs();toast('🔤 Cỡ chữ '+n)}
+  applyTheme();applyStill();applyFs();
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(){if(get('theme','auto')==='auto')applyTheme()});
+
+  function toast(t){var d=document.createElement('div');d.className='toast';d.textContent=t;document.body.appendChild(d);setTimeout(function(){d.remove()},1700)}
+  function burst(el){if(html.classList.contains('still'))return;var r=el.getBoundingClientRect(),E=['🎉','✨','💖','🌟','🎊','💫','🌈','🥳'];
+    for(var i=0;i<12;i++){var s=document.createElement('span'),a=(-170+Math.random()*160)*Math.PI/180,d=70+Math.random()*90;
+      s.className='burst';s.textContent=E[i%E.length];s.style.left=(r.left+r.width/2)+'px';s.style.top=(r.top+r.height/2)+'px';
+      s.style.setProperty('--dx',(Math.cos(a)*d).toFixed(0)+'px');s.style.setProperty('--dy',(Math.sin(a)*d).toFixed(0)+'px');
+      document.body.appendChild(s);setTimeout(function(x){x.remove()}.bind(null,s),1200)}}
+
+  /* reading days: tính 1 ngày đã đọc khi đọc thật ≥ 2 phút hoặc đánh dấu xong một phần */
+  var lastAct=Date.now();
+  ['scroll','touchstart','keydown','click'].forEach(function(ev){addEventListener(ev,function(){lastAct=Date.now()},{passive:true})});
+  function markDay(){var days=get('days',[]),k=dkey();if(days.indexOf(k)<0){days.push(k);set('days',days.slice(-400))}}
+  setInterval(function(){if(document.visibilityState!=='visible'||Date.now()-lastAct>180000)return;
+    var s=get('sec',{}),k=dkey();s[k]=(s[k]||0)+15;set('sec',s);if(s[k]>=120)markDay();if(SM.onTick)SM.onTick()},15000);
+  function streak(){var days=get('days',[]),n=0,d=new Date();if(days.indexOf(dkey(d))<0)d.setDate(d.getDate()-1);while(days.indexOf(dkey(d))>=0){n++;d.setDate(d.getDate()-1)}return n}
+
+  /* copy prompt / quote */
+  function copyText(t,msg){function fb(){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();
+      try{document.execCommand('copy');toast(msg)}catch(e){toast('Không sao chép được')}a.remove()}
+    if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(function(){toast(msg)},fb);else fb()}
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('[data-prompt]');if(b){copyText(b.dataset.prompt,'✅ Đã sao chép prompt');return}
+    var q=e.target.closest('.cpy');if(q){var c=q.closest('.quote');copyText(c.querySelector('.qbody').innerText.trim()+(c.querySelector('cite')?'\n'+c.querySelector('cite').innerText.trim():''),'📋 Đã sao chép trích dẫn');return}
+    var a=e.target.closest('[data-act]');if(!a)return;var act=a.dataset.act;
+    if(act==='dark')toggleDark();else if(act==='still')toggleStill();else if(act==='font')cycleFs();else if(act==='print')print();
+    else if(act==='top')scrollTo({top:0,behavior:html.classList.contains('still')?'auto':'smooth'});
+  });
+
+  /* lightbox */
+  var lb=document.getElementById('lightbox');
+  if(lb){var lbImg=lb.querySelector('img'),lbX=lb.querySelector('.lb-close'),last=null;
+    document.querySelectorAll('.zoom').forEach(function(b){b.addEventListener('click',function(){var i=b.querySelector('img');last=b;lbImg.src=i.src;lbImg.alt=i.alt;lb.hidden=false;document.body.style.overflow='hidden';lbX.focus()})});
+    function closeLb(){lb.hidden=true;lbImg.removeAttribute('src');document.body.style.overflow='';if(last)last.focus()}
+    lbX.addEventListener('click',closeLb);lb.addEventListener('click',function(e){if(e.target===lb)closeLb()});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!lb.hidden)closeLb()});}
+
+  /* reveal */
+  var rv=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});rv.forEach(function(el){io.observe(el)})}
+  else rv.forEach(function(el){el.classList.add('in')});
+  addEventListener('beforeprint',function(){rv.forEach(function(el){el.classList.add('in')})});
+
+  /* progress bar + top button */
+  var bar=document.getElementById('progress'),topBtn=document.querySelector('.fab-top');
+  function onScroll(){var h=document.documentElement,p=h.scrollTop/((h.scrollHeight-h.clientHeight)||1);
+    if(bar)bar.style.transform='scaleX('+Math.min(1,Math.max(0,p))+')';if(topBtn)topBtn.classList.toggle('on',scrollY>innerHeight*.8)}
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var pimgs=[].slice.call(document.querySelectorAll('.zoom img')),pt=false;
+  function para(){pt=false;if(html.classList.contains('still'))return;pimgs.forEach(function(i){var r=i.parentNode.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;
+    var k=((r.top+r.height/2)-innerHeight/2)/innerHeight;i.style.setProperty('--py',Math.max(-1,Math.min(1,k*-1.2)).toFixed(2)+'%')})}
+  addEventListener('scroll',function(){if(!pt){pt=true;requestAnimationFrame(para)}},{passive:true});para();
+
+  return {get:get,set:set,dkey:dkey,toast:toast,burst:burst,markDay:markDay,streak:streak,onTick:null};
+})();
+</script>
+<script>(function(){
+  var html=document.documentElement,slug=document.body.dataset.slug,main=document.getElementById('doc');
+  /* ---- vị trí đọc ---- */
+  function frac(){var r=main.getBoundingClientRect();return Math.min(1,Math.max(0,(innerHeight*0.3-r.top)/r.height))}
+  function goFrac(f,smooth){var r=main.getBoundingClientRect();scrollTo({top:Math.max(0,r.top+scrollY+f*r.height-innerHeight*0.3),behavior:smooth&&!html.classList.contains('still')?'smooth':'auto'})}
+  var saved=SM.get('pos.'+slug,null),lastSave=0;
+  var heads=[].slice.call(document.querySelectorAll('.sec-head h2,.sum-h h2')),now=document.getElementById('nowsec');
+  addEventListener('scroll',function(){var t=Date.now();
+    if(t-lastSave>700){lastSave=t;var f=frac();if(f>0.01){SM.set('pos.'+slug,{f:f});SM.set('last',{slug:slug,f:f})}}
+    if(now){var cur='';heads.forEach(function(h){if(h.getBoundingClientRect().top<innerHeight*0.3)cur=h.textContent});now.textContent=cur?'📍 '+cur:''}
+  },{passive:true});
+  if(saved&&saved.f>0.03){
+    if(location.hash==='#tiep'){setTimeout(function(){goFrac(saved.f,false)},60)}
+    else{var rs=document.getElementById('resume');document.getElementById('resume-t').textContent='📍 Lần trước bạn đọc phần này đến '+Math.round(saved.f*100)+'%.';
+      rs.hidden=false;rs.querySelector('.go').onclick=function(){rs.hidden=true;goFrac(saved.f,true)};rs.querySelector('.x').onclick=function(){rs.hidden=true};setTimeout(function(){rs.hidden=true},15000)}
+  }
+  /* ---- đánh dấu đã đọc ---- */
+  var mk=document.querySelector('.mark');
+  function syncMark(){mk.setAttribute('aria-pressed',SM.get('done',{})[slug]?'true':'false')}
+  syncMark();
+  mk.addEventListener('click',function(){var d=SM.get('done',{});if(d[slug])delete d[slug];else{d[slug]=SM.dkey();SM.markDay();SM.burst(mk);SM.toast('🎉 Đã ghi nhận bạn đọc xong phần này')}SM.set('done',d);syncMark()});
+  /* ---- số liệu đếm lên ---- */
+  [].forEach.call(document.querySelectorAll('.stat b[data-n]'),function(b,i){var n=+b.dataset.n;if(html.classList.contains('still')||!n){b.textContent=b.dataset.t||n;return}
+    var t0=null,dur=1100+i*140;function step(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/dur);k=1-Math.pow(1-k,3);b.textContent=Math.round(n*k)+(b.dataset.s||'');if(k<1)requestAnimationFrame(step);else b.textContent=b.dataset.t||n}requestAnimationFrame(step)});
+  /* ---- tìm trong trang ---- */
+  var fb=document.getElementById('findbar'),fi=fb.querySelector('input'),fc=document.getElementById('fcount'),hits=[],hi=-1,tm;
+  function clear(){hits.forEach(function(s){var p=s.parentNode;if(!p)return;p.replaceChild(document.createTextNode(s.textContent),s);p.normalize()});hits=[];hi=-1}
+  function find(q){clear();q=q.trim().toLowerCase();if(q.length<2){fc.textContent='0/0';return}
+    var w=document.createTreeWalker(main,NodeFilter.SHOW_TEXT,{acceptNode:function(n){return n.parentNode.closest('.prompt,button,script')?2:(n.nodeValue.toLowerCase().indexOf(q)>=0?1:2)}}),ns=[];
+    while(w.nextNode())ns.push(w.currentNode);
+    ns.forEach(function(n){var v=n.nodeValue,lv=v.toLowerCase(),i,pos=0,frag=document.createDocumentFragment();
+      while((i=lv.indexOf(q,pos))>=0){frag.appendChild(document.createTextNode(v.slice(pos,i)));var s=document.createElement('span');s.className='hit';s.textContent=v.slice(i,i+q.length);frag.appendChild(s);hits.push(s);pos=i+q.length}
+      frag.appendChild(document.createTextNode(v.slice(pos)));n.parentNode.replaceChild(frag,n)});
+    hi=hits.length?0:-1;show()}
+  function show(){hits.forEach(function(s,i){s.classList.toggle('cur',i===hi)});fc.textContent=(hits.length?hi+1:0)+'/'+hits.length;
+    if(hi>=0){var el=hits[hi];var rv=el.closest('.rv');if(rv)rv.classList.add('in');el.scrollIntoView({block:'center',behavior:html.classList.contains('still')?'auto':'smooth'})}}
+  document.getElementById('fabFind').addEventListener('click',function(){fb.hidden=!fb.hidden;this.setAttribute('aria-pressed',String(!fb.hidden));if(!fb.hidden)fi.focus();else clear()});
+  fi.addEventListener('input',function(){clearTimeout(tm);tm=setTimeout(function(){find(fi.value)},220)});
+  fi.addEventListener('keydown',function(e){if(e.key==='Enter'&&hits.length){hi=(hi+(e.shiftKey?-1:1)+hits.length)%hits.length;show()}if(e.key==='Escape'){fb.hidden=true;clear()}});
+  fb.addEventListener('click',function(e){var b=e.target.closest('[data-f]');if(!b)return;var f=b.dataset.f;
+    if(f==='close'){fb.hidden=true;clear();document.getElementById('fabFind').setAttribute('aria-pressed','false');return}
+    if(hits.length){hi=(hi+(f==='next'?1:-1)+hits.length)%hits.length;show()}});
+  /* ---- câu bôi vàng ---- */
+  var hb=document.getElementById('fabHl'),hs=document.getElementById('hlsheet');
+  if(hb){var marks=[].slice.call(main.querySelectorAll('mark')),ol=hs.querySelector('ol');
+    marks.forEach(function(m,i){var li=document.createElement('li');li.textContent=m.textContent;li.onclick=function(){var rv=m.closest('.rv');if(rv)rv.classList.add('in');m.scrollIntoView({block:'center',behavior:'smooth'});m.classList.remove('flash');void m.offsetWidth;m.classList.add('flash');hs.hidden=true;hb.setAttribute('aria-pressed','false')};ol.appendChild(li)});
+    hb.addEventListener('click',function(e){e.stopPropagation();hs.hidden=!hs.hidden;hb.setAttribute('aria-pressed',String(!hs.hidden))});
+    document.addEventListener('click',function(e){if(!hs.hidden&&!hs.contains(e.target)){hs.hidden=true;hb.setAttribute('aria-pressed','false')}});}
+})();</script>
+<script>window.__EMO={"📘": "1f4d8.png", "🗂️": "1f5c2-fe0f.png", "🌙": "1f319.png", "🖨️": "1f5a8-fe0f.png", "⬆️": "2b06-fe0f.png", "💖": "1f496.png", "🌌": "1f30c.png", "✨": "2728.png", "🌍": "1f30d.png", "💫": "1f4ab.png", "🌟": "1f31f.png", "🎨": "1f3a8.png", "📖": "1f4d6.png", "✍️": "270d-fe0f.png", "🧭": "1f9ed.png", "⏱️": "23f1-fe0f.png", "📄": "1f4c4.png", "🧩": "1f9e9.png", "💬": "1f4ac.png", "📋": "1f4cb.png", "🗝️": "1f5dd-fe0f.png", "✅": "2705.png", "🎉": "1f389.png", "⬅️": "2b05-fe0f.png", "➡️": "27a1-fe0f.png", "🖍️": "1f58d-fe0f.png", "🔍": "1f50d.png", "🔤": "1f524.png", "⏸️": "23f8-fe0f.png", "☀️": "2600-fe0f.png", "▶️": "25b6-fe0f.png", "🎊": "1f38a.png", "🌈": "1f308.png", "🥳": "1f973.png", "📍": "1f4cd.png"};</script><script>(function(){
+  var M=window.__EMO||{},ks=Object.keys(M).sort(function(a,b){return b.length-a.length});
+  if(!ks.length)return;
+  var RE=new RegExp(ks.map(function(k){return k.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}).join('|'),'g');
+  var SKIP=/^(SCRIPT|STYLE|TEXTAREA|INPUT|TITLE|PRE|CODE|OPTION)$/;
+  function fix(root){
+    if(!root)return;if(root.nodeType===3)root=root.parentNode;if(!root||SKIP.test(root.nodeName))return;
+    var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:function(n){var p=n.parentNode;if(!p||SKIP.test(p.nodeName))return 2;RE.lastIndex=0;return RE.test(n.nodeValue)?1:2}}),ns=[];
+    while(w.nextNode())ns.push(w.currentNode);
+    ns.forEach(function(n){var v=n.nodeValue,f=document.createDocumentFragment(),last=0,m;RE.lastIndex=0;
+      while((m=RE.exec(v))){f.appendChild(document.createTextNode(v.slice(last,m.index)));var i=document.createElement('img');i.className='em';i.src='emoji/'+M[m[0]];i.alt=m[0];i.draggable=false;f.appendChild(i);last=m.index+m[0].length}
+      f.appendChild(document.createTextNode(v.slice(last)));if(n.parentNode)n.parentNode.replaceChild(f,n)});
+  }
+  fix(document.body);
+  new MutationObserver(function(ms){ms.forEach(function(m){[].forEach.call(m.addedNodes,fix)})}).observe(document.body,{childList:true,subtree:true});
+})();</script>
+</body>
+</html>

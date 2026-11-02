@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="auto" class="chap">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fbf8f3">
+<script>try{var t=JSON.parse(localStorage.getItem("suc-manh.theme")||'"auto"');if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<title>Chương 02 · Sức mạnh và cảm xúc – Sức Mạnh</title>
+<style>
+:root{
+  --bg:#fbf8f3; --paper:#fff; --ink:#1d1b26; --ink2:#46435a; --muted:#6d6a7c; --line:#e9e4da;
+  --red:#d12f45; --red-bg:#fff0f2; --red-bd:#f7c3cb;
+  --orange:#c25e0a; --orange-bg:#fff5e8; --orange-bd:#f6d3a6;
+  --gold:#b98200; --gold-bg:#fff8e1; --gold-bd:#f1dc94;
+  --green:#16794a; --green-bg:#ecfaf2; --green-bd:#b5e6cb;
+  --teal:#0f7c86; --teal-bg:#e9f8f9; --teal-bd:#aee0e4;
+  --blue:#2563c9; --blue-bg:#eef4ff; --blue-bd:#bcd2fb;
+  --purple:#6d3fc0; --purple-bg:#f4efff; --purple-bd:#d6c6fa;
+  --pink:#c02a74; --pink-bg:#fff0f7; --pink-bd:#f6c1dc;
+  --on-c:#fff; --mix:#000;
+  --radius:22px; --shadow:0 1px 2px rgba(30,20,60,.05),0 10px 30px rgba(30,20,60,.08);
+  --shadow2:0 10px 30px rgba(30,20,60,.16);
+  --glass:rgba(255,255,255,.9);
+  --hero:radial-gradient(1100px 500px at 8% -10%,#e2ebff 0,transparent 60%),radial-gradient(900px 520px at 100% 0,#f3e5ff 0,transparent 55%),radial-gradient(900px 420px at 50% 115%,#ffeccc 0,transparent 60%);
+  --blob1:#bcd2fb; --blob2:#ffd6a3;
+  --b1:#8ab4ff; --b2:#ff9ccf; --b3:#c9a7ff; --b4:#7fe0d8; --b5:#ffd27a;
+  --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,"Noto Sans","Helvetica Neue",Arial,sans-serif;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Noto Serif",Georgia,"Times New Roman",serif;
+  --emo:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif;
+  --fs:19px; --lh:1.85;
+  --mk1:#fff4a8; --mk2:#ffd84a; --mk-ink:#1d1b26;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#13111b; --paper:#1c1927; --ink:#ece8f6; --ink2:#c3bed6; --muted:#958fab; --line:#2f2b40;
+    --red:#f2788a; --red-bg:#2c1a21; --red-bd:#5a2c38; --orange:#f39a5b; --orange-bg:#2c2016; --orange-bd:#5a3d22;
+    --gold:#e6bd4f; --gold-bg:#2a2414; --gold-bd:#57491f; --green:#55c98f; --green-bg:#152820; --green-bd:#28513d;
+    --teal:#4cc4cc; --teal-bg:#132628; --teal-bd:#245055; --blue:#7fa9f7; --blue-bg:#161f33; --blue-bd:#2c3f66;
+    --purple:#ad8ef2; --purple-bg:#211a35; --purple-bd:#43356b; --pink:#f17ab6; --pink-bg:#2c1826; --pink-bd:#5b2f4c;
+    --on-c:#15121d; --mix:#fff;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35); --shadow2:0 10px 30px rgba(0,0,0,.45);
+    --glass:rgba(28,25,39,.9);
+    --hero:radial-gradient(1100px 500px at 8% -10%,#1d2648 0,transparent 60%),radial-gradient(900px 520px at 100% 0,#2c1d48 0,transparent 55%),radial-gradient(900px 420px at 50% 115%,#3a2a12 0,transparent 60%);
+    --blob1:#2a3a72; --blob2:#5a3a14;
+    --b1:#2a4a9a; --b2:#7a2a5a; --b3:#4a2f8a; --b4:#1f6a66; --b5:#6a5214;
+    --mk1:#6b520c; --mk2:#8c6a08; --mk-ink:#fff6d8;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#13111b; --paper:#1c1927; --ink:#ece8f6; --ink2:#c3bed6; --muted:#958fab; --line:#2f2b40;
+  --red:#f2788a; --red-bg:#2c1a21; --red-bd:#5a2c38; --orange:#f39a5b; --orange-bg:#2c2016; --orange-bd:#5a3d22;
+  --gold:#e6bd4f; --gold-bg:#2a2414; --gold-bd:#57491f; --green:#55c98f; --green-bg:#152820; --green-bd:#28513d;
+  --teal:#4cc4cc; --teal-bg:#132628; --teal-bd:#245055; --blue:#7fa9f7; --blue-bg:#161f33; --blue-bd:#2c3f66;
+  --purple:#ad8ef2; --purple-bg:#211a35; --purple-bd:#43356b; --pink:#f17ab6; --pink-bg:#2c1826; --pink-bd:#5b2f4c;
+  --on-c:#15121d; --mix:#fff;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35); --shadow2:0 10px 30px rgba(0,0,0,.45);
+  --glass:rgba(28,25,39,.9);
+  --hero:radial-gradient(1100px 500px at 8% -10%,#1d2648 0,transparent 60%),radial-gradient(900px 520px at 100% 0,#2c1d48 0,transparent 55%),radial-gradient(900px 420px at 50% 115%,#3a2a12 0,transparent 60%);
+  --blob1:#2a3a72; --blob2:#5a3a14;
+  --b1:#2a4a9a; --b2:#7a2a5a; --b3:#4a2f8a; --b4:#1f6a66; --b5:#6a5214;
+  --mk1:#6b520c; --mk2:#8c6a08; --mk-ink:#fff6d8;
+  color-scheme:dark;
+}
+.c-purple{--c:var(--purple);--cbg:var(--purple-bg);--cbd:var(--purple-bd)}
+.c-green{--c:var(--green);--cbg:var(--green-bg);--cbd:var(--green-bd)}
+.c-blue{--c:var(--blue);--cbg:var(--blue-bg);--cbd:var(--blue-bd)}
+.c-orange{--c:var(--orange);--cbg:var(--orange-bg);--cbd:var(--orange-bd)}
+.c-red{--c:var(--red);--cbg:var(--red-bg);--cbd:var(--red-bd)}
+.c-teal{--c:var(--teal);--cbg:var(--teal-bg);--cbd:var(--teal-bd)}
+.c-pink{--c:var(--pink);--cbg:var(--pink-bg);--cbd:var(--pink-bd)}
+.c-gold{--c:var(--gold);--cbg:var(--gold-bg);--cbd:var(--gold-bd)}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.75 var(--sans);-webkit-font-smoothing:antialiased;transition:background .3s,color .3s;overflow-x:hidden}
+a{color:var(--blue);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid #f0a020;outline-offset:3px;border-radius:6px}
+p{margin:0 0 1em}
+button{font:inherit;color:inherit}
+.skip{position:absolute;left:-999px;top:0;background:#000;color:#fff;padding:8px 14px;z-index:99}.skip:focus{left:8px}
+#progress{position:fixed;top:0;left:0;height:4px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,#FF3B30,#FF8A00,#E8A500,#28B446,#00B3A6,#0A84FF,#9B51E0,#FF2D78);z-index:90}
+
+/* icon glow + motion (dùng chung) */
+.num,.cn,.badge{position:relative}
+.num::after,.cn::after,.badge::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;box-shadow:0 0 16px 3px color-mix(in srgb,var(--c) 55%,transparent),0 0 40px 10px color-mix(in srgb,var(--c) 26%,transparent);opacity:.5;animation:halo 3.4s ease-in-out infinite alternate}
+.cn::after{box-shadow:0 0 12px 2px color-mix(in srgb,var(--c) 50%,transparent),0 0 26px 6px color-mix(in srgb,var(--c) 22%,transparent)}
+@keyframes halo{to{opacity:1}}
+.nv{display:inline-block;animation:wiggle 4.2s ease-in-out infinite;text-shadow:0 0 10px rgba(255,255,255,.55)}
+.nv.emo{font-family:var(--emo);font-size:1.15em;text-shadow:none;filter:drop-shadow(0 0 6px rgba(255,236,170,.9))}
+@keyframes wiggle{0%,100%{transform:translateY(0) rotate(0)}25%{transform:translateY(-2px) rotate(-5deg)}50%{transform:translateY(1px) rotate(0)}75%{transform:translateY(-1px) rotate(4deg)}}
+.stk{position:absolute;top:-13px;right:-15px;font-size:24px;line-height:1;font-family:var(--emo);filter:drop-shadow(0 0 6px rgba(255,226,150,.95)) drop-shadow(0 2px 3px rgba(0,0,0,.18));animation:floaty 3.6s ease-in-out infinite;z-index:2}
+.cn .stk{font-size:17px;top:-9px;right:-10px}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-5px) rotate(8deg)}}
+@keyframes twinkle{0%,100%{opacity:1}50%{opacity:.55}}
+
+/* floating buttons / dock */
+#fabs{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:65;display:flex;flex-direction:column;gap:10px}
+#fabs button{width:50px;height:50px;border-radius:50%;cursor:pointer;border:1.5px solid var(--line);background:var(--paper);box-shadow:var(--shadow2);font-family:var(--emo);font-size:21px;line-height:1;display:grid;place-items:center;transition:transform .18s,box-shadow .18s}
+#fabs button:hover{transform:translateY(-3px) scale(1.07)}
+#fabs button[aria-pressed="true"]{background:var(--purple-bg);border-color:var(--purple)}
+#fabs .fab-top{opacity:0;pointer-events:none;transition:opacity .25s}
+#fabs .fab-top.on{opacity:1;pointer-events:auto}
+@media (max-width:720px){
+  #fabs{left:50%;right:auto;transform:translateX(-50%);bottom:calc(10px + env(safe-area-inset-bottom));flex-direction:row;gap:4px;padding:6px 10px;border-radius:999px;background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);box-shadow:var(--shadow2)}
+  #fabs button{width:42px;height:42px;font-size:18px;border:0;box-shadow:none;background:transparent}
+  #fabs button[aria-pressed="true"]{background:var(--purple-bg)}
+  #fabs .fab-top{opacity:1;pointer-events:auto}
+}
+
+.toast{position:fixed;left:50%;top:70px;transform:translateX(-50%);z-index:95;background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:999px;font-weight:700;font-size:15px;box-shadow:0 10px 30px rgba(0,0,0,.25);white-space:nowrap}
+.burst{position:fixed;z-index:96;pointer-events:none;font-family:var(--emo);font-size:24px;line-height:1;transform:translate(-50%,-50%);filter:drop-shadow(0 0 6px rgba(255,210,120,.85));animation:burst 1.1s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes burst{to{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1.35) rotate(30deg);opacity:0}}
+#resume{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:70;width:min(560px,calc(100vw - 24px));display:flex;gap:12px;align-items:center;padding:12px 12px 12px 18px;border-radius:18px;background:var(--ink);color:var(--bg);box-shadow:0 18px 44px rgba(0,0,0,.3);font-size:15px;line-height:1.45;animation:up .5s cubic-bezier(.2,.8,.2,1)}
+#resume[hidden]{display:none}
+@keyframes up{from{opacity:0;transform:translate(-50%,20px)}}
+#resume p{margin:0;flex:1}
+#resume .go{flex:0 0 auto;font:800 14.5px var(--sans);padding:10px 16px;border-radius:999px;border:0;cursor:pointer;background:linear-gradient(120deg,var(--purple),var(--pink));color:#fff}
+#resume .x{flex:0 0 auto;border:0;background:none;color:var(--bg);opacity:.75;font-size:18px;cursor:pointer;padding:6px}
+#lightbox{position:fixed;inset:0;z-index:99;background:rgba(10,8,20,.92);display:grid;place-items:center;padding:20px}
+#lightbox[hidden]{display:none}
+#lightbox img{max-width:100%;max-height:100%;border-radius:12px}
+.lb-close{position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:#000;font-size:20px;cursor:pointer}
+
+/* image prompt placeholder */
+.prompt{width:100%;font-size:15px;line-height:1.5}
+.prompt .pl{margin:0 0 8px;font-weight:700;color:var(--c,var(--purple))}
+.prompt code{font-size:14px;background:var(--paper);border:1px solid var(--cbd,var(--line));padding:1px 7px;border-radius:6px}
+.prompt summary{cursor:pointer;color:var(--ink2);font-weight:600}
+.prompt pre{white-space:pre-wrap;word-break:break-word;font:14px/1.55 ui-monospace,Menlo,Consolas,monospace;background:var(--paper);border:1px solid var(--cbd,var(--line));border-radius:12px;padding:12px 14px;margin:10px 0 0;color:var(--ink2)}
+.copy{margin-top:12px;font:800 14.5px var(--sans);padding:10px 18px;border-radius:999px;border:0;cursor:pointer;color:var(--on-c);background:var(--c,var(--purple))}
+
+/* emoji Apple (ảnh) */
+img.em{display:inline-block;width:1.2em;height:1.2em;vertical-align:-.22em;margin:0 .04em;object-fit:contain;-webkit-user-drag:none;user-select:none;pointer-events:none}
+@keyframes bounce{0%,100%{transform:translateY(0) scale(1)}30%{transform:translateY(-7px) scale(1.18) rotate(-8deg)}60%{transform:translateY(1px) scale(.96)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pop{0%{scale:.3;opacity:0}70%{scale:1.12;opacity:1}100%{scale:1}}
+@keyframes rise{0%{transform:translateY(0) rotate(0) scale(.6);opacity:0}12%{opacity:.8}85%{opacity:.7}100%{transform:translateY(-1100px) rotate(var(--r,200deg)) scale(1.05);opacity:0}}
+.fx{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
+.fx i{position:absolute;bottom:-50px;left:var(--x);font-style:normal;font-size:var(--s,26px);line-height:1;filter:drop-shadow(0 0 10px rgba(255,255,255,.8));animation:rise var(--t,14s) linear var(--dl,0s) infinite}
+#progress{box-shadow:0 0 12px rgba(155,81,224,.7)}
+#fabs button{animation:pop .6s cubic-bezier(.2,1.6,.4,1) both}
+#fabs button:nth-child(2){animation-delay:.08s}#fabs button:nth-child(3){animation-delay:.16s}#fabs button:nth-child(4){animation-delay:.24s}#fabs button:nth-child(5){animation-delay:.32s}#fabs button:nth-child(6){animation-delay:.4s}
+#fabs button:hover img.em{animation:bounce .6s ease}
+html.still *,html.still *::before,html.still *::after{animation:none!important;transition:none!important}
+html.still .rv,html.still .rv *,html.still header.book *,html.still .hero *{opacity:1!important;transform:none!important;translate:none!important;scale:none!important;rotate:none!important}
+html.still .rv,html.still .rv p,html.still h1 .w,html.still .sec-head h2{filter:none!important}
+html.still .zoom{clip-path:none!important}
+html.still mark{background-size:100% 80%!important}
+html.still .fx{display:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media print{#fabs,#resume,#progress,.toast,#toolbar,.pic.empty,.cover.empty,#findbar{display:none!important}}
+
+:root{--h1:#1F6FEB;--h2:#5B6CFF;--h3:#7B3FE4;--h4:#00B3D6}
+body{padding-bottom:40px}
+#blobs{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;filter:blur(60px);opacity:.5}
+:root[data-theme="dark"] #blobs{opacity:.34}
+#blobs i{position:absolute;display:block;border-radius:50%}
+#blobs i:nth-child(1){width:46vmin;height:46vmin;left:-8vmin;top:4vmin;background:var(--b1);animation:drift1 34s ease-in-out infinite}
+#blobs i:nth-child(2){width:38vmin;height:38vmin;right:-6vmin;top:18vmin;background:var(--b2);animation:drift2 41s ease-in-out infinite}
+#blobs i:nth-child(3){width:42vmin;height:42vmin;left:24vmin;bottom:-12vmin;background:var(--b3);animation:drift3 47s ease-in-out infinite}
+#blobs i:nth-child(4){width:30vmin;height:30vmin;right:14vmin;bottom:4vmin;background:var(--b4);animation:drift1 39s ease-in-out infinite reverse}
+#blobs i:nth-child(5){width:26vmin;height:26vmin;left:52vmin;top:-8vmin;background:var(--b5);animation:drift2 44s ease-in-out infinite}
+@keyframes drift1{50%{transform:translate(8vmin,6vmin) scale(1.12)}}
+@keyframes drift2{50%{transform:translate(-7vmin,9vmin) scale(.9)}}
+@keyframes drift3{50%{transform:translate(6vmin,-8vmin) scale(1.08)}}
+
+/* toolbar */
+#toolbar{position:sticky;top:0;z-index:60;backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--line)}
+.tb{display:flex;gap:8px;align-items:center;max-width:1180px;margin:0 auto;padding:10px 20px}
+.tb-title{font-size:13px;font-weight:800;letter-spacing:.04em;color:var(--ink2);text-decoration:none;margin-right:auto;display:flex;align-items:center;gap:7px;white-space:nowrap}
+#nowsec{font-size:13px;font-weight:700;color:var(--muted);margin-right:auto;max-width:34ch;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.btn{font:650 13px/1.2 var(--sans);padding:9px 15px;cursor:pointer;background:var(--paper);color:var(--ink);border:1.5px solid var(--line);border-radius:999px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:transform .16s,box-shadow .16s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px);border-color:var(--c);box-shadow:0 6px 18px color-mix(in srgb,var(--c) 26%,transparent)}
+
+/* hero */
+header.book{position:relative;overflow:hidden;text-align:center;padding:66px 18px 60px;color:#fff;background:linear-gradient(120deg,var(--h1),var(--h2),var(--h3),var(--h4),var(--h1));background-size:300% 300%;animation:heroShift 26s ease infinite}
+@keyframes heroShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+header.book::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 120%,rgba(0,0,0,.34),transparent 70%);pointer-events:none}
+header.book .wrap{position:relative;z-index:2;max-width:900px;margin:0 auto}
+.fl{position:absolute;font-size:40px;line-height:1;pointer-events:none;filter:drop-shadow(0 0 14px rgba(255,255,255,.85));z-index:1;animation:pop .9s cubic-bezier(.2,1.6,.4,1) .5s both}
+.fl>img{animation:float1 7s ease-in-out infinite}
+.fl.f1{left:2%;top:4%}.fl.f2{right:3%;top:30%;animation-delay:.7s}.fl.f2>img{animation-name:float2;animation-duration:8.5s}
+@keyframes float1{50%{transform:translate(12px,-18px) rotate(14deg) scale(1.12)}}
+@keyframes float2{50%{transform:translate(-14px,14px) rotate(-14deg) scale(1.1)}}
+.kicker{display:inline-flex;align-items:center;gap:8px;margin:0 0 20px;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.45);padding:7px 16px;border-radius:999px;backdrop-filter:blur(6px)}
+.chapno{display:block;width:max-content;margin:0 auto 14px;font-size:13px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;background:rgba(255,255,255,.95);color:#1c1b2e;padding:6px 18px;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.15)}
+header.book h1{margin:0;font-size:clamp(36px,7.4vw,72px);line-height:1.08;font-weight:850;letter-spacing:-.02em;text-shadow:0 4px 26px rgba(0,0,0,.3);text-wrap:balance}
+.rule-orn{display:flex;align-items:center;justify-content:center;gap:10px;margin:24px auto 0;max-width:300px}
+.rule-orn span{height:3px;flex:1;border-radius:3px;background:linear-gradient(90deg,transparent,#fff)}
+.rule-orn span:last-child{background:linear-gradient(90deg,#fff,transparent)}
+.rule-orn b{font-family:var(--emo);font-size:20px;animation:twinkle 3.6s ease-in-out infinite}
+.sub{max-width:640px;margin:20px auto 0;font-size:17.5px;line-height:1.7;color:rgba(255,255,255,.96)}
+.author{display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-size:13px;font-weight:750;letter-spacing:.1em;text-transform:uppercase;background:rgba(0,0,0,.22);padding:8px 18px;border-radius:999px}
+.stats{display:grid;grid-template-columns:repeat(var(--sn,4),1fr);gap:12px;max-width:640px;margin:30px auto 0}
+.stat{background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.45);border-radius:20px;padding:14px 8px 12px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:transform .2s}
+.stat:hover{transform:translateY(-4px) scale(1.04)}
+.stat .se{display:block;font-family:var(--emo);font-size:24px;line-height:1;margin-bottom:6px;animation:floaty 4s ease-in-out infinite}
+.stat:nth-child(2) .se{animation-delay:-1s}.stat:nth-child(3) .se{animation-delay:-2s}.stat:nth-child(4) .se{animation-delay:-3s}
+.stat b{display:block;font-size:28px;font-weight:850;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat small{display:block;font-size:11.5px;font-weight:700;letter-spacing:.04em;opacity:.95;margin-top:3px;line-height:1.35}
+
+/* main */
+main.wrap{max-width:820px;margin:0 auto;padding:34px 18px 10px}
+.fig{margin:0 0 30px;background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:18px;box-shadow:var(--shadow)}
+.fig-lbl{display:inline-flex;align-items:center;gap:8px;margin:2px 0 14px;font-size:12px;font-weight:850;letter-spacing:.1em;text-transform:uppercase;color:#fff;padding:8px 16px;border-radius:999px;background:linear-gradient(100deg,var(--h1),var(--h3));box-shadow:0 6px 18px color-mix(in srgb,var(--h1) 35%,transparent)}
+.fig .zoom{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;border-radius:18px;overflow:hidden}
+.fig .zoom img{display:block;width:100%;height:auto}
+.fig figcaption{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);font-size:14.5px;color:var(--muted)}
+.fig.empty .prompt{padding:4px 4px 2px}
+
+.sec-head{display:flex;gap:18px;align-items:center;margin:44px 0 18px}
+.sec-head:first-child{margin-top:8px}
+.badge{flex:0 0 auto;width:56px;height:56px;border-radius:18px;display:grid;place-items:center;font:850 21px var(--sans);color:#fff;background:linear-gradient(145deg,var(--h1),var(--h2));--c:var(--h1)}
+.sec-head h2{margin:0;font-size:clamp(24px,3.4vw,34px);line-height:1.2;font-weight:850;letter-spacing:-.01em;text-wrap:balance}
+.body-card{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:30px 36px 14px;box-shadow:var(--shadow);margin:0 0 24px}
+.body-card p{font-size:var(--fs);line-height:var(--lh);margin:0 0 1.05em}
+main>section:first-of-type .body-card:first-of-type>p:first-child::first-letter,main>.body-card:first-of-type>p:first-child::first-letter{float:left;font:800 3.3em/.86 var(--sans);margin:.08em .12em 0 0;background:linear-gradient(145deg,var(--h1),var(--h3));-webkit-background-clip:text;background-clip:text;color:transparent}
+mark{color:var(--mk-ink);font-weight:600;background-color:transparent;background-image:linear-gradient(100deg,var(--mk1),var(--mk2));background-repeat:no-repeat;background-position:0 75%;background-size:100% 80%;padding:.02em .12em;border-radius:5px;-webkit-box-decoration-break:clone;box-decoration-break:clone;transition:background-size 1.3s cubic-bezier(.65,0,.25,1) .55s}
+.js .rv:not(.in) mark{background-size:0% 80%}
+mark.flash{animation:flash 1.6s ease 2}
+@keyframes flash{50%{box-shadow:0 0 0 6px rgba(255,214,90,.6)}}
+.hit{background:#ffd75a;color:#000;border-radius:3px}.hit.cur{background:#ff9f1a;box-shadow:0 0 0 3px rgba(255,159,26,.4)}
+
+.quote{display:grid;grid-template-columns:56px minmax(0,1fr);gap:14px;margin:0 0 24px;align-items:start}
+.avatar{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font:850 17px var(--sans);color:#fff;background:linear-gradient(145deg,var(--purple),var(--pink));box-shadow:0 0 0 4px var(--paper),0 0 0 6px var(--purple-bd),0 8px 20px rgba(109,63,192,.3)}
+.qcard{position:relative;background:var(--gold-bg);border:1.5px solid var(--gold-bd);border-radius:24px;padding:20px 24px 16px;box-shadow:var(--shadow)}
+.qcard::before{content:"";position:absolute;left:-9px;top:20px;width:16px;height:16px;background:var(--gold-bg);border-left:1.5px solid var(--gold-bd);border-bottom:1.5px solid var(--gold-bd);transform:rotate(45deg)}
+.qtag{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:850;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:999px;background:#ffd60a;color:#3a2c00}
+.cpy{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:12px;border:1.5px solid var(--gold-bd);background:var(--paper);cursor:pointer;font-family:var(--emo);font-size:16px}
+.qbody{margin-top:12px;font-size:calc(var(--fs) + 1px);line-height:1.75}
+.qbody p:last-child{margin-bottom:0}
+.quote cite{display:block;margin-top:12px;padding-top:10px;border-top:1px dashed var(--gold-bd);font-style:normal;font-weight:800;color:var(--purple);font-size:15.5px}
+
+.fnr{font-size:.62em;line-height:0;vertical-align:super;margin-left:1px}
+.fnr a{font-weight:800;text-decoration:none;color:var(--purple);background:var(--purple-bg);border:1px solid var(--purple-bd);border-radius:6px;padding:0 4px}
+.notes{margin:0 0 24px;padding:18px 24px 12px;border-radius:22px;background:var(--paper);border:1px dashed var(--line);box-shadow:var(--shadow)}
+.notes h3{margin:0 0 10px;font-size:13px;font-weight:850;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.notes ol{list-style:none;margin:0;padding:0}
+.notes li{font-size:15.5px;line-height:1.65;color:var(--ink2);margin:0 0 8px;scroll-margin-top:90px}
+.notes li:target{background:var(--gold-bg);border-radius:10px;padding:6px 10px}
+.fnb{font-weight:800;text-decoration:none;color:var(--purple)}
+.quote cite .cn1{display:block}
+.quote cite .cr{display:block;margin-top:2px;font-weight:600;font-size:14px;font-style:italic;color:var(--muted)}
+main>.body-card:first-of-type>p.lead:first-child::first-letter{float:none;font:inherit;margin:0}
+.body-card p.lead{font-size:calc(var(--fs) * 1.5);line-height:1.35;font-weight:850;letter-spacing:-.01em;background:linear-gradient(100deg,var(--h1),var(--h3),var(--h2));-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:.7em}
+.sum{margin:44px 0 24px;padding:26px 26px 20px;border-radius:28px;background:linear-gradient(160deg,var(--gold-bg),var(--paper) 62%);border:2px solid var(--gold-bd);box-shadow:var(--shadow);scroll-margin-top:80px}
+.sum-h{display:flex;gap:14px;align-items:center;margin:0 0 18px}
+.sum-ic{flex:0 0 auto;width:54px;height:54px;border-radius:18px;display:grid;place-items:center;font-size:26px;background:linear-gradient(145deg,#ffc400,#ff7a00);box-shadow:0 8px 22px rgba(255,140,0,.35),0 0 30px rgba(255,190,0,.35)}
+.sum-h h2{margin:0;font-size:clamp(18px,2.5vw,23px);font-weight:850;letter-spacing:.05em;line-height:1.3}
+.sum ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.sum li{position:relative;padding:12px 16px 12px 42px;border-radius:16px;background:var(--paper);border:1px solid var(--gold-bd);font-size:calc(var(--fs) - 1px);line-height:1.65;transition:box-shadow .3s}
+.sum li:hover{box-shadow:0 10px 26px rgba(255,150,0,.18)}
+.sum li::before{content:"";position:absolute;left:17px;top:calc(.82em + 6px);width:11px;height:11px;border-radius:50%;background:linear-gradient(145deg,#ffc400,#ff6a00);box-shadow:0 0 0 4px rgba(255,160,0,.2);animation:dotPulse 2.4s ease-in-out infinite;animation-delay:calc(var(--li)*-.2s)}
+@keyframes dotPulse{50%{box-shadow:0 0 0 7px rgba(255,160,0,.1)}}
+.totop{display:flex;justify-content:flex-end;margin:0 0 10px}
+.totop a{font:700 14px var(--sans);color:var(--ink2);text-decoration:none;background:var(--paper);border:1.5px solid var(--line);padding:8px 16px;border-radius:999px;box-shadow:var(--shadow)}
+.pending{background:var(--paper);border:2px dashed color-mix(in srgb,var(--h1) 45%,var(--line));border-radius:26px;padding:26px 28px;font-size:17px;line-height:1.65;color:var(--ink2);margin:0 0 24px}
+.pending b{color:var(--ink)}
+
+.done-card{text-align:center;margin:36px 0 10px;padding:26px 20px;border-radius:26px;background:linear-gradient(var(--paper),var(--paper)) padding-box,linear-gradient(120deg,var(--h1),var(--h3),var(--h4)) border-box;border:2px solid transparent;box-shadow:var(--shadow)}
+.done-card p{margin:0 0 14px;font-weight:700;color:var(--ink2)}
+.mark{font:800 16px var(--sans);padding:13px 24px;border-radius:999px;cursor:pointer;border:0;color:#fff;background:linear-gradient(120deg,var(--h1),var(--h3));box-shadow:0 10px 26px color-mix(in srgb,var(--h1) 35%,transparent);transition:transform .2s}
+.mark:hover{transform:translateY(-2px)}
+.mark .m-on{display:none}.mark[aria-pressed="true"] .m-off{display:none}.mark[aria-pressed="true"] .m-on{display:inline}
+.mark[aria-pressed="true"]{background:var(--green)}
+
+.pager{max-width:820px;margin:30px auto 0;padding:0 18px;display:grid;grid-template-columns:1fr auto 1fr;gap:14px}
+.pager a{display:block;text-decoration:none;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:16px 18px 18px;box-shadow:var(--shadow);transition:transform .2s}
+.pager a:hover{transform:translateY(-3px)}
+.pager .pl{display:inline-flex;gap:8px;align-items:center;font-size:11.5px;font-weight:850;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);padding:8px 14px;border-radius:999px;background:var(--bg);border:1px solid var(--line);margin-bottom:10px}
+.pager b{display:block;font-size:15.5px;line-height:1.4}
+.pager .nx{text-align:right}
+.pager .ghost{visibility:hidden}
+footer{max-width:820px;margin:34px auto 0;padding:22px 18px 110px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:14.5px}
+footer .fe{font-family:var(--emo);font-size:30px;display:block;margin-bottom:8px}
+footer b{color:var(--ink)}
+
+/* find bar + highlight sheet */
+#findbar{position:fixed;top:64px;left:50%;transform:translateX(-50%);z-index:70;width:min(520px,calc(100vw - 24px));display:flex;gap:6px;align-items:center;padding:8px;border-radius:18px;background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);box-shadow:var(--shadow2)}
+#findbar[hidden]{display:none}
+#findbar input{flex:1;min-width:0;font:16px var(--sans);padding:9px 12px;border-radius:12px;border:1.5px solid var(--line);background:var(--paper);color:var(--ink)}
+#findbar span{font-size:13px;font-weight:700;color:var(--muted);min-width:3.5em;text-align:center}
+#findbar button{width:38px;height:38px;border-radius:12px;border:1.5px solid var(--line);background:var(--paper);cursor:pointer;font-size:16px}
+#hlsheet{position:fixed;right:16px;bottom:90px;z-index:70;width:min(420px,calc(100vw - 24px));max-height:60vh;overflow:auto;padding:16px 18px;border-radius:22px;background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);box-shadow:var(--shadow2)}
+#hlsheet[hidden]{display:none}
+#hlsheet h3{margin:0 0 10px;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+#hlsheet ol{margin:0;padding-left:20px}
+#hlsheet li{margin:0 0 10px;font-size:15px;line-height:1.5;cursor:pointer}
+#hlsheet li:hover{color:var(--purple)}
+
+/* ================= MOTION — căng đét ================= */
+/* ánh sáng quét ngang hero */
+header.book::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.3) 50%,transparent 65%);transform:translateX(-100%);animation:sweep 6s ease-in-out 1.6s infinite}
+@keyframes sweep{0%{transform:translateX(-100%)}45%,100%{transform:translateX(100%)}}
+
+header.book .fx i{opacity:.75}
+/* hero vào cảnh */
+header.book .kicker{animation:dropIn .8s cubic-bezier(.2,1.5,.4,1) both}
+header.book .chapno{animation:dropIn .9s cubic-bezier(.2,1.7,.4,1) .12s both}
+@keyframes dropIn{from{opacity:0;translate:0 -40px;scale:.6}}
+header.book h1 .w{display:inline-block;animation:wordPop 1s cubic-bezier(.2,1.5,.35,1) both;animation-delay:calc(.28s + var(--d)*.1s)}
+@keyframes wordPop{from{opacity:0;translate:0 60px;rotate:8deg;scale:.5;filter:blur(10px)}}
+.rule-orn span{animation:grow 1s cubic-bezier(.2,.8,.2,1) .75s both}
+.rule-orn span:first-child{transform-origin:100% 50%}.rule-orn span:last-child{transform-origin:0 50%}
+@keyframes grow{from{scale:0 1}}
+.rule-orn b{display:inline-block;animation:spinIn 1.1s cubic-bezier(.2,1.6,.4,1) .85s both}
+.rule-orn b img{animation:twinkle 2.4s ease-in-out infinite,spin 9s linear infinite}
+@keyframes spinIn{from{opacity:0;scale:0;rotate:-300deg}}
+header.book .sub{animation:fadeUp 1s ease .95s both}
+header.book .author{animation:popIn .8s cubic-bezier(.2,1.7,.4,1) 1.1s both}
+@keyframes fadeUp{from{opacity:0;translate:0 22px;filter:blur(6px)}}
+@keyframes popIn{from{opacity:0;scale:.4}}
+.stat{animation:flipUp .9s cubic-bezier(.2,1.4,.4,1) both;animation-delay:calc(1.2s + var(--k,0)*.11s)}
+@keyframes flipUp{from{opacity:0;translate:0 40px;rotate:x -80deg}}
+.stat .se img{animation:bounce 2.6s ease-in-out infinite;animation-delay:calc(var(--k,0)*.35s)}
+.stat:hover{transform:translateY(-6px) scale(1.07)}
+
+/* nhãn + thẻ chung */
+.js .rv{transition:opacity .8s ease,translate 1s cubic-bezier(.2,1.25,.3,1),scale 1s cubic-bezier(.2,1.25,.3,1),filter .8s ease}
+.js .rv:not(.in){opacity:0;translate:0 50px;scale:.94;filter:blur(8px)}
+
+/* đoạn văn trong thẻ hiện so le */
+.js .body-card p{transition:opacity .7s ease,translate .8s cubic-bezier(.2,1.1,.3,1);transition-delay:calc(.12s + var(--pi,0)*.09s)}
+.js .body-card:not(.in) p{opacity:0;translate:0 26px}
+.body-card{transition:box-shadow .3s,translate 1s cubic-bezier(.2,1.25,.3,1),scale 1s cubic-bezier(.2,1.25,.3,1),opacity .8s,filter .8s}
+.body-card:hover{box-shadow:0 18px 44px color-mix(in srgb,var(--h1) 18%,transparent),var(--shadow)}
+main>.body-card:first-of-type>p:first-child::first-letter,main>section:first-of-type .body-card:first-of-type>p:first-child::first-letter{background-size:200% 200%}
+
+/* hình minh họa: mở rèm + vệt sáng + Ken Burns */
+.fig .zoom{position:relative;clip-path:inset(0 0 0 0 round 18px);transition:clip-path 1.5s cubic-bezier(.75,0,.2,1) .25s}
+.js .fig.rv:not(.in) .zoom{clip-path:inset(0 100% 0 0 round 18px)}
+.fig .zoom::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:radial-gradient(120% 95% at 50% 38%,transparent 52%,rgba(12,6,32,.38) 100%);box-shadow:inset 0 0 46px rgba(12,6,32,.28)}
+.fig .zoom img{transform-origin:50% 30%;translate:0 var(--py,0%);animation:pushIn 20s cubic-bezier(.45,0,.55,1) infinite alternate;will-change:scale,translate}
+@keyframes pushIn{from{scale:var(--zmin,1.06)}to{scale:var(--zmax,1.14)}}
+@keyframes shine{0%{transform:translateX(-120%)}30%,100%{transform:translateX(120%)}}
+.fig-lbl{transition:opacity .7s .3s,translate .8s cubic-bezier(.2,1.5,.4,1) .3s}
+.js .fig.rv:not(.in) .fig-lbl{opacity:0;translate:-40px 0}
+.fig-lbl img{animation:bounce 2.2s ease-in-out infinite}
+
+/* tiêu đề phần nhỏ */
+.sec-head .badge{transition:scale .9s cubic-bezier(.2,1.7,.4,1),rotate .9s cubic-bezier(.2,1.2,.3,1)}
+.js .sec-head.rv:not(.in) .badge{scale:0;rotate:-200deg}
+.sec-head h2{transition:opacity .7s .15s,translate .9s cubic-bezier(.2,1.3,.3,1) .15s,filter .7s .15s}
+.js .sec-head.rv:not(.in) h2{opacity:0;translate:50px 0;filter:blur(6px)}
+.js .sec-head.rv{filter:none!important;scale:none!important;translate:none!important}
+
+/* trích dẫn trượt vào + vòng sáng xoay quanh ảnh đại diện */
+.quote .qcard{transition:opacity .8s,translate 1s cubic-bezier(.2,1.3,.3,1),rotate 1s cubic-bezier(.2,1.3,.3,1)}
+.js .quote.rv:not(.in) .qcard{opacity:0;translate:70px 0;rotate:3deg}
+.quote .avatar{position:relative;transition:opacity .6s,scale .9s cubic-bezier(.2,1.7,.4,1) .2s,rotate .9s .2s}
+.js .quote.rv:not(.in) .avatar{opacity:0;scale:0;rotate:-160deg}
+.avatar::before{content:"";position:absolute;inset:-6px;border-radius:50%;padding:3px;background:conic-gradient(var(--purple),var(--pink),#ffb800,var(--teal),var(--purple));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:spin 3.2s linear infinite}
+.qtag img{animation:bounce 2.4s ease-in-out infinite}
+.js .quote.rv{filter:none!important;scale:none!important;translate:none!important}
+
+/* thẻ “đã đọc xong”: viền gradient xoay + nút phát sáng */
+@property --ang{syntax:'<angle>';inherits:false;initial-value:0deg}
+.done-card{background:linear-gradient(var(--paper),var(--paper)) padding-box,conic-gradient(from var(--ang),var(--h1),var(--h3),var(--h4),var(--h2),var(--h1)) border-box;animation:rot 4s linear infinite}
+@keyframes rot{to{--ang:360deg}}
+.mark{position:relative;overflow:hidden;animation:glow 2.4s ease-in-out infinite}
+.mark::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);transform:translateX(-120%);animation:shine 3.6s ease-in-out 1s infinite}
+@keyframes glow{50%{box-shadow:0 0 0 8px color-mix(in srgb,var(--h1) 18%,transparent),0 14px 34px color-mix(in srgb,var(--h1) 45%,transparent)}}
+.done-card p img{animation:spin 6s linear infinite}
+
+/* phần trước / sau */
+.pager a{transition:transform .35s cubic-bezier(.2,1.5,.4,1),box-shadow .3s,opacity .8s,translate 1s cubic-bezier(.2,1.25,.3,1)}
+.pager a:hover{transform:translateY(-6px) rotate(-1deg);box-shadow:0 18px 40px color-mix(in srgb,var(--h1) 22%,transparent)}
+.pager a:hover .pl img{animation:bounce .7s ease}
+.js .pager a.rv:nth-child(2){transition-delay:.1s}.js .pager a.rv:nth-child(3){transition-delay:.2s}
+
+/* thanh công cụ + chân trang */
+.btn:hover img.em{animation:bounce .6s ease}
+.tb-title img{animation:bounce 3s ease-in-out infinite}
+footer .fe img{animation:floaty 3.5s ease-in-out infinite}
+.notes h3 img,.pending img{animation:bounce 2.6s ease-in-out infinite}
+
+/* câu mở đầu + hộp tóm tắt */
+.body-card p.lead{background-size:200% 100%;animation:leadShift 6s ease-in-out infinite alternate}
+@keyframes leadShift{to{background-position:100% 0}}
+.js .sum.rv li{transition:opacity .6s,translate .75s cubic-bezier(.2,1.35,.3,1),box-shadow .3s;transition-delay:calc(.25s + var(--li,0)*.08s)}
+.js .sum.rv:not(.in) li{opacity:0;translate:-36px 0}
+.js .sum.rv:not(.in) .sum-ic{scale:0;rotate:-180deg}
+.sum-ic{transition:scale .9s cubic-bezier(.2,1.7,.4,1) .1s,rotate .9s .1s}
+.sum-ic img{animation:bounce 2.6s ease-in-out infinite}
+.quote cite .cr{transition:opacity .6s .5s}
+.js .quote.rv:not(.in) cite .cr{opacity:0}
+/* ================= HÌNH MINH HỌA ĐỘNG (SVG) ================= */
+:root{--c1:#FF3B30;--c1l:#FFE9E7;--c2:#FF8A00;--c2l:#FFF1DF;--c3:#E8A500;--c3l:#FFF8DC;--c4:#28B446;--c4l:#E6F8EA;--c5:#00B3A6;--c5l:#DFF7F5;--c6:#0A84FF;--c6l:#E4F0FF;--c7:#9B51E0;--c7l:#F3E9FD;--c8:#FF2D78;--c8l:#FFE7EF;--gy:#8e8aa3;--gyl:#f2f0f7}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--c1:#FF6961;--c1l:#3A1E1C;--c2:#FFA64D;--c2l:#3A2A14;--c3:#FFCC33;--c3l:#3A3214;--c4:#4CD964;--c4l:#173A20;--c5:#40D9CC;--c5l:#123634;--c6:#4DA3FF;--c6l:#152B45;--c7:#BF8CFF;--c7l:#2C1F45;--c8:#FF6B9E;--c8l:#3D1828;--gy:#8a85a3;--gyl:#25222f}}
+:root[data-theme="dark"]{--c1:#FF6961;--c1l:#3A1E1C;--c2:#FFA64D;--c2l:#3A2A14;--c3:#FFCC33;--c3l:#3A3214;--c4:#4CD964;--c4l:#173A20;--c5:#40D9CC;--c5l:#123634;--c6:#4DA3FF;--c6l:#152B45;--c7:#BF8CFF;--c7l:#2C1F45;--c8:#FF6B9E;--c8l:#3D1828;--gy:#8a85a3;--gyl:#25222f}
+
+figure.dia{position:relative;margin:30px 0;padding:22px 20px 18px;background:var(--paper);border-radius:26px;box-shadow:var(--shadow);overflow:hidden;isolation:isolate}
+figure.dia::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:3px;pointer-events:none;background:conic-gradient(from var(--ang),var(--c1),var(--c3),var(--c2),var(--c4),var(--c5),var(--c6),var(--c7),var(--c8),var(--c1));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:rot 6s linear infinite}
+figure.dia::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(70% 60% at 100% 0%,color-mix(in srgb,var(--h1) 12%,transparent),transparent 70%),radial-gradient(60% 55% at 0% 100%,color-mix(in srgb,var(--h3) 12%,transparent),transparent 70%)}
+figure.dia .fig-lbl{background:linear-gradient(100deg,var(--c8),var(--c7));box-shadow:0 6px 18px color-mix(in srgb,var(--c8) 30%,transparent)}
+figure.dia svg{display:block;width:100%;height:auto;max-width:600px;margin:10px auto 0;overflow:visible}
+.st{fill:var(--ink);font-family:var(--sans)}.st2{fill:var(--ink2);font-family:var(--sans)}.sw{fill:#fff;font-family:var(--sans)}
+/* lật 3D khi cuộn tới */
+.js figure.dia.rv{transition:opacity .8s ease,transform 1.1s cubic-bezier(.2,1.25,.3,1),scale 1s cubic-bezier(.2,1.25,.3,1),filter .8s ease,translate 1s cubic-bezier(.2,1.25,.3,1)}
+.js figure.dia.rv:not(.in){transform:perspective(800px) rotateX(28deg)}
+figure.dia:not(.in) svg *{animation-play-state:paused}
+figure.dia .fig-lbl{transition:opacity .7s .35s,translate .8s cubic-bezier(.2,1.5,.4,1) .35s}
+.js figure.dia.rv:not(.in) .fig-lbl{opacity:0;translate:-40px 0}
+
+/* bộ chuyển động trong hình */
+.dia .a-pulse{animation:dPulse 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.14)}}
+.dia .a-glow{animation:dGlow 3s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dGlow{0%,100%{opacity:.55;transform:scale(.94)}50%{opacity:1;transform:scale(1.06)}}
+.dia .a-dash{stroke-dasharray:6 7;animation:dDash 1.1s linear infinite}
+.dia .a-dash-in{stroke-dasharray:6 7;animation:dDash 1.1s linear infinite}
+@keyframes dDash{to{stroke-dashoffset:-26}}
+.dia .a-float{animation:dFloat 4.6s ease-in-out infinite;transform-box:fill-box}
+.dia .a-float2{animation:dFloat 6s ease-in-out infinite reverse;transform-box:fill-box}
+@keyframes dFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.dia .a-bob{animation:dBob 3s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dBob{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-6px) rotate(3deg)}}
+.dia .a-hop{animation:dHop 1.8s cubic-bezier(.3,1.6,.5,1) infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes dHop{0%,100%{transform:translateY(0) scale(1)}40%{transform:translateY(-11px) scale(1.08,.94)}60%{transform:translateY(0) scale(1.1,.9)}}
+.dia .a-spin{animation:dSpin 26s linear infinite;transform-box:fill-box;transform-origin:center}
+.dia .a-spin-slow{animation:dSpin 40s linear infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dSpin{to{transform:rotate(360deg)}}
+.dia .a-rip{animation:dRip 3s ease-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dRip{0%{transform:scale(.7);opacity:.9}100%{transform:scale(1.9);opacity:0}}
+.dia .a-tw{animation:dTw 2.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dTw{0%,100%{transform:scale(.4) rotate(0);opacity:.3}50%{transform:scale(1.25) rotate(45deg);opacity:1}}
+.dia .a-draw{stroke-dasharray:100;animation:dDraw 6s ease-in-out infinite}
+@keyframes dDraw{0%{stroke-dashoffset:100}55%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:-100}}
+.dia .a-fall{animation:dFall 5s ease-in infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dFall{0%,35%{transform:none;opacity:1}75%{transform:translateY(26px) rotate(var(--rot,8deg));opacity:0}76%{transform:translateY(-14px);opacity:0}100%{transform:none;opacity:1}}
+.dia .a-rain{animation:dRain 1.1s linear infinite}
+@keyframes dRain{0%{transform:translateY(-6px);opacity:0}30%{opacity:.9}100%{transform:translateY(12px);opacity:0}}
+.dia .a-rise{animation:dRise 3.6s ease-in-out infinite;transform-box:fill-box}
+@keyframes dRise{0%,100%{transform:translateY(5px)}50%{transform:translateY(-5px)}}
+.dia .a-fade{animation:dFade 4.4s ease-in-out infinite}
+@keyframes dFade{0%,30%{opacity:1;transform:none}60%,80%{opacity:.25;transform:translateY(8px)}100%{opacity:1;transform:none}}
+.dia .a-sink{animation:dSink 4.5s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes dSink{0%,100%{transform:rotate(-3deg) translateY(0)}50%{transform:rotate(-9deg) translateY(5px)}}
+.dia .a-sway2{animation:dSway 3.6s ease-in-out infinite;transform-box:fill-box;transform-origin:100% 50%}
+@keyframes dSway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+.dia .a-pop{animation:dPop 8s cubic-bezier(.3,1.6,.5,1) infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dPop{0%{transform:scale(.3);opacity:0}8%,88%{transform:scale(1);opacity:1}100%{transform:scale(.3);opacity:0}}
+.dia .a-swapA{animation:dSwapA 7s ease-in-out infinite}
+.dia .a-swapB{animation:dSwapB 7s ease-in-out infinite}
+@keyframes dSwapA{0%,40%{opacity:1}50%,90%{opacity:.18}100%{opacity:1}}
+@keyframes dSwapB{0%,40%{opacity:.18}50%,90%{opacity:1}100%{opacity:.18}}
+.dia .a-knob{animation:dKnob 6s cubic-bezier(.5,1.5,.5,1) infinite}
+@keyframes dKnob{0%,40%{transform:translateX(0)}50%,90%{transform:translateX(34px)}100%{transform:translateX(0)}}
+.dia .a-on{animation:dOn 6s ease infinite}
+.dia .a-off{animation:dOff 6s ease infinite}
+@keyframes dOn{0%,40%{opacity:0}50%,90%{opacity:1}100%{opacity:0}}
+@keyframes dOff{0%,40%{opacity:1}50%,90%{opacity:0}100%{opacity:1}}
+.dia .a-bar{animation:dBar 9s ease infinite;transform-box:fill-box;transform-origin:50% 0}
+@keyframes dBar{0%{transform:scaleY(0);opacity:0}6%,80%{transform:scaleY(1);opacity:1}92%,100%{transform:scaleY(0);opacity:0}}
+html.still .dia svg *{animation:none!important}
+
+/* ảnh chèn giữa bài */
+figure.inimg{margin:-6px 0 28px;border-radius:24px;overflow:hidden;background:var(--paper);box-shadow:var(--shadow);border:1px solid var(--line)}
+figure.inimg .zoom{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;overflow:hidden}
+figure.inimg img{display:block;width:100%;height:auto;animation:inBreathe 7s ease-in-out infinite;transform-origin:50% 50%}
+@keyframes inBreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
+.js figure.inimg.rv:not(.in){transform:perspective(800px) rotateX(-18deg)}
+.js figure.inimg.rv{transition:opacity .8s ease,transform 1.1s cubic-bezier(.2,1.25,.3,1),scale 1s cubic-bezier(.2,1.25,.3,1),filter .8s ease,translate 1s cubic-bezier(.2,1.25,.3,1)}
+html.still figure.inimg img{animation:none}
+
+/* chương 2 */
+.dia .a-launch{animation:dLaunch 3.4s ease-in-out infinite}
+@keyframes dLaunch{0%,100%{transform:translateY(6px)}50%{transform:translateY(-22px)}}
+.dia .a-flame{animation:dFlick .35s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes dFlick{0%,100%{transform:scale(1,1)}50%{transform:scale(.82,1.18)}}
+.dia .a-fill{animation:dFillX 6s ease-in-out infinite;transform-box:fill-box;transform-origin:0 50%}
+@keyframes dFillX{0%{transform:scaleX(0)}55%,90%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+.dia .a-fillup{animation:dFillY 7.2s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes dFillY{0%,6%{transform:scaleY(.06)}70%,92%{transform:scaleY(1)}100%{transform:scaleY(.06)}}
+.dia .a-listin{animation:dListIn 7.2s ease-out infinite both}
+@keyframes dListIn{0%{opacity:0;transform:translateX(-16px)}8%,88%{opacity:1;transform:none}96%,100%{opacity:0;transform:none}}
+.dia .a-slide{animation:dSlide 6s cubic-bezier(.5,1.4,.5,1) infinite}
+@keyframes dSlide{0%,25%{transform:translateX(0)}55%,90%{transform:translateX(152px)}100%{transform:translateX(0)}}
+.dia .a-eq{animation:dEq 1s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes dEq{from{transform:scaleY(.22)}to{transform:scaleY(1)}}
+.dia .a-knobspin{animation:dKnob2 4s cubic-bezier(.5,1.3,.5,1) infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dKnob2{0%,15%{transform:rotate(-120deg)}55%,85%{transform:rotate(120deg)}100%{transform:rotate(-120deg)}}
+.dia .a-tip{animation:dTip 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:20% 80%}
+@keyframes dTip{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(6deg)}}
+.dia .a-ticker{animation:dTicker 12s linear infinite}
+@keyframes dTicker{to{transform:translateX(-372px)}}
+.dia .a-strike{stroke-dasharray:100;animation:dStrike 5s ease-in-out infinite}
+@keyframes dStrike{0%,10%{stroke-dashoffset:100}35%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:100}}
+
+figure.inimg.tall{max-width:540px;margin-left:auto;margin-right:auto;margin-top:6px}
+
+/* chương 3 */
+.dia .a-slide2{animation:dSlide2 6s cubic-bezier(.5,1.3,.5,1) infinite}
+@keyframes dSlide2{0%,40%{transform:translateX(0)}50%,90%{transform:translateX(260px)}100%{transform:translateX(0)}}
+.dia .a-flipA{animation:dFlipA 6s ease-in-out infinite both;transform-box:fill-box;transform-origin:center}
+.dia .a-flipB{animation:dFlipB 6s ease-in-out infinite both;transform-box:fill-box;transform-origin:center}
+@keyframes dFlipA{0%,40%{transform:scaleX(1)}48%,92%{transform:scaleX(0)}100%{transform:scaleX(1)}}
+@keyframes dFlipB{0%,48%{transform:scaleX(0)}56%,92%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+.dia .a-spinfast{animation:dSpin 2.2s linear infinite;transform-box:fill-box;transform-origin:center}
+.dia .a-tilt{animation:dTilt 5s cubic-bezier(.5,1.4,.5,1) infinite;transform-origin:220px 96px}
+@keyframes dTilt{0%,15%{transform:rotate(0)}45%,90%{transform:rotate(-9deg)}100%{transform:rotate(0)}}
+.dia .a-panL{animation:dPanL 5s cubic-bezier(.5,1.4,.5,1) infinite}
+.dia .a-panR{animation:dPanR 5s cubic-bezier(.5,1.4,.5,1) infinite}
+@keyframes dPanL{0%,15%{transform:translateY(0)}45%,90%{transform:translateY(19px)}100%{transform:translateY(0)}}
+@keyframes dPanR{0%,15%{transform:translateY(0)}45%,90%{transform:translateY(-19px)}100%{transform:translateY(0)}}
+
+/* chương 4 */
+.dia .a-echo{animation:dEcho 1.8s ease-out infinite}
+@keyframes dEcho{0%{opacity:0;transform:translateX(-8px)}30%{opacity:1}100%{opacity:0;transform:translateX(10px)}}
+.dia .a-copy{animation:dCopy 3s ease-in-out infinite}
+@keyframes dCopy{0%,10%{transform:translateX(-30px);opacity:0}40%,70%{transform:translateX(0);opacity:1}100%{transform:translateX(30px);opacity:0}}
+.dia .a-sway-h{animation:dSwayH 2.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 0}
+@keyframes dSwayH{0%,100%{transform:rotate(-10deg)}50%{transform:rotate(10deg)}}
+.dia .a-blink{animation:dBlink 2.4s ease-in-out infinite}
+@keyframes dBlink{0%,100%{opacity:.25}50%{opacity:.55}}
+/* nhãn bước trong thẻ nội dung */
+.body-card p.step{display:inline-flex;align-items:center;margin:.4em 0 .7em;padding:7px 18px 7px 8px;border-radius:999px;font-weight:850;letter-spacing:.08em;color:#fff;background:linear-gradient(100deg,var(--h1),var(--h3));box-shadow:0 8px 22px color-mix(in srgb,var(--h1) 32%,transparent);font-size:calc(var(--fs) - 2px)}
+.body-card p.step::before{content:"";width:12px;height:12px;border-radius:50%;background:#fff;margin:0 10px 0 6px;box-shadow:0 0 0 4px rgba(255,255,255,.35);animation:dotPulse 2s ease-in-out infinite}
+
+/* chương 5 */
+.dia .a-field{animation:dField 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dField{0%,100%{transform:scale(.92)}50%{transform:scale(1.06)}}
+.dia .a-shrinkin{animation:dShrinkIn 4.4s cubic-bezier(.6,0,.4,1) infinite both}
+@keyframes dShrinkIn{0%,20%{transform:none;opacity:1}75%{transform:translate(var(--dx),var(--dy)) scale(.05);opacity:.2}76%,100%{transform:translate(var(--dx),var(--dy)) scale(0);opacity:0}}
+.dia .a-check{animation:dCheck 7s ease infinite both}
+@keyframes dCheck{0%,5%{opacity:0;transform:scale(.3)}12%,90%{opacity:1;transform:none}100%{opacity:0}}
+.dia .a-pour{animation:dPour 7s ease-in-out infinite}
+@keyframes dPour{0%,8%{transform:translateY(190px)}70%,90%{transform:translateY(0)}100%{transform:translateY(190px)}}
+.dia .a-wave{animation:dWaveX 1.6s linear infinite}
+@keyframes dWaveX{to{transform:translateX(-40px)}}
+.dia .a-vanish{animation:dVanish 7s ease-in-out infinite}
+.dia .a-vanish:nth-of-type(1){}
+@keyframes dVanish{0%,20%{opacity:1;transform:none}60%,92%{opacity:0;transform:translateY(-8px) scale(.85)}100%{opacity:1;transform:none}}
+.dia .a-gallop{animation:dGallop .9s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes dGallop{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-4px) rotate(-6deg)}}
+.dia .a-grow{animation:dGrow 3.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dGrow{0%,100%{transform:scale(.8)}60%{transform:scale(1.25)}}
+.dia .a-shrink{animation:dShrink2 3.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dShrink2{0%,15%{transform:scale(1);opacity:1}70%,90%{transform:scale(.3);opacity:.25}100%{transform:scale(1);opacity:1}}
+
+
+@media (max-width:860px){#nowsec{display:none}}
+@media (max-width:720px){
+  .tb{padding:8px 12px}
+  .tb .btn[data-act]{display:none}
+  .bl{display:none}
+  .tb a.btn .bl{display:inline}
+  header.book{padding:44px 14px 42px}
+  header.book .wrap::before,header.book .wrap::after{font-size:26px}
+  .kicker{font-size:10.5px;letter-spacing:.08em;padding:6px 12px}
+  .sub{font-size:16px}
+  .stats{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+  .stat{flex:0 1 calc(33.33% - 6px);padding:10px 4px 9px;border-radius:16px}
+  .stat .se{font-size:19px;margin-bottom:4px}.stat b{font-size:21px}.stat small{font-size:10.5px}
+  .pager .pl{font-size:10.5px;letter-spacing:.06em;padding:6px 10px}
+  .sum{padding:20px 14px 14px;border-radius:22px}
+  .sum li{padding:10px 12px 10px 36px}
+  .sum li::before{left:14px}
+  .sum-ic{width:46px;height:46px;font-size:22px;border-radius:15px}
+  .pager b{font-size:14.5px}
+  main.wrap{padding:24px 12px 6px}
+  .body-card{padding:22px 18px 8px;border-radius:22px}
+  .sec-head{gap:14px;margin-top:34px}
+  .badge{width:46px;height:46px;border-radius:15px;font-size:18px}
+  .quote{grid-template-columns:minmax(0,1fr)}
+  .avatar{width:44px;height:44px;font-size:15px;margin-left:14px;margin-bottom:-6px;position:relative;z-index:1}
+  .qcard::before{display:none}
+  .qcard{padding:18px 18px 14px}
+  .pager{grid-template-columns:1fr 1fr;padding:0 12px}
+  .pager .mid{grid-column:1/-1;grid-row:1}
+  .pager .ghost{display:none}
+  #hlsheet{right:12px;bottom:80px}
+  #findbar{top:58px}
+  footer{padding-bottom:120px}
+}
+</style>
+</head>
+<body data-slug="02-suc-manh-va-cam-xuc" data-name="Sức mạnh và cảm xúc">
+<div id="blobs" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+<div id="progress" aria-hidden="true"></div>
+<div id="toolbar"><div class="tb">
+  <a class="tb-title" href="index.html"><img class="em" src="emoji/1f4d8.png" alt="📘" draggable="false"> Sức Mạnh</a>
+  <span id="nowsec" aria-live="polite"></span>
+  <a class="btn" href="index.html"><img class="em" src="emoji/1f5c2-fe0f.png" alt="🗂️" draggable="false"><span class="bl"> Mục lục sách</span></a>
+  <button class="btn" type="button" data-act="dark" aria-pressed="false"><img class="em" src="emoji/1f319.png" alt="🌙" draggable="false"><span class="bl"> Chế độ đọc tối</span></button>
+  <button class="btn" type="button" data-act="print"><img class="em" src="emoji/1f5a8-fe0f.png" alt="🖨️" draggable="false"><span class="bl"> In / Lưu PDF</span></button>
+  <button class="btn" type="button" data-act="top"><img class="em" src="emoji/2b06-fe0f.png" alt="⬆️" draggable="false"><span class="bl"> Về đầu trang</span></button>
+</div></div>
+
+<header class="book c-blue" id="top">
+  <div class="fx" aria-hidden="true"><i style="--x:6.2%;--t:11.2s;--dl:-2.8s;--s:30px;--r:217deg"><img class="em" src="emoji/1f30a.png" alt="🌊" draggable="false"></i><i style="--x:31.2%;--t:15.7s;--dl:-2.3s;--s:24px;--r:263deg"><img class="em" src="emoji/2600-fe0f.png" alt="☀️" draggable="false"></i><i style="--x:75.1%;--t:17.3s;--dl:-3.2s;--s:21px;--r:251deg"><img class="em" src="emoji/1f497.png" alt="💗" draggable="false"></i><i style="--x:29.6%;--t:14.3s;--dl:-9.2s;--s:26px;--r:-123deg"><img class="em" src="emoji/1f308.png" alt="🌈" draggable="false"></i><i style="--x:72.9%;--t:16.6s;--dl:-8.8s;--s:20px;--r:-108deg"><img class="em" src="emoji/2728.png" alt="✨" draggable="false"></i><i style="--x:25.3%;--t:12.6s;--dl:-0.2s;--s:28px;--r:-260deg"><img class="em" src="emoji/1f4ab.png" alt="💫" draggable="false"></i><i style="--x:55.7%;--t:18.9s;--dl:-12.5s;--s:20px;--r:290deg"><img class="em" src="emoji/1f31f.png" alt="🌟" draggable="false"></i><i style="--x:40.5%;--t:12.8s;--dl:-14.2s;--s:27px;--r:221deg"><img class="em" src="emoji/1f496.png" alt="💖" draggable="false"></i><i style="--x:43.0%;--t:15.0s;--dl:-7.0s;--s:30px;--r:-240deg"><img class="em" src="emoji/1f30a.png" alt="🌊" draggable="false"></i><i style="--x:81.4%;--t:14.1s;--dl:-15.7s;--s:31px;--r:239deg"><img class="em" src="emoji/2600-fe0f.png" alt="☀️" draggable="false"></i><i style="--x:23.3%;--t:16.0s;--dl:-3.8s;--s:28px;--r:-93deg"><img class="em" src="emoji/1f497.png" alt="💗" draggable="false"></i><i style="--x:94.0%;--t:14.6s;--dl:-14.5s;--s:25px;--r:151deg"><img class="em" src="emoji/1f308.png" alt="🌈" draggable="false"></i></div>
+  <div class="wrap"><span class="fl f1" aria-hidden="true"><img class="em" src="emoji/1f30a.png" alt="🌊" draggable="false"></span><span class="fl f2" aria-hidden="true"><img class="em" src="emoji/2600-fe0f.png" alt="☀️" draggable="false"></span>
+    <p class="kicker"><img class="em" src="emoji/1f3a8.png" alt="🎨" draggable="false"> Sách · Sức Mạnh</p>
+    <p class="chapno"><img class="em" src="emoji/1f4d6.png" alt="📖" draggable="false"> Chương 02</p>
+    <h1><span class="w" style="--d:0">Sức</span> <span class="w" style="--d:1">mạnh</span> <span class="w" style="--d:2">và</span> <span class="w" style="--d:3">cảm</span> <span class="w" style="--d:4">xúc</span></h1>
+    <div class="rule-orn" aria-hidden="true"><span></span><b><img class="em" src="emoji/2728.png" alt="✨" draggable="false"></b><span></span></div>
+    <p class="sub">“Bạn càng cảm thấy tốt, cuộc sống càng trở nên tốt đẹp.”</p>
+    <p class="author"><img class="em" src="emoji/270d-fe0f.png" alt="✍️" draggable="false"> Rhonda Byrne</p>
+    <div class="stats" style="--sn:6"><div class="stat" style="--k:0"><span class="se" aria-hidden="true"><img class="em" src="emoji/1f9ed.png" alt="🧭" draggable="false"></span><b data-t="2/12">2/12</b><small>chương</small></div><div class="stat" style="--k:1"><span class="se" aria-hidden="true"><img class="em" src="emoji/23f1-fe0f.png" alt="⏱️" draggable="false"></span><b data-n="14">14</b><small>phút đọc</small></div><div class="stat" style="--k:2"><span class="se" aria-hidden="true"><img class="em" src="emoji/1f4c4.png" alt="📄" draggable="false"></span><b data-n="33">33</b><small>đoạn văn</small></div><div class="stat" style="--k:3"><span class="se" aria-hidden="true"><img class="em" src="emoji/1f9e9.png" alt="🧩" draggable="false"></span><b data-n="6">6</b><small>phần nhỏ</small></div><div class="stat" style="--k:4"><span class="se" aria-hidden="true"><img class="em" src="emoji/1f4ac.png" alt="💬" draggable="false"></span><b data-n="4">4</b><small>trích dẫn</small></div><div class="stat" style="--k:5"><span class="se" aria-hidden="true"><img class="em" src="emoji/1f3a8.png" alt="🎨" draggable="false"></span><b data-n="10">10</b><small>hình minh họa</small></div></div>
+  </div>
+</header>
+
+<main class="wrap c-blue" id="doc">
+<figure class="fig rv"><span class="fig-lbl"><img class="em" src="emoji/1f3a8.png" alt="🎨" draggable="false"> Hình minh họa · Chương 2</span><button class="zoom" type="button" aria-label="Phóng to ảnh"><img src="images/chuong_02.jpg" width="1536" height="1024" alt="Ảnh minh họa: Sức mạnh và cảm xúc" decoding="async" style="--zmax:1.09;--zmin:1.03"></button></figure>
+<figure class="quote rv"><div class="avatar" aria-hidden="true">NG</div><div class="qcard"><span class="qtag"><img class="em" src="emoji/1f4ac.png" alt="💬" draggable="false"> Trích dẫn</span><button class="cpy" type="button" aria-label="Sao chép trích dẫn"><img class="em" src="emoji/1f4cb.png" alt="📋" draggable="false"></button><div class="qbody"><p>“Cảm nhận chính là bí mật.”</p></div><cite><b class="cn1">Neville Goddard (1905–1972)</b><span class="cr">Tác giả thuộc phong trào Tư tưởng Mới</span></cite></div></figure>
+<section id="p1"><div class="sec-head rv"><div class="badge"><span class="nv">01</span></div><h2>Bạn là một sinh thể biết cảm nhận</h2></div>
+<article class="body-card rv"><p style="--pi:0">Từ khi chào đời, bạn luôn cảm nhận một điều gì đó, và mọi người khác cũng vậy. Khi ngủ, dòng suy nghĩ có ý thức của bạn có thể tạm ngừng, nhưng bạn không bao giờ ngừng cảm nhận, bởi sống chính là cảm nhận cuộc sống. Bạn là một sinh thể biết cảm nhận đến tận sâu bên trong; vì thế, chẳng phải ngẫu nhiên mà mọi bộ phận trong cơ thể bạn đều được tạo ra để cảm nhận cuộc sống!</p><p style="--pi:1">Bạn có thị giác, thính giác, vị giác, khứu giác và xúc giác để có thể cảm nhận mọi thứ trong đời. Đó là những giác quan giúp bạn “cảm nhận”: cảm nhận điều mình nhìn thấy, điều mình nghe thấy, hương vị mình nếm được, mùi mình ngửi thấy và những gì mình chạm vào. Toàn bộ cơ thể bạn được bao phủ bởi một lớp da mỏng — một cơ quan cảm giác giúp bạn cảm nhận thế giới xung quanh.</p></article>
+<figure class="dia rv" id="hinh-1"><span class="fig-lbl"><img class="em" src="emoji/1f3a8.png" alt="🎨" draggable="false"> Hình 1 · Bạn là một sinh thể biết cảm nhận</span><svg viewBox="0 0 440 300" role="img" aria-label="Một người ở giữa với trái tim đập, năm giác quan thị giác, thính giác, vị giác, khứu giác, xúc giác xếp quanh và truyền cảm nhận vào người ấy"><defs></defs><circle cx="220" cy="140" r="62" fill="var(--c8)" fill-opacity=".16" class="a-glow"/><circle cx="220" cy="140" r="40" fill="none" stroke="var(--c8)" stroke-width="2" class="a-rip" style="animation-delay:0.0s"/><circle cx="220" cy="140" r="40" fill="none" stroke="var(--c8)" stroke-width="2" class="a-rip" style="animation-delay:1.5s"/><line x1="220.0" y1="42.0" x2="220" y2="140" stroke="var(--c6)" stroke-width="2" stroke-linecap="round" class="a-dash" opacity=".75"/><line x1="370.3" y1="109.7" x2="220" y2="140" stroke="var(--c7)" stroke-width="2" stroke-linecap="round" class="a-dash" opacity=".75"/><line x1="312.9" y1="219.3" x2="220" y2="140" stroke="var(--c8)" stroke-width="2" stroke-linecap="round" class="a-dash" opacity=".75"/><line x1="127.1" y1="219.3" x2="220" y2="140" stroke="var(--c2)" stroke-width="2" stroke-linecap="round" class="a-dash" opacity=".75"/><line x1="69.7" y1="109.7" x2="220" y2="140" stroke="var(--c4)" stroke-width="2" stroke-linecap="round" class="a-dash" opacity=".75"/><circle cx="220.0" cy="116.4" r="12.0" fill="var(--c7)"/><path d="M204.4,180.0 Q204.4,134.4 220.0,132.0 Q235.6,134.4 235.6,180.0 Z" fill="var(--c7)"/><path d="M220,143 c-6,-9 -20,-4 -14,7 l14,13 l14,-13 c6,-11 -8,-16 -14,-7 Z" fill="var(--c8)" class="a-pulse" style=""/><circle cx="220.0" cy="42.0" r="25" fill="var(--c6l)" stroke="var(--c6)" stroke-width="2.2"/><g class="a-bob" style="animation-delay:-0.0s"><image href="emoji/1f441-fe0f.png" x="205.0" y="27.0" width="30" height="30"/></g><text x="254.0" y="47.0" class="st" font-size="12.5" font-weight="800" text-anchor="start" style="fill:var(--c6)">thị giác</text><circle cx="370.3" cy="109.7" r="25" fill="var(--c7l)" stroke="var(--c7)" stroke-width="2.2"/><g class="a-bob" style="animation-delay:-0.6s"><image href="emoji/1f442.png" x="355.3" y="94.7" width="30" height="30"/></g><text x="370.2669295746342" y="151.71633455125516" class="st" font-size="12.5" font-weight="800" text-anchor="middle" style="fill:var(--c7)">thính giác</text><circle cx="312.9" cy="219.3" r="25" fill="var(--c8l)" stroke="var(--c8)" stroke-width="2.2"/><g class="a-bob" style="animation-delay:-1.2s"><image href="emoji/1f445.png" x="297.9" y="204.3" width="30" height="30"/></g><text x="312.87006986221076" y="261.28366544874484" class="st" font-size="12.5" font-weight="800" text-anchor="middle" style="fill:var(--c8)">vị giác</text><circle cx="127.1" cy="219.3" r="25" fill="var(--c2l)" stroke="var(--c2)" stroke-width="2.2"/><g class="a-bob" style="animation-delay:-1.8s"><image href="emoji/1f443.png" x="112.1" y="204.3" width="30" height="30"/></g><text x="127.12993013778926" y="261.28366544874484" class="st" font-size="12.5" font-weight="800" text-anchor="middle" style="fill:var(--c2)">khứu giác</text><circle cx="69.7" cy="109.7" r="25" fill="var(--c4l)" stroke="var(--c4)" stroke-width="2.2"/><g class="a-bob" style="animation-delay:-2.4s"><image href="emoji/270b.png" x="54.7" y="94.7" width="30" height="30"/></g><text x="69.73307042536572" y="151.71633455125516" class="st" font-size="12.5" font-weight="800" text-anchor="middle" style="fill:var(--c4)">xúc giác</text><g class="" style=""><rect x="103.0" y="274.2" width="234.0" height="27.5" rx="13.8" fill="var(--c8)"/><text x="220" y="292.5" class="sw" font-size="12.5" font-weight="800" text-anchor="middle" style="fill:#fff">sống chính là cảm nhận cuộc sống</text></g></svg></figure>
+<article class="body-card rv"><p style="--pi:0"><mark>Bạn cảm thấy thế nào trong từng khoảnh khắc là điều quan trọng hơn mọi thứ khác, bởi cảm xúc của bạn ngay lúc này đang tạo nên cuộc đời bạn.</mark></p></article>
+<div class="totop"><a href="#top">↑ Về đầu trang</a></div></section>
+<section id="p2"><div class="sec-head rv"><div class="badge"><span class="nv">02</span></div><h2>Cảm xúc của bạn là nhiên liệu</h2></div>
+<article class="body-card rv"><p style="--pi:0">Nếu thiếu cảm xúc, suy nghĩ và lời nói của bạn không có sức mạnh tác động đến cuộc đời bạn. Rất nhiều suy nghĩ nảy ra trong một ngày không dẫn đến điều gì, bởi chúng không khơi dậy trong bạn một cảm xúc đủ mạnh. <mark>Điều thực sự quan trọng là những gì bạn cảm thấy!</mark></p><p style="--pi:1">Hãy hình dung suy nghĩ và lời nói của bạn là một con tàu tên lửa, còn cảm xúc là nhiên liệu của nó. Khi không có nhiên liệu, con tàu tên lửa chỉ đứng yên và không thể làm được gì; chính nhiên liệu tạo ra sức mạnh đưa nó bay lên. Suy nghĩ và lời nói của bạn cũng vậy. Chúng là những phương tiện không thể làm được gì nếu thiếu cảm xúc, <mark>bởi cảm xúc chính là sức mạnh của suy nghĩ và lời nói!</mark></p></article>
+<figure class="dia rv" id="hinh-2"><span class="fig-lbl"><img class="em" src="emoji/1f3a8.png" alt="🎨" draggable="false"> Hình 2 · Cảm xúc là nhiên liệu</span><svg viewBox="0 0 440 262" role="img" aria-label="Bên trái: tên lửa suy nghĩ và lời nói không có nhiên liệu nên đứng yên; bên phải: bình nhiên liệu cảm xúc được đổ đầy, tên lửa phun lửa bay lên"><defs></defs><rect x="12" y="14" width="200" height="236" rx="20" fill="var(--gyl)" stroke="var(--gy)" stroke-width="2" stroke-dasharray="5 6"/><rect x="228" y="14" width="200" height="236" rx="20" fill="var(--c2l)" stroke="var(--c2)" stroke-width="2"/><text x="112" y="42" class="st" font-size="13" font-weight="800" text-anchor="middle" style="fill:var(--gy)">suy nghĩ &amp; lời nói</text><text x="328" y="42" class="st" font-size="13" font-weight="800" text-anchor="middle" style="fill:var(--c2)">suy nghĩ &amp; lời nói</text><text x="328" y="60" class="st" font-size="13" font-weight="800" text-anchor="middle" style="fill:var(--c8)">+ cảm xúc</text><line x1="44" y1="170" x2="180" y2="170" stroke="var(--gy)" stroke-width="4" stroke-linecap="round"/><g transform="rotate(-45 112 132)"><image href="emoji/1f680.png" x="81.0" y="101.0" width="62" height="62"/></g><rect x="40" y="194" width="144" height="16" rx="8" fill="var(--paper)" stroke="var(--gy)" stroke-width="2"/><text x="112" y="232" class="st" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--gy)">không nhiên liệu · đứng yên</text><g class="a-launch"><circle cx="318" cy="160" r="3.5" fill="var(--c2)" class="a-rain" style="animation-delay:0.00s"/><circle cx="328" cy="160" r="3.5" fill="var(--c2)" class="a-rain" style="animation-delay:0.30s"/><circle cx="338" cy="160" r="3.5" fill="var(--c2)" class="a-rain" style="animation-delay:0.60s"/><g transform="rotate(135 328 152)" class="a-flame-wrap"><g class="a-flame" style=""><image href="emoji/1f525.png" x="313.0" y="137.0" width="30" height="30"/></g></g><g transform="rotate(-45 328 118)"><image href="emoji/1f680.png" x="297.0" y="87.0" width="62" height="62"/></g></g><rect x="256" y="194" width="144" height="16" rx="8" fill="var(--paper)" stroke="var(--c2)" stroke-width="2"/><rect x="258" y="196" width="140" height="12" rx="6" fill="var(--c2)" class="a-fill"/><text x="328" y="232" class="st" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--c2)">cảm xúc = nhiên liệu · bay lên!</text><path d="M262,85 L263.96,90.04 L269,92 L263.96,93.96 L262,99 L260.04,93.96 L255,92 L260.04,90.04 Z" fill="var(--c3)" class="a-tw" style="animation-delay:0.00s"/><path d="M396,79 L397.96,84.04 L403,86 L397.96,87.96 L396,93 L394.04,87.96 L389,86 L394.04,84.04 Z" fill="var(--c3)" class="a-tw" style="animation-delay:0.50s"/><path d="M400,143 L401.96,148.04 L407,150 L401.96,151.96 L400,157 L398.04,151.96 L393,150 L398.04,148.04 Z" fill="var(--c3)" class="a-tw" style="animation-delay:1.00s"/></svg></figure>
+<article class="body-card rv"><p style="--pi:0">Nếu bạn nghĩ: “Tôi không chịu nổi sếp của mình”, ý nghĩ ấy thể hiện một cảm xúc tiêu cực mạnh mẽ đối với sếp, và bạn đang phát ra cảm xúc tiêu cực đó. Vì thế, mối quan hệ giữa bạn và sếp sẽ tiếp tục xấu đi.</p><p style="--pi:1">Nếu bạn nghĩ: “Tôi có vài đồng nghiệp thật tuyệt vời”, những lời ấy thể hiện cảm xúc tích cực bạn dành cho những người làm việc cùng mình, và bạn đang phát ra cảm xúc tích cực đó. Vì thế, mối quan hệ giữa bạn và các đồng nghiệp sẽ tiếp tục tốt lên.</p></article>
+<figure class="dia rv" id="hinh-3"><span class="fig-lbl"><img class="em" src="emoji/1f3a8.png" alt="🎨" draggable="false"> Hình 3 · Một suy nghĩ mang theo cảm xúc</span><svg viewBox="0 0 440 250" role="img" aria-label="Trên: suy nghĩ tôi không chịu nổi sếp của mình phát ra cảm xúc tiêu cực, quan hệ xấu đi; dưới: suy nghĩ tôi có vài đồng nghiệp thật tuyệt vời phát ra cảm xúc tích cực, quan hệ tốt lên"><defs><marker id="c23-m0" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--gy)"/></marker><marker id="c23-m1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--c4)"/></marker></defs><g class="a-swapB"><rect x="12" y="29" width="252" height="66" rx="20" fill="var(--gyl)" stroke="var(--gy)" stroke-width="2" stroke-dasharray="5 6"/><path d="M40,94 l-8,16 l22,-16 Z" fill="var(--gy)"/><text x="138" y="58" class="st" font-size="13" font-weight="800" text-anchor="middle">“Tôi không chịu nổi</text><text x="138" y="77" class="st" font-size="13" font-weight="800" text-anchor="middle">sếp của mình”</text><path d="M274,62 L310,62" fill="none" stroke="var(--gy)" stroke-width="3" stroke-linecap="round" class="a-dash" style="" marker-end="url(#c23-m0)"/><g class="a-hop" style=""><image href="emoji/1f4c9.png" x="344.0" y="34.0" width="44" height="44"/></g><text x="366" y="94" class="st" font-size="11.5" font-weight="800" text-anchor="middle" style="fill:var(--gy)">quan hệ với sếp</text><text x="366" y="108" class="st" font-size="11.5" font-weight="800" text-anchor="middle" style="fill:var(--gy)">tiếp tục xấu đi</text></g><g class="a-swapA"><rect x="12" y="151" width="252" height="66" rx="20" fill="var(--c4l)" stroke="var(--c4)" stroke-width="2"/><path d="M40,216 l-8,16 l22,-16 Z" fill="var(--c4)"/><text x="138" y="180" class="st" font-size="13" font-weight="800" text-anchor="middle">“Tôi có vài đồng nghiệp</text><text x="138" y="199" class="st" font-size="13" font-weight="800" text-anchor="middle">thật tuyệt vời”</text><path d="M274,184 L310,184" fill="none" stroke="var(--c4)" stroke-width="3" stroke-linecap="round" class="a-dash" style="" marker-end="url(#c23-m1)"/><g class="a-hop" style=""><image href="emoji/1f4c8.png" x="344.0" y="156.0" width="44" height="44"/></g><text x="366" y="216" class="st" font-size="11.5" font-weight="800" text-anchor="middle" style="fill:var(--c4)">quan hệ với đồng nghiệp</text><text x="366" y="230" class="st" font-size="11.5" font-weight="800" text-anchor="middle" style="fill:var(--c4)">tiếp tục tốt lên</text></g></svg></figure>
+<figure class="quote rv"><div class="avatar" aria-hidden="true">CH</div><div class="qcard"><span class="qtag"><img class="em" src="emoji/1f4ac.png" alt="💬" draggable="false"> Trích dẫn</span><button class="cpy" type="button" aria-label="Sao chép trích dẫn"><img class="em" src="emoji/1f4cb.png" alt="📋" draggable="false"></button><div class="qbody"><p>“Cần khơi dậy cảm xúc, truyền cảm xúc vào suy nghĩ để suy nghĩ ấy thành hình.”</p></div><cite><b class="cn1">Charles Haanel (1866–1949)</b><span class="cr">Tác giả thuộc phong trào Tư tưởng Mới</span></cite></div></figure>
+<figure class="inimg rv tall"><button class="zoom" type="button" aria-label="Phóng to ảnh"><img src="images/thang_cam_xuc.jpg" width="1085" height="1450" alt="Cảm xúc tốt bắt nguồn từ tình yêu — cảm xúc tiêu cực ở phía dưới" loading="lazy" decoding="async"></button></figure>
+<div class="totop"><a href="#top">↑ Về đầu trang</a></div></section>
+<section id="p3"><div class="sec-head rv"><div class="badge"><span class="nv">03</span></div><h2>Cảm xúc tốt và cảm xúc xấu</h2></div>
+<article class="body-card rv"><p style="--pi:0">Cũng như mọi điều khác trong cuộc sống, cảm xúc của bạn có thể tích cực hoặc tiêu cực; bạn có những cảm xúc tốt hoặc những cảm xúc xấu. <mark>Mọi cảm xúc tốt đều bắt nguồn từ tình yêu!</mark> Và mọi cảm xúc tiêu cực đều bắt nguồn từ sự thiếu vắng tình yêu. Bạn càng cảm thấy tốt — chẳng hạn khi vui vẻ — thì bạn càng trao đi nhiều tình yêu. Bạn càng trao đi nhiều tình yêu, bạn càng nhận lại nhiều tình yêu.</p><p style="--pi:1">Bạn càng cảm thấy tồi tệ — chẳng hạn khi chán nản — thì bạn càng phát ra nhiều sự tiêu cực. Bạn càng trao đi nhiều sự tiêu cực, bạn càng nhận lại nhiều điều tiêu cực trong cuộc sống. Sở dĩ cảm xúc tiêu cực khiến bạn thấy tồi tệ đến thế là vì tình yêu là sức mạnh tích cực của sự sống, còn cảm xúc tiêu cực chứa rất ít tình yêu!</p><p style="--pi:2"><mark>Bạn càng cảm thấy tốt, cuộc sống càng trở nên tốt đẹp.</mark></p><p style="--pi:3">Bạn càng cảm thấy tồi tệ, cuộc sống càng trở nên tồi tệ... cho đến khi bạn thay đổi cảm xúc của mình.</p><p style="--pi:4">Khi bạn cảm thấy vui, suy nghĩ của bạn cũng tự động trở nên tích cực. Bạn không thể vừa cảm thấy vui vừa có những suy nghĩ tiêu cực! Tương tự, bạn không thể vừa cảm thấy tồi tệ vừa có những suy nghĩ tốt đẹp.</p><p style="--pi:5">Cảm xúc của bạn phản ánh chính xác và là thước đo rõ ràng nhất cho những gì bạn đang trao đi vào bất kỳ lúc nào. Khi cảm thấy tốt, bạn không cần lo lắng về điều gì khác, bởi suy nghĩ, lời nói và hành động của bạn sẽ đều tốt đẹp. Chỉ cần cảm thấy tốt, bạn đã chắc chắn đang trao đi tình yêu — và tất cả tình yêu ấy sẽ trở về với bạn!</p></article>
+<div class="totop"><a href="#top">↑ Về đầu trang</a></div></section>
+<section id="p4"><div class="sec-head rv"><div class="badge"><span class="nv">04</span></div><h2>Cảm thấy tốt nghĩa là thật sự cảm thấy tốt</h2></div>
+<article class="body-card rv"><p style="--pi:0">Phần lớn mọi người đều biết cảm giác khi mình thấy tốt hoặc thấy rất tồi tệ là như thế nào, nhưng họ không nhận ra rằng mình có thể sống với cảm xúc tiêu cực trong một thời gian dài. Họ cho rằng “cảm thấy tồi tệ” chỉ có nghĩa là trải qua những cảm xúc tiêu cực dữ dội như buồn bã, đau thương, giận dữ hay sợ hãi. Nhưng dù những cảm xúc ấy đều thuộc về cảm giác tồi tệ, cảm xúc tiêu cực còn có nhiều mức độ khác nhau.</p><p style="--pi:1">Nếu phần lớn thời gian bạn chỉ cảm thấy “tàm tạm”, bạn có thể nghĩ đó là một cảm xúc tích cực vì mình không thực sự thấy tồi tệ. Nếu trước đó bạn đã cảm thấy rất tệ, thì cảm giác tàm tạm quả thực tốt hơn nhiều. Nhưng thường xuyên chỉ cảm thấy tàm tạm vẫn là một trạng thái cảm xúc tiêu cực, bởi cảm thấy tàm tạm không phải là cảm thấy tốt. <mark>Cảm thấy tốt nghĩa là thật sự cảm thấy tốt!</mark> Những cảm xúc tốt là khi bạn hạnh phúc, vui vẻ, háo hức, nhiệt tình hoặc say mê. Nếu bạn chỉ cảm thấy tàm tạm, bình bình, hoặc gần như chẳng cảm thấy gì, thì cuộc sống của bạn cũng sẽ tàm tạm, bình bình, chẳng có gì nổi bật! Đó không phải một cuộc sống tốt đẹp. Có cảm xúc tốt nghĩa là bạn cảm thấy rất tốt; và chính cảm giác rất tốt ấy mang đến cho bạn một cuộc sống rất tốt đẹp!</p></article>
+<figure class="dia rv" id="hinh-4"><span class="fig-lbl"><img class="em" src="emoji/1f3a8.png" alt="🎨" draggable="false"> Hình 4 · Cảm thấy tốt nghĩa là thật sự cảm thấy tốt</span><svg viewBox="0 0 440 226" role="img" aria-label="Một thanh đo năm mức cảm xúc từ rất tồi tệ, tồi tệ, tàm tạm đến tốt và rất tốt; con trỏ trượt từ tàm tạm lên rất tốt; tàm tạm vẫn thuộc nhóm cảm xúc tiêu cực"><defs></defs><rect x="30" y="112" width="74" height="22" rx="11" fill="var(--c1)"/><g class="a-bob" style="animation-delay:-0.0s"><image href="emoji/1f62b.png" x="51.0" y="36.0" width="32" height="32"/></g><text x="67" y="96" class="st" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--c1)">rất tồi tệ</text><rect x="106" y="112" width="74" height="22" rx="3" fill="var(--c2)"/><g class="a-bob" style="animation-delay:-0.4s"><image href="emoji/1f61e.png" x="127.0" y="36.0" width="32" height="32"/></g><text x="143" y="96" class="st" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--c2)">tồi tệ</text><rect x="182" y="112" width="74" height="22" rx="3" fill="var(--gy)"/><g class="a-bob" style="animation-delay:-0.8s"><image href="emoji/1f610.png" x="203.0" y="36.0" width="32" height="32"/></g><text x="219" y="96" class="st" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--gy)">tàm tạm</text><rect x="258" y="112" width="74" height="22" rx="3" fill="var(--c5)"/><g class="a-bob" style="animation-delay:-1.2s"><image href="emoji/1f642.png" x="279.0" y="36.0" width="32" height="32"/></g><text x="295" y="96" class="st" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--c5)">tốt</text><rect x="334" y="112" width="74" height="22" rx="11" fill="var(--c4)"/><g class="a-hop" style="animation-delay:-1.6s"><image href="emoji/1f604.png" x="355.0" y="36.0" width="32" height="32"/></g><text x="371" y="96" class="st" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--c4)">rất tốt</text><g class="a-slide"><path d="M220,106 l-9,-12 h18 Z" fill="var(--c8)"/><circle cx="220" cy="123" r="13" fill="#fff" stroke="var(--c8)" stroke-width="3"/></g><path d="M34,146 v10 h220 v-10" fill="none" stroke="var(--gy)" stroke-width="2"/><path d="M262,146 v10 h144 v-10" fill="none" stroke="var(--c4)" stroke-width="2"/><text x="144" y="178" class="st" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--gy)">tàm tạm, bình bình = vẫn là tiêu cực</text><text x="334" y="178" class="st" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--c4)">thật sự cảm thấy tốt</text><text x="144" y="198" class="st2" font-size="12" font-weight="700" text-anchor="middle">→ cuộc sống tàm tạm</text><text x="334" y="198" class="st" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--c4)">→ cuộc sống rất tốt đẹp</text><path d="M418,32 L420.24,37.76 L426,40 L420.24,42.24 L418,48 L415.76,42.24 L410,40 L415.76,37.76 Z" fill="var(--c3)" class="a-tw" style="animation-delay:0.00s"/><path d="M404,71 L405.4,74.6 L409,76 L405.4,77.4 L404,81 L402.6,77.4 L399,76 L402.6,74.6 Z" fill="var(--c3)" class="a-tw" style="animation-delay:0.60s"/></svg></figure>
+<figure class="quote rv"><div class="avatar" aria-hidden="true">TC</div><div class="qcard"><span class="qtag"><img class="em" src="emoji/1f4ac.png" alt="💬" draggable="false"> Trích dẫn</span><button class="cpy" type="button" aria-label="Sao chép trích dẫn"><img class="em" src="emoji/1f4cb.png" alt="📋" draggable="false"></button><div class="qbody"><p>“Thước đo của tình yêu là yêu thương không giới hạn.”</p></div><cite><b class="cn1">Thánh Bernard thành Clairvaux (1090–1153)</b><span class="cr">Tu sĩ và nhà thần bí Kitô giáo</span></cite></div></figure>
+<article class="body-card rv"><p style="--pi:0">Khi vui vẻ, bạn đang tạo ra niềm vui, và bạn sẽ nhận lại những trải nghiệm vui vẻ, những tình huống đem đến niềm vui cùng những con người vui vẻ ở bất cứ nơi nào bạn đến. Từ trải nghiệm nhỏ như tình cờ nghe được bài hát yêu thích trên đài phát thanh đến trải nghiệm lớn hơn như được tăng lương, mọi hoàn cảnh bạn gặp đều là sự đáp lại của luật hấp dẫn đối với cảm xúc vui vẻ của bạn. Khi cảm thấy cáu kỉnh, bạn đang phát ra sự cáu kỉnh và sẽ gặp những trải nghiệm, tình huống cùng những con người khiến bạn cáu kỉnh ở bất cứ nơi nào bạn đến. Từ chuyện nhỏ như bị muỗi đốt đến chuyện lớn hơn như xe bị hỏng, tất cả những trải nghiệm ấy đều là sự đáp lại của luật hấp dẫn đối với cảm xúc cáu kỉnh của bạn.</p></article>
+<figure class="dia rv" id="hinh-5"><span class="fig-lbl"><img class="em" src="emoji/1f3a8.png" alt="🎨" draggable="false"> Hình 5 · Vui vẻ thu hút niềm vui — cáu kỉnh thu hút sự cáu kỉnh</span><svg viewBox="0 0 440 246" role="img" aria-label="Bên trái: khuôn mặt vui vẻ phát sóng, thu hút bài hát yêu thích và được tăng lương; bên phải: khuôn mặt cáu kỉnh, thu hút muỗi đốt và xe bị hỏng"><defs></defs><line x1="220" y1="20" x2="220" y2="230" stroke="var(--line)" stroke-width="2" stroke-dasharray="4 6"/><g class="a-swapA"><circle cx="110" cy="70" r="30" fill="none" stroke="var(--c4)" stroke-width="2.4" class="a-rip" style="animation-delay:0.0s"/><circle cx="110" cy="70" r="30" fill="none" stroke="var(--c4)" stroke-width="2.4" class="a-rip" style="animation-delay:1.2s"/><g class="a-pulse" style=""><image href="emoji/1f60a.png" x="84.0" y="44.0" width="52" height="52"/></g><text x="110" y="120" class="st" font-size="14" font-weight="800" text-anchor="middle" style="fill:var(--c4)">vui vẻ</text><g class="a-pop" style="animation-delay:0.0s"><circle cx="58" cy="168" r="24" fill="var(--paper)" stroke="var(--c4)" stroke-width="2"/><image href="emoji/1f3b5.png" x="44.0" y="154.0" width="28" height="28"/></g><text x="58" y="212" class="st" font-size="11.5" font-weight="800" text-anchor="middle" style="fill:var(--c4)">bài hát yêu thích</text><g class="a-pop" style="animation-delay:0.8s"><circle cx="162" cy="168" r="24" fill="var(--paper)" stroke="var(--c4)" stroke-width="2"/><image href="emoji/1f4b5.png" x="148.0" y="154.0" width="28" height="28"/></g><text x="162" y="212" class="st" font-size="11.5" font-weight="800" text-anchor="middle" style="fill:var(--c4)">được tăng lương</text></g><g class="a-swapB"><circle cx="330" cy="70" r="30" fill="none" stroke="var(--gy)" stroke-width="2.4" class="a-rip" style="animation-delay:0.0s"/><circle cx="330" cy="70" r="30" fill="none" stroke="var(--gy)" stroke-width="2.4" class="a-rip" style="animation-delay:1.2s"/><g class="a-pulse" style=""><image href="emoji/1f620.png" x="304.0" y="44.0" width="52" height="52"/></g><text x="330" y="120" class="st" font-size="14" font-weight="800" text-anchor="middle" style="fill:var(--gy)">cáu kỉnh</text><g class="a-pop" style="animation-delay:0.0s"><circle cx="278" cy="168" r="24" fill="var(--paper)" stroke="var(--gy)" stroke-width="2"/><image href="emoji/1f99f.png" x="264.0" y="154.0" width="28" height="28"/></g><text x="278" y="212" class="st" font-size="11.5" font-weight="800" text-anchor="middle" style="fill:var(--gy)">bị muỗi đốt</text><g class="a-pop" style="animation-delay:0.8s"><circle cx="382" cy="168" r="24" fill="var(--paper)" stroke="var(--gy)" stroke-width="2"/><image href="emoji/1f697.png" x="368.0" y="154.0" width="28" height="28"/></g><text x="382" y="212" class="st" font-size="11.5" font-weight="800" text-anchor="middle" style="fill:var(--gy)">xe bị hỏng</text></g></svg></figure>
+<article class="body-card rv"><p style="--pi:0">Mỗi cảm xúc tốt đều kết nối bạn với sức mạnh của tình yêu, bởi tình yêu là nguồn gốc của mọi cảm xúc tốt. Sự nhiệt tình, háo hức và đam mê đều bắt nguồn từ tình yêu. Khi thường xuyên cảm nhận những cảm xúc ấy, bạn sẽ có một cuộc sống đầy những điều khiến mình nhiệt tình, háo hức và say mê.</p><p style="--pi:1">Bạn có thể tận dụng tối đa sức mạnh của một cảm xúc tốt bằng cách “tăng âm lượng” cho nó. Để làm vậy, hãy chủ động nắm lấy cảm xúc ấy và cố ý làm nó mạnh hơn, cho đến khi bạn cảm thấy tốt nhất có thể. Muốn tăng thêm sự nhiệt tình, hãy đắm mình trong cảm giác nhiệt tình; hãy cảm nhận nó thật mãnh liệt! Khi thấy đam mê hoặc háo hức, hãy tận hưởng và làm những cảm xúc ấy sâu đậm nhất có thể. Bạn càng khuếch đại những cảm xúc tốt, bạn càng trao đi nhiều tình yêu; và những gì bạn nhận lại trong cuộc sống sẽ vô cùng tuyệt vời.</p></article>
+<figure class="dia rv" id="hinh-6"><span class="fig-lbl"><img class="em" src="emoji/1f3a8.png" alt="🎨" draggable="false"> Hình 6 · Tăng âm lượng cho cảm xúc tốt</span><svg viewBox="0 0 440 236" role="img" aria-label="Một núm vặn âm lượng xoay lên, các cột sóng âm nhảy cao dần, phía trên là nhiệt tình, háo hức, đam mê"><defs></defs><circle cx="84" cy="124" r="50" fill="var(--c7l)" stroke="var(--c7)" stroke-width="3"/><line x1="43.0" y1="165.0" x2="37.3" y2="170.7" stroke="var(--c1)" stroke-width="3" stroke-linecap="round"/><line x1="28.8" y1="141.9" x2="21.2" y2="144.4" stroke="var(--c2)" stroke-width="3" stroke-linecap="round"/><line x1="26.7" y1="114.9" x2="18.8" y2="113.7" stroke="var(--c3)" stroke-width="3" stroke-linecap="round"/><line x1="37.1" y1="89.9" x2="30.6" y2="85.2" stroke="var(--c4)" stroke-width="3" stroke-linecap="round"/><line x1="57.7" y1="72.3" x2="54.0" y2="65.2" stroke="var(--c5)" stroke-width="3" stroke-linecap="round"/><line x1="84.0" y1="66.0" x2="84.0" y2="58.0" stroke="var(--c6)" stroke-width="3" stroke-linecap="round"/><line x1="110.3" y1="72.3" x2="114.0" y2="65.2" stroke="var(--c7)" stroke-width="3" stroke-linecap="round"/><line x1="130.9" y1="89.9" x2="137.4" y2="85.2" stroke="var(--c8)" stroke-width="3" stroke-linecap="round"/><line x1="141.3" y1="114.9" x2="149.2" y2="113.7" stroke="var(--c1)" stroke-width="3" stroke-linecap="round"/><line x1="139.2" y1="141.9" x2="146.8" y2="144.4" stroke="var(--c2)" stroke-width="3" stroke-linecap="round"/><line x1="125.0" y1="165.0" x2="130.7" y2="170.7" stroke="var(--c3)" stroke-width="3" stroke-linecap="round"/><g class="a-knobspin"><circle cx="84" cy="124" r="34" fill="var(--paper)"/><line x1="84" y1="124" x2="84" y2="98" stroke="var(--c8)" stroke-width="6" stroke-linecap="round"/></g><text x="84" y="212" class="st" font-size="12.5" font-weight="800" text-anchor="middle" style="fill:var(--c7)">tăng âm lượng</text><rect x="176" y="86" width="20" height="116" rx="6" fill="var(--c4)" class="a-eq" style="animation-delay:-0.00s;animation-duration:0.90s"/><rect x="206" y="86" width="20" height="116" rx="6" fill="var(--c5)" class="a-eq" style="animation-delay:-0.17s;animation-duration:1.10s"/><rect x="236" y="86" width="20" height="116" rx="6" fill="var(--c6)" class="a-eq" style="animation-delay:-0.34s;animation-duration:1.30s"/><rect x="266" y="86" width="20" height="116" rx="6" fill="var(--c7)" class="a-eq" style="animation-delay:-0.51s;animation-duration:0.90s"/><rect x="296" y="86" width="20" height="116" rx="6" fill="var(--c8)" class="a-eq" style="animation-delay:-0.68s;animation-duration:1.10s"/><rect x="326" y="86" width="20" height="116" rx="6" fill="var(--c2)" class="a-eq" style="animation-delay:-0.85s;animation-duration:1.30s"/><rect x="356" y="86" width="20" height="116" rx="6" fill="var(--c3)" class="a-eq" style="animation-delay:-1.02s;animation-duration:0.90s"/><rect x="386" y="86" width="20" height="116" rx="6" fill="var(--c1)" class="a-eq" style="animation-delay:-1.19s;animation-duration:1.10s"/><line x1="170" y1="204" x2="414" y2="204" stroke="var(--line)" stroke-width="3" stroke-linecap="round"/><g class="a-float" style="animation-delay:-0.0s"><rect x="169.8" y="34.5" width="88.4" height="27" rx="13.5" fill="var(--c2)"/><text x="214" y="52.3" class="sw" font-size="12" font-weight="800" text-anchor="middle" style="fill:#fff">nhiệt tình</text></g><g class="a-float" style="animation-delay:-0.7s"><rect x="265.2" y="34.5" width="69.7" height="27" rx="13.5" fill="var(--c8)"/><text x="300" y="52.3" class="sw" font-size="12" font-weight="800" text-anchor="middle" style="fill:#fff">háo hức</text></g><g class="a-float" style="animation-delay:-1.4s"><rect x="346.3" y="34.5" width="63.4" height="27" rx="13.5" fill="var(--c7)"/><text x="378" y="52.3" class="sw" font-size="12" font-weight="800" text-anchor="middle" style="fill:#fff">đam mê</text></g><text x="292" y="228" class="st" font-size="12.5" font-weight="800" text-anchor="middle" style="fill:var(--c8)">cảm nhận thật mãnh liệt!</text></svg></figure>
+<article class="body-card rv"><p style="--pi:0">Khi đang có một cảm xúc tốt, bạn có thể làm nó mạnh hơn bằng cách tìm đến những điều mình yêu thích. Trước khi ngồi xuống viết cuốn sách này, mỗi ngày tôi đều dành vài phút để làm những cảm xúc tốt của mình mạnh thêm. Tôi nghĩ về những điều tôi yêu thích, lần lượt kể ra không ngừng: gia đình, bạn bè, ngôi nhà, những bông hoa trong vườn, thời tiết, màu sắc, những hoàn cảnh, sự việc và những điều tôi yêu thích đã xảy ra trong tuần, trong tháng hoặc trong năm. Tôi tiếp tục liệt kê trong đầu mọi điều mình yêu thích cho đến khi cảm thấy vô cùng tuyệt vời. Sau đó, tôi ngồi xuống viết. Làm cho cảm xúc tốt mạnh lên đơn giản như vậy, và bạn có thể làm điều đó ở bất cứ đâu, bất cứ lúc nào.</p></article>
+<figure class="dia rv" id="hinh-7"><span class="fig-lbl"><img class="em" src="emoji/1f3a8.png" alt="🎨" draggable="false"> Hình 7 · Kể ra những điều mình yêu thích</span><svg viewBox="0 0 440 236" role="img" aria-label="Một danh sách hiện dần: gia đình, bạn bè, ngôi nhà, những bông hoa trong vườn, thời tiết, màu sắc; cột cảm xúc bên cạnh dâng dần lên tới mức vô cùng tuyệt vời, rồi ngồi xuống viết"><defs><marker id="c27-m0" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--c8)"/></marker></defs><rect x="16" y="14" width="236" height="206" rx="20" fill="var(--paper)" stroke="var(--c8)" stroke-width="2"/><g class="a-listin" style="animation-delay:0.00s"><path d="M42,44.0 c-3.0,-4.5 -10.0,-2.0 -7.0,3.5 l7.0,6.5 l7.0,-6.5 c3.0,-5.5 -4.0,-8.0 -7.0,-3.5 Z" fill="var(--c8)" class="" style=""/><image href="emoji/1f468-200d-1f469-200d-1f467.png" x="58.0" y="32.0" width="24" height="24"/><text x="92" y="49" class="st" font-size="13.5" font-weight="800" text-anchor="start">gia đình</text></g><g class="a-listin" style="animation-delay:0.80s"><path d="M42,75.0 c-3.0,-4.5 -10.0,-2.0 -7.0,3.5 l7.0,6.5 l7.0,-6.5 c3.0,-5.5 -4.0,-8.0 -7.0,-3.5 Z" fill="var(--c8)" class="" style=""/><image href="emoji/1fac2.png" x="58.0" y="63.0" width="24" height="24"/><text x="92" y="80" class="st" font-size="13.5" font-weight="800" text-anchor="start">bạn bè</text></g><g class="a-listin" style="animation-delay:1.60s"><path d="M42,106.0 c-3.0,-4.5 -10.0,-2.0 -7.0,3.5 l7.0,6.5 l7.0,-6.5 c3.0,-5.5 -4.0,-8.0 -7.0,-3.5 Z" fill="var(--c8)" class="" style=""/><image href="emoji/1f3e1.png" x="58.0" y="94.0" width="24" height="24"/><text x="92" y="111" class="st" font-size="13.5" font-weight="800" text-anchor="start">ngôi nhà</text></g><g class="a-listin" style="animation-delay:2.40s"><path d="M42,137.0 c-3.0,-4.5 -10.0,-2.0 -7.0,3.5 l7.0,6.5 l7.0,-6.5 c3.0,-5.5 -4.0,-8.0 -7.0,-3.5 Z" fill="var(--c8)" class="" style=""/><image href="emoji/1f337.png" x="58.0" y="125.0" width="24" height="24"/><text x="92" y="142" class="st" font-size="13.5" font-weight="800" text-anchor="start">hoa trong vườn</text></g><g class="a-listin" style="animation-delay:3.20s"><path d="M42,168.0 c-3.0,-4.5 -10.0,-2.0 -7.0,3.5 l7.0,6.5 l7.0,-6.5 c3.0,-5.5 -4.0,-8.0 -7.0,-3.5 Z" fill="var(--c8)" class="" style=""/><image href="emoji/26c5.png" x="58.0" y="156.0" width="24" height="24"/><text x="92" y="173" class="st" font-size="13.5" font-weight="800" text-anchor="start">thời tiết</text></g><g class="a-listin" style="animation-delay:4.00s"><path d="M42,199.0 c-3.0,-4.5 -10.0,-2.0 -7.0,3.5 l7.0,6.5 l7.0,-6.5 c3.0,-5.5 -4.0,-8.0 -7.0,-3.5 Z" fill="var(--c8)" class="" style=""/><image href="emoji/1f3a8.png" x="58.0" y="187.0" width="24" height="24"/><text x="92" y="204" class="st" font-size="13.5" font-weight="800" text-anchor="start">màu sắc</text></g><path d="M262,118 L290,118" fill="none" stroke="var(--c8)" stroke-width="3" stroke-linecap="round" class="a-dash" style="" marker-end="url(#c27-m0)"/><rect x="304" y="34" width="38" height="170" rx="19" fill="var(--paper)" stroke="var(--c2)" stroke-width="2.5"/><defs><linearGradient id="c27g" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="var(--c8)"/><stop offset="1" stop-color="var(--c3)"/></linearGradient></defs><rect x="309" y="39" width="28" height="160" rx="14" fill="url(#c27g)" class="a-fillup"/><text x="323" y="222" class="st" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--c2)">cảm xúc</text><g class="a-pulse" style=""><image href="emoji/2728.png" x="367.0" y="35.0" width="34" height="34"/></g><text x="384" y="88" class="st" font-size="12.5" font-weight="800" text-anchor="middle" style="fill:var(--c2)">vô cùng</text><text x="384" y="104" class="st" font-size="12.5" font-weight="800" text-anchor="middle" style="fill:var(--c2)">tuyệt vời</text><g class="a-bob" style=""><image href="emoji/270d-fe0f.png" x="368.0" y="142.0" width="32" height="32"/></g><text x="384" y="192" class="st2" font-size="12" font-weight="700" text-anchor="middle">rồi ngồi</text><text x="384" y="207" class="st2" font-size="12" font-weight="700" text-anchor="middle">xuống viết</text></svg></figure>
+<div class="totop"><a href="#top">↑ Về đầu trang</a></div></section>
+<section id="p5"><div class="sec-head rv"><div class="badge"><span class="nv">05</span></div><h2>Cảm xúc phản ánh những gì bạn đang trao đi</h2></div>
+<article class="body-card rv"><p style="--pi:0">Ngay lúc này, bạn có thể biết mình đã trao đi nhiều cảm xúc tốt hay cảm xúc xấu hơn trong những lĩnh vực chính của cuộc đời. Cách bạn cảm nhận về từng vấn đề — như tiền bạc, sức khỏe, công việc và từng mối quan hệ — phản ánh chính xác những gì bạn đã trao đi trong lĩnh vực đó.</p><p style="--pi:1">Khi nghĩ đến tiền bạc, cảm xúc của bạn phản ánh những gì bạn đang trao đi về vấn đề này. Nếu bạn cảm thấy tồi tệ mỗi khi nghĩ đến tiền vì mình không có đủ, bạn sẽ nhận lại những hoàn cảnh và trải nghiệm tiêu cực liên quan đến việc thiếu tiền, bởi đó là cảm xúc tiêu cực bạn đang trao đi.</p><p style="--pi:2">Khi nghĩ đến công việc, cảm xúc cho bạn biết bạn đã trao đi điều gì trong lĩnh vực ấy. Nếu bạn cảm thấy tốt về công việc của mình, bạn sẽ nhận lại những hoàn cảnh và trải nghiệm tích cực, bởi đó là cảm xúc tích cực bạn đang trao đi. Tương tự, khi nghĩ đến gia đình, sức khỏe hay bất cứ điều gì quan trọng với mình, cảm xúc sẽ cho bạn biết bạn đang trao đi điều gì.</p></article>
+<figure class="dia rv" id="hinh-8"><span class="fig-lbl"><img class="em" src="emoji/1f3a8.png" alt="🎨" draggable="false"> Hình 8 · Cảm xúc phản ánh những gì bạn đang trao đi</span><svg viewBox="0 0 440 226" role="img" aria-label="Bốn lĩnh vực tiền bạc, sức khỏe, công việc, gia đình; cảm xúc về mỗi lĩnh vực lần lượt chuyển giữa tồi tệ và tốt, và điều nhận lại chuyển theo giữa tiêu cực và tích cực"><defs><marker id="c28-m0" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--c7)"/></marker><marker id="c28-m1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--c7)"/></marker><marker id="c28-m2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--c7)"/></marker><marker id="c28-m3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--c7)"/></marker></defs><text x="196" y="18" class="st2" font-size="12" font-weight="700" text-anchor="middle">cảm xúc</text><text x="340" y="18" class="st2" font-size="12" font-weight="700" text-anchor="middle">điều nhận lại</text><image href="emoji/1f4b0.png" x="16.0" y="36.0" width="28" height="28"/><text x="52" y="55" class="st" font-size="14" font-weight="800" text-anchor="start">tiền bạc</text><g class="a-off" style="animation-delay:0.0s"><image href="emoji/1f61f.png" x="181.0" y="35.0" width="30" height="30"/></g><g class="a-on" style="animation-delay:0.0s"><image href="emoji/1f60a.png" x="181.0" y="35.0" width="30" height="30"/></g><path d="M222,50 L258,50" fill="none" stroke="var(--c7)" stroke-width="2.5" stroke-linecap="round" class="a-dash" style="" marker-end="url(#c28-m0)"/><g class="a-off" style="animation-delay:0.0s"><g class="" style=""><rect x="302.0" y="36.5" width="75.9" height="27" rx="13.5" fill="var(--gy)"/><text x="340" y="54.3" class="sw" font-size="12" font-weight="800" text-anchor="middle" style="fill:#fff">tiêu cực</text></g></g><g class="a-on" style="animation-delay:0.0s"><g class="" style=""><rect x="302.0" y="36.5" width="75.9" height="27" rx="13.5" fill="var(--c4)"/><text x="340" y="54.3" class="sw" font-size="12" font-weight="800" text-anchor="middle" style="fill:#fff">tích cực</text></g></g><image href="emoji/1f33f.png" x="16.0" y="82.0" width="28" height="28"/><text x="52" y="101" class="st" font-size="14" font-weight="800" text-anchor="start">sức khỏe</text><g class="a-off" style="animation-delay:0.8s"><image href="emoji/1f61f.png" x="181.0" y="81.0" width="30" height="30"/></g><g class="a-on" style="animation-delay:0.8s"><image href="emoji/1f60a.png" x="181.0" y="81.0" width="30" height="30"/></g><path d="M222,96 L258,96" fill="none" stroke="var(--c7)" stroke-width="2.5" stroke-linecap="round" class="a-dash" style="" marker-end="url(#c28-m1)"/><g class="a-off" style="animation-delay:0.8s"><g class="" style=""><rect x="302.0" y="82.5" width="75.9" height="27" rx="13.5" fill="var(--gy)"/><text x="340" y="100.3" class="sw" font-size="12" font-weight="800" text-anchor="middle" style="fill:#fff">tiêu cực</text></g></g><g class="a-on" style="animation-delay:0.8s"><g class="" style=""><rect x="302.0" y="82.5" width="75.9" height="27" rx="13.5" fill="var(--c4)"/><text x="340" y="100.3" class="sw" font-size="12" font-weight="800" text-anchor="middle" style="fill:#fff">tích cực</text></g></g><image href="emoji/1f4bc.png" x="16.0" y="128.0" width="28" height="28"/><text x="52" y="147" class="st" font-size="14" font-weight="800" text-anchor="start">công việc</text><g class="a-off" style="animation-delay:1.6s"><image href="emoji/1f61f.png" x="181.0" y="127.0" width="30" height="30"/></g><g class="a-on" style="animation-delay:1.6s"><image href="emoji/1f60a.png" x="181.0" y="127.0" width="30" height="30"/></g><path d="M222,142 L258,142" fill="none" stroke="var(--c7)" stroke-width="2.5" stroke-linecap="round" class="a-dash" style="" marker-end="url(#c28-m2)"/><g class="a-off" style="animation-delay:1.6s"><g class="" style=""><rect x="302.0" y="128.5" width="75.9" height="27" rx="13.5" fill="var(--gy)"/><text x="340" y="146.3" class="sw" font-size="12" font-weight="800" text-anchor="middle" style="fill:#fff">tiêu cực</text></g></g><g class="a-on" style="animation-delay:1.6s"><g class="" style=""><rect x="302.0" y="128.5" width="75.9" height="27" rx="13.5" fill="var(--c4)"/><text x="340" y="146.3" class="sw" font-size="12" font-weight="800" text-anchor="middle" style="fill:#fff">tích cực</text></g></g><image href="emoji/1f468-200d-1f469-200d-1f467.png" x="16.0" y="174.0" width="28" height="28"/><text x="52" y="193" class="st" font-size="14" font-weight="800" text-anchor="start">gia đình</text><g class="a-off" style="animation-delay:2.4s"><image href="emoji/1f61f.png" x="181.0" y="173.0" width="30" height="30"/></g><g class="a-on" style="animation-delay:2.4s"><image href="emoji/1f60a.png" x="181.0" y="173.0" width="30" height="30"/></g><path d="M222,188 L258,188" fill="none" stroke="var(--c7)" stroke-width="2.5" stroke-linecap="round" class="a-dash" style="" marker-end="url(#c28-m3)"/><g class="a-off" style="animation-delay:2.4s"><g class="" style=""><rect x="302.0" y="174.5" width="75.9" height="27" rx="13.5" fill="var(--gy)"/><text x="340" y="192.3" class="sw" font-size="12" font-weight="800" text-anchor="middle" style="fill:#fff">tiêu cực</text></g></g><g class="a-on" style="animation-delay:2.4s"><g class="" style=""><rect x="302.0" y="174.5" width="75.9" height="27" rx="13.5" fill="var(--c4)"/><text x="340" y="192.3" class="sw" font-size="12" font-weight="800" text-anchor="middle" style="fill:#fff">tích cực</text></g></g></svg></figure>
+<figure class="quote rv"><div class="avatar" aria-hidden="true">NG</div><div class="qcard"><span class="qtag"><img class="em" src="emoji/1f4ac.png" alt="💬" draggable="false"> Trích dẫn</span><button class="cpy" type="button" aria-label="Sao chép trích dẫn"><img class="em" src="emoji/1f4cb.png" alt="📋" draggable="false"></button><div class="qbody"><p>“Hãy chú ý đến tâm trạng và cảm xúc của mình, bởi có một mối liên hệ không đứt đoạn giữa cảm xúc của bạn và thế giới hữu hình quanh bạn.”</p></div><cite><b class="cn1">Neville Goddard (1905–1972)</b><span class="cr">Tác giả thuộc phong trào Tư tưởng Mới</span></cite></div></figure>
+<article class="body-card rv"><p style="--pi:0">Cuộc sống không chỉ là những chuyện xảy đến với bạn; cuộc sống đang đáp lại bạn. <mark>Cuộc đời bạn do bạn lựa chọn!</mark> Mỗi lĩnh vực trong đời đều gắn với lựa chọn của bạn. Bạn là người tạo nên cuộc đời mình. Bạn là người viết câu chuyện đời mình. Bạn là đạo diễn bộ phim về cuộc đời mình. Những gì bạn trao đi sẽ quyết định cuộc đời bạn trở thành như thế nào.</p></article>
+<figure class="dia rv" id="hinh-9"><span class="fig-lbl"><img class="em" src="emoji/1f3a8.png" alt="🎨" draggable="false"> Hình 9 · Bạn là đạo diễn bộ phim cuộc đời mình</span><svg viewBox="0 0 440 262" role="img" aria-label="Chiếc bảng clapper của đạo diễn bên trái; dải phim chạy ngang với các khung hình ngôi nhà, công việc, tình yêu, sức khỏe, tiền bạc, du lịch; bên dưới: bạn tạo nên, viết và đạo diễn cuộc đời mình"><defs><clipPath id="c29c"><rect x="134" y="62" width="292" height="88" rx="12"/></clipPath></defs><g class="a-tip" style=""><image href="emoji/1f3ac.png" x="37.0" y="71.0" width="66" height="66"/></g><text x="70" y="166" class="st" font-size="15" font-weight="800" text-anchor="middle" style="fill:var(--c8)">Bạn</text><rect x="134" y="62" width="292" height="88" rx="12" fill="#2a2440"/><g clip-path="url(#c29c)"><g class="a-ticker"><rect x="148" y="66" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="178" y="66" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="148" y="140" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="178" y="140" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="140" y="78" width="54" height="56" rx="6" fill="var(--c1l)"/><image href="emoji/1f3e1.png" x="151.0" y="90.0" width="32" height="32"/><rect x="210" y="66" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="240" y="66" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="210" y="140" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="240" y="140" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="202" y="78" width="54" height="56" rx="6" fill="var(--c2l)"/><image href="emoji/1f4bc.png" x="213.0" y="90.0" width="32" height="32"/><rect x="272" y="66" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="302" y="66" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="272" y="140" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="302" y="140" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="264" y="78" width="54" height="56" rx="6" fill="var(--c3l)"/><image href="emoji/2764-fe0f.png" x="275.0" y="90.0" width="32" height="32"/><rect x="334" y="66" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="364" y="66" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="334" y="140" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="364" y="140" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="326" y="78" width="54" height="56" rx="6" fill="var(--c4l)"/><image href="emoji/1f33f.png" x="337.0" y="90.0" width="32" height="32"/><rect x="396" y="66" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="426" y="66" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="396" y="140" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="426" y="140" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="388" y="78" width="54" height="56" rx="6" fill="var(--c5l)"/><image href="emoji/1f4b0.png" x="399.0" y="90.0" width="32" height="32"/><rect x="458" y="66" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="488" y="66" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="458" y="140" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="488" y="140" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="450" y="78" width="54" height="56" rx="6" fill="var(--c6l)"/><image href="emoji/2708-fe0f.png" x="461.0" y="90.0" width="32" height="32"/><rect x="520" y="66" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="550" y="66" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="520" y="140" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="550" y="140" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="512" y="78" width="54" height="56" rx="6" fill="var(--c7l)"/><image href="emoji/1f3e1.png" x="523.0" y="90.0" width="32" height="32"/><rect x="582" y="66" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="612" y="66" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="582" y="140" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="612" y="140" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="574" y="78" width="54" height="56" rx="6" fill="var(--c8l)"/><image href="emoji/1f4bc.png" x="585.0" y="90.0" width="32" height="32"/><rect x="644" y="66" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="674" y="66" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="644" y="140" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="674" y="140" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="636" y="78" width="54" height="56" rx="6" fill="var(--c1l)"/><image href="emoji/2764-fe0f.png" x="647.0" y="90.0" width="32" height="32"/><rect x="706" y="66" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="736" y="66" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="706" y="140" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="736" y="140" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="698" y="78" width="54" height="56" rx="6" fill="var(--c2l)"/><image href="emoji/1f33f.png" x="709.0" y="90.0" width="32" height="32"/><rect x="768" y="66" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="798" y="66" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="768" y="140" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="798" y="140" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="760" y="78" width="54" height="56" rx="6" fill="var(--c3l)"/><image href="emoji/1f4b0.png" x="771.0" y="90.0" width="32" height="32"/><rect x="830" y="66" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="860" y="66" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="830" y="140" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="860" y="140" width="8" height="6" rx="1.5" fill="#fff" opacity=".8"/><rect x="822" y="78" width="54" height="56" rx="6" fill="var(--c4l)"/><image href="emoji/2708-fe0f.png" x="833.0" y="90.0" width="32" height="32"/></g></g><g class="a-pop" style="animation-delay:0.0s"><rect x="201.5" y="172.5" width="157.0" height="27" rx="13.5" fill="var(--c7)"/><text x="280" y="190.3" class="sw" font-size="12" font-weight="800" text-anchor="middle" style="fill:#fff">tạo nên cuộc đời mình</text></g><g class="a-pop" style="animation-delay:0.6s"><rect x="192.1" y="202.5" width="175.8" height="27" rx="13.5" fill="var(--c6)"/><text x="280" y="220.3" class="sw" font-size="12" font-weight="800" text-anchor="middle" style="fill:#fff">viết câu chuyện đời mình</text></g><g class="a-pop" style="animation-delay:1.2s"><rect x="189.0" y="232.5" width="182.0" height="27" rx="13.5" fill="var(--c8)"/><text x="280" y="250.3" class="sw" font-size="12" font-weight="800" text-anchor="middle" style="fill:#fff">đạo diễn bộ phim đời mình</text></g></svg></figure>
+<article class="body-card rv"><p style="--pi:0">Có vô số mức độ cảm xúc tốt mà bạn có thể trải nghiệm. Điều đó có nghĩa là không có giới hạn cho những đỉnh cao bạn có thể đạt tới trong cuộc sống. Cảm xúc xấu cũng có nhiều mức độ và có thể ngày càng trở nên tiêu cực. Nhưng cảm xúc xấu có một giới hạn thấp nhất: khi vượt quá mức bạn có thể chịu đựng, chúng sẽ thôi thúc bạn chọn trở lại với những cảm xúc tốt.</p><p style="--pi:1">Không phải ngẫu nhiên mà cảm xúc tốt khiến bạn thấy tuyệt vời, còn cảm xúc xấu khiến bạn thấy rất tồi tệ.</p><p style="--pi:2">Tình yêu là sức mạnh tối thượng chi phối cuộc sống. Thông qua những cảm xúc tốt, tình yêu kêu gọi và thu hút bạn đến với cuộc đời mà bạn sinh ra để sống. Tình yêu cũng gửi tín hiệu đến bạn qua những cảm xúc xấu, bởi chúng cho bạn biết rằng mình đang mất kết nối với sức mạnh tích cực của sự sống!</p></article>
+<div class="totop"><a href="#top">↑ Về đầu trang</a></div></section>
+<section id="p6"><div class="sec-head rv"><div class="badge"><span class="nv">06</span></div><h2>Tất cả đều liên quan đến cảm xúc của bạn</h2></div>
+<article class="body-card rv"><p style="--pi:0">Mọi điều trong cuộc sống đều liên quan đến cách bạn cảm thấy. Mỗi quyết định bạn đưa ra đều dựa trên cảm xúc của bạn. <mark>Cảm xúc chính là sức mạnh thúc đẩy toàn bộ cuộc đời bạn!</mark></p></article>
+<figure class="inimg rv"><button class="zoom" type="button" aria-label="Phóng to ảnh"><img src="images/vong_cam_xuc.jpg" width="1920" height="819" alt="Vòng cảm xúc tiêu cực thu hút thêm điều bạn không muốn; vòng cảm xúc tích cực thu hút thêm điều bạn muốn" loading="lazy" decoding="async"></button></figure>
+<article class="body-card rv"><p style="--pi:0">Bạn muốn những điều mình muốn trong đời vì bạn yêu thích chúng và vì chúng khiến bạn cảm thấy tốt. Bạn không muốn những điều mình không thích vì chúng khiến bạn cảm thấy tồi tệ.</p><p style="--pi:1">Bạn muốn khỏe mạnh vì sức khỏe tốt khiến bạn cảm thấy dễ chịu, còn bệnh tật khiến bạn thấy khổ sở. Bạn muốn có tiền vì việc mua sắm và làm những điều mình yêu thích khiến bạn vui, còn việc không thể làm những điều ấy khiến bạn buồn. Bạn muốn có những mối quan hệ hạnh phúc vì chúng đem lại cảm giác tốt đẹp, trong khi những mối quan hệ khó khăn khiến bạn thấy tồi tệ. Bạn muốn hạnh phúc vì hạnh phúc khiến bạn cảm thấy tốt, còn bất hạnh khiến bạn cảm thấy buồn khổ.</p><p style="--pi:2">Mọi điều bạn muốn đều bắt nguồn từ mong muốn có được cảm giác tốt đẹp mà chúng mang lại! Vậy làm thế nào để đón nhận những điều tốt đẹp bạn mong muốn? Bằng những cảm xúc tốt! <mark>Những đồng đô la yêu mến bạn. Sức khỏe yêu mến bạn. Hạnh phúc yêu mến bạn.</mark> Mọi điều bạn yêu thích đều yêu mến bạn! Chúng mong mỏi được bước vào cuộc đời bạn, nhưng bạn cần trao đi những cảm xúc tốt để chúng có thể đến. Bạn không cần gắng sức và vật lộn để thay đổi hoàn cảnh sống; điều duy nhất bạn cần làm là trao đi tình yêu thông qua những cảm xúc tốt, rồi điều bạn mong muốn sẽ xuất hiện!</p><p style="--pi:3">Những cảm xúc tốt giúp bạn sử dụng sức mạnh của tình yêu — sức mạnh mang đến mọi điều tốt đẹp trong cuộc sống. Chúng cho bạn biết rằng bạn đang đi đúng hướng để đến với điều mình mong muốn. Chúng cho bạn biết rằng khi bạn cảm thấy tốt, cuộc sống sẽ tốt đẹp! Nhưng trước hết, bạn phải trao đi những cảm xúc tốt.</p><p style="--pi:4">Nếu suốt đời bạn vẫn tự nhủ: “Mình sẽ hạnh phúc khi có một ngôi nhà tốt hơn”, “Mình sẽ hạnh phúc khi có việc làm hoặc được thăng chức”, “Mình sẽ hạnh phúc khi các con học xong đại học”, “Mình sẽ hạnh phúc khi gia đình có nhiều tiền hơn”, “Mình sẽ hạnh phúc khi được đi du lịch”, hay “Mình sẽ hạnh phúc khi công việc kinh doanh thành công”, thì bạn sẽ không bao giờ có được những điều ấy. Bởi những suy nghĩ đó đi ngược lại cách tình yêu vận hành; chúng đi ngược lại luật hấp dẫn.</p><p style="--pi:5"><mark>Trước tiên, bạn phải hạnh phúc và trao đi niềm hạnh phúc thì mới nhận lại những điều đem đến hạnh phúc!</mark> Không thể có cách nào khác, bởi điều bạn muốn nhận trong cuộc sống thì trước hết bạn phải trao đi. Bạn có thể làm chủ cảm xúc của mình, có thể làm chủ tình yêu mình trao đi; và sức mạnh của tình yêu sẽ trả lại cho bạn tất cả những gì bạn đã trao.</p></article>
+<figure class="dia rv" id="hinh-10"><span class="fig-lbl"><img class="em" src="emoji/1f3a8.png" alt="🎨" draggable="false"> Hình 10 · Hạnh phúc trước — rồi mới nhận</span><svg viewBox="0 0 440 246" role="img" aria-label="Trên: ý nghĩ mình sẽ hạnh phúc khi có được điều mình muốn bị gạch đi vì đi ngược luật hấp dẫn; dưới: hạnh phúc trước, trao đi niềm hạnh phúc, rồi nhận lại những điều đem đến hạnh phúc"><defs></defs><g opacity=".75"><g class="" style=""><rect x="45.9" y="44.0" width="188.2" height="28" rx="14.0" fill="var(--gy)"/><text x="140" y="62.7" class="sw" font-size="13" font-weight="800" text-anchor="middle" style="fill:#fff">“Mình sẽ hạnh phúc khi…”</text></g></g><line x1="28" y1="58" x2="252" y2="58" stroke="var(--c1)" stroke-width="4" stroke-linecap="round" pathLength="100" class="a-strike"/><g class="a-pulse" style=""><image href="emoji/274c.png" x="303.0" y="41.0" width="34" height="34"/></g><text x="320" y="98" class="st" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--gy)">đi ngược luật hấp dẫn</text><line x1="20" y1="124" x2="420" y2="124" stroke="var(--line)" stroke-width="2" stroke-dasharray="4 6"/><circle cx="66" cy="182" r="34" fill="var(--c4l)" stroke="var(--c4)" stroke-width="2.5"/><g class="a-pulse" style=""><image href="emoji/1f60a.png" x="44.0" y="160.0" width="44" height="44"/></g><text x="66" y="236" class="st" font-size="12.5" font-weight="800" text-anchor="middle" style="fill:var(--c4)">hạnh phúc trước</text><path d="M108,182 C170,150 240,150 300,182" fill="none" stroke="var(--c8)" stroke-width="2.5" class="a-dash"/><g><path d="M0,-0.8000000000000007 c-4.800000000000001,-7.2 -16.0,-3.2 -11.200000000000001,5.6000000000000005 l11.200000000000001,10.4 l11.200000000000001,-10.4 c4.800000000000001,-8.8 -6.4,-12.8 -11.200000000000001,-5.6000000000000005 Z" fill="var(--c8)" class="" style=""/><animateMotion dur="2.6s" repeatCount="indefinite" path="M108,182 C170,150 240,150 300,182"/></g><text x="204" y="150" class="st" font-size="12.5" font-weight="800" text-anchor="middle" style="fill:var(--c8)">trao đi niềm hạnh phúc</text><g class="a-hop" style=""><image href="emoji/1f381.png" x="323.0" y="153.0" width="46" height="46"/></g><text x="346" y="222" class="st" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--c2)">nhận lại điều đem</text><text x="346" y="237" class="st" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--c2)">đến hạnh phúc</text><path d="M382,144 L383.68,148.32 L388,150 L383.68,151.68 L382,156 L380.32,151.68 L376,150 L380.32,148.32 Z" fill="var(--c3)" class="a-tw" style="animation-delay:0.00s"/><path d="M310,140 L311.68,144.32 L316,146 L311.68,147.68 L310,152 L308.32,147.68 L304,146 L308.32,144.32 Z" fill="var(--c3)" class="a-tw" style="animation-delay:0.50s"/><path d="M396,190 L397.68,194.32 L402,196 L397.68,197.68 L396,202 L394.32,197.68 L390,196 L394.32,194.32 Z" fill="var(--c3)" class="a-tw" style="animation-delay:1.00s"/></svg></figure>
+<div class="totop"><a href="#top">↑ Về đầu trang</a></div></section>
+<section class="sum rv" id="tom-tat"><div class="sum-h"><span class="sum-ic" aria-hidden="true"><img class="em" src="emoji/1f5dd-fe0f.png" alt="🗝️" draggable="false"></span><h2>NHỮNG ĐIỂM CỐT LÕI VỀ SỨC MẠNH</h2></div><ul><li style="--li:0">Điều bạn cảm thấy tại một thời điểm quan trọng hơn mọi thứ khác, bởi cách bạn cảm thấy ngay lúc này đang tạo nên cuộc đời bạn.</li><li style="--li:1">Cảm xúc tạo nên sức mạnh cho suy nghĩ và lời nói của bạn. Điều bạn cảm thấy mới là điều quan trọng!</li><li style="--li:2"><mark>Mọi cảm xúc tốt đều bắt nguồn từ tình yêu!</mark> Mọi cảm xúc tiêu cực đều bắt nguồn từ sự thiếu vắng tình yêu.</li><li style="--li:3">Mỗi cảm xúc tốt đều kết nối bạn với sức mạnh của tình yêu, bởi tình yêu là nguồn gốc của mọi cảm xúc tốt.</li><li style="--li:4">Hãy làm những cảm xúc tốt mạnh lên bằng cách nghĩ về mọi điều bạn yêu thích. Liên tục kể ra những điều ấy, hết điều này đến điều khác. Hãy tiếp tục liệt kê cho đến khi bạn cảm thấy tuyệt vời.</li><li style="--li:5">Cách bạn cảm nhận về từng lĩnh vực trong đời phản ánh chính xác những gì bạn đã trao đi trong lĩnh vực đó.</li><li style="--li:6">Cuộc sống không đơn thuần là những chuyện xảy đến với bạn — cuộc sống đang đáp lại bạn! Mỗi vấn đề trong đời đều gắn với lựa chọn của bạn; những gì bạn trao đi quyết định những gì bạn nhận được.</li><li style="--li:7">Có vô số mức độ cảm xúc tốt mà bạn có thể trải nghiệm. Điều đó có nghĩa là không có giới hạn cho những đỉnh cao bạn có thể đạt tới trong cuộc sống.</li><li style="--li:8">Mọi điều bạn yêu thích đều mong được đến với bạn! Những đồng đô la muốn đến với bạn. Sức khỏe muốn đến với bạn. Hạnh phúc muốn đến với bạn.</li><li style="--li:9">Đừng vật lộn để thay đổi hoàn cảnh sống. Hãy trao đi tình yêu thông qua những cảm xúc tốt, rồi điều bạn mong muốn sẽ xuất hiện!</li><li style="--li:10">Trước hết, bạn phải trao đi những cảm xúc tốt. Bạn phải hạnh phúc và trao đi niềm hạnh phúc trước thì mới nhận lại những điều đem đến hạnh phúc! Bất cứ điều gì bạn muốn nhận trong cuộc sống, trước tiên bạn phải trao đi điều ấy!</li></ul></section>
+  <div class="done-card rv"><p><img class="em" src="emoji/1f31f.png" alt="🌟" draggable="false"> Bạn đã đi đến cuối phần này.</p><button class="mark" type="button" aria-pressed="false"><span class="m-off"><img class="em" src="emoji/2705.png" alt="✅" draggable="false"> Đánh dấu đã đọc xong</span><span class="m-on"><img class="em" src="emoji/1f389.png" alt="🎉" draggable="false"> Đã đọc xong — giỏi lắm!</span></button></div>
+</main>
+
+<nav class="pager" aria-label="Chuyển phần"><a class="pv rv" href="01-suc-manh-la-gi.html"><span class="pl"><img class="em" src="emoji/2b05-fe0f.png" alt="⬅️" draggable="false"> Phần trước</span><b>Chương 01 — Sức mạnh là gì?</b></a><a class="mid rv" href="index.html"><span class="pl"><img class="em" src="emoji/1f5c2-fe0f.png" alt="🗂️" draggable="false"> Mục lục</span><b>Toàn bộ cuốn sách</b></a><a class="nx rv" href="03-cam-nhan-cac-tan-so.html"><span class="pl">Phần sau <img class="em" src="emoji/27a1-fe0f.png" alt="➡️" draggable="false"></span><b>Chương 03 — Cảm nhận các tần số</b></a></nav>
+<footer><span class="fe"><img class="em" src="emoji/1f4d8.png" alt="📘" draggable="false"></span><b>Sức Mạnh</b> — Rhonda Byrne<br>Bản trình bày để đọc riêng hằng ngày. Bản quyền nội dung thuộc về tác giả và nhà xuất bản.</footer>
+
+<div id="findbar" hidden role="search"><input type="search" placeholder="Tìm trong phần này…" aria-label="Tìm trong trang"><span id="fcount">0/0</span><button type="button" data-f="prev" aria-label="Kết quả trước">‹</button><button type="button" data-f="next" aria-label="Kết quả sau">›</button><button type="button" data-f="close" aria-label="Đóng tìm kiếm">✕</button></div>
+<div id="hlsheet" hidden aria-label="Các câu được bôi vàng"><h3><img class="em" src="emoji/1f58d-fe0f.png" alt="🖍️" draggable="false"> Các câu bôi vàng</h3><ol></ol></div>
+<div id="fabs">
+  <button type="button" id="fabFind" aria-label="Tìm trong trang"><img class="em" src="emoji/1f50d.png" alt="🔍" draggable="false"></button>
+  <button type="button" id="fabHl" aria-label="Xem các câu bôi vàng"><img class="em" src="emoji/1f58d-fe0f.png" alt="🖍️" draggable="false"></button>
+  <button type="button" data-act="font" aria-label="Đổi cỡ chữ"><img class="em" src="emoji/1f524.png" alt="🔤" draggable="false"></button>
+  <button type="button" data-act="still" aria-label="Tạm dừng chuyển động"><img class="em" src="emoji/23f8-fe0f.png" alt="⏸️" draggable="false"></button>
+  <button type="button" data-act="dark" data-label="0" aria-label="Chế độ tối"><img class="em" src="emoji/1f319.png" alt="🌙" draggable="false"></button>
+  <button type="button" class="fab-top" data-act="top" aria-label="Về đầu trang"><img class="em" src="emoji/2b06-fe0f.png" alt="⬆️" draggable="false"></button>
+</div>
+<div id="resume" hidden role="status"><p id="resume-t"></p><button class="go" type="button">Đọc tiếp</button><button class="x" type="button" aria-label="Đóng">✕</button></div>
+<div id="lightbox" hidden><button class="lb-close" type="button" aria-label="Đóng">✕</button><img alt=""></div>
+<script>var SM=(function(){
+  var html=document.documentElement,P='suc-manh.';
+  function get(k,d){try{var v=localStorage.getItem(P+k);return v==null?d:JSON.parse(v)}catch(e){return d}}
+  function set(k,v){try{localStorage.setItem(P+k,JSON.stringify(v))}catch(e){}}
+  function dkey(d){d=d||new Date();return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2)}
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  html.classList.add('js');
+
+  /* theme */
+  var mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function isDark(){var t=get('theme','auto');return t==='dark'||(t==='auto'&&!!mq&&mq.matches)}
+  function applyTheme(){html.setAttribute('data-theme',isDark()?'dark':'light');var m=document.querySelector('meta[name=theme-color]');if(m)m.content=isDark()?'#13111b':'#fbf8f3';
+    document.querySelectorAll('[data-act=dark]').forEach(function(b){b.setAttribute('aria-pressed',isDark()?'true':'false');if(b.dataset.label!=='0')b.innerHTML=isDark()?'☀️<span class="bl"> Chế độ đọc sáng</span>':'🌙<span class="bl"> Chế độ đọc tối</span>';else b.textContent=isDark()?'☀️':'🌙'})}
+  function toggleDark(){set('theme',isDark()?'light':'dark');applyTheme()}
+  /* motion */
+  function applyStill(){var s=get('motion','on')==='off'||reduce;html.classList.toggle('still',s);document.querySelectorAll('svg').forEach(function(g){try{g[s?'pauseAnimations':'unpauseAnimations']()}catch(e){}});document.querySelectorAll('[data-act=still]').forEach(function(b){b.setAttribute('aria-pressed',s?'true':'false');b.textContent=s?'▶️':'⏸️';b.title=s?'Bật lại chuyển động':'Tạm dừng chuyển động'})}
+  function toggleStill(){set('motion',get('motion','on')==='off'?'on':'off');applyStill();toast(get('motion','on')==='off'?'⏸️ Đã dừng chuyển động':'▶️ Đã bật chuyển động')}
+  /* font size */
+  var SIZES=[17,19,21,23];
+  function applyFs(){html.style.setProperty('--fs',get('fs',19)+'px')}
+  function cycleFs(){var i=SIZES.indexOf(get('fs',19));var n=SIZES[(i+1)%SIZES.length];set('fs',n);applyFs();toast('🔤 Cỡ chữ '+n)}
+  applyTheme();applyStill();applyFs();
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(){if(get('theme','auto')==='auto')applyTheme()});
+
+  function toast(t){var d=document.createElement('div');d.className='toast';d.textContent=t;document.body.appendChild(d);setTimeout(function(){d.remove()},1700)}
+  function burst(el){if(html.classList.contains('still'))return;var r=el.getBoundingClientRect(),E=['🎉','✨','💖','🌟','🎊','💫','🌈','🥳'];
+    for(var i=0;i<12;i++){var s=document.createElement('span'),a=(-170+Math.random()*160)*Math.PI/180,d=70+Math.random()*90;
+      s.className='burst';s.textContent=E[i%E.length];s.style.left=(r.left+r.width/2)+'px';s.style.top=(r.top+r.height/2)+'px';
+      s.style.setProperty('--dx',(Math.cos(a)*d).toFixed(0)+'px');s.style.setProperty('--dy',(Math.sin(a)*d).toFixed(0)+'px');
+      document.body.appendChild(s);setTimeout(function(x){x.remove()}.bind(null,s),1200)}}
+
+  /* reading days: tính 1 ngày đã đọc khi đọc thật ≥ 2 phút hoặc đánh dấu xong một phần */
+  var lastAct=Date.now();
+  ['scroll','touchstart','keydown','click'].forEach(function(ev){addEventListener(ev,function(){lastAct=Date.now()},{passive:true})});
+  function markDay(){var days=get('days',[]),k=dkey();if(days.indexOf(k)<0){days.push(k);set('days',days.slice(-400))}}
+  setInterval(function(){if(document.visibilityState!=='visible'||Date.now()-lastAct>180000)return;
+    var s=get('sec',{}),k=dkey();s[k]=(s[k]||0)+15;set('sec',s);if(s[k]>=120)markDay();if(SM.onTick)SM.onTick()},15000);
+  function streak(){var days=get('days',[]),n=0,d=new Date();if(days.indexOf(dkey(d))<0)d.setDate(d.getDate()-1);while(days.indexOf(dkey(d))>=0){n++;d.setDate(d.getDate()-1)}return n}
+
+  /* copy prompt / quote */
+  function copyText(t,msg){function fb(){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();
+      try{document.execCommand('copy');toast(msg)}catch(e){toast('Không sao chép được')}a.remove()}
+    if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(function(){toast(msg)},fb);else fb()}
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('[data-prompt]');if(b){copyText(b.dataset.prompt,'✅ Đã sao chép prompt');return}
+    var q=e.target.closest('.cpy');if(q){var c=q.closest('.quote');copyText(c.querySelector('.qbody').innerText.trim()+(c.querySelector('cite')?'\n'+c.querySelector('cite').innerText.trim():''),'📋 Đã sao chép trích dẫn');return}
+    var a=e.target.closest('[data-act]');if(!a)return;var act=a.dataset.act;
+    if(act==='dark')toggleDark();else if(act==='still')toggleStill();else if(act==='font')cycleFs();else if(act==='print')print();
+    else if(act==='top')scrollTo({top:0,behavior:html.classList.contains('still')?'auto':'smooth'});
+  });
+
+  /* lightbox */
+  var lb=document.getElementById('lightbox');
+  if(lb){var lbImg=lb.querySelector('img'),lbX=lb.querySelector('.lb-close'),last=null;
+    document.querySelectorAll('.zoom').forEach(function(b){b.addEventListener('click',function(){var i=b.querySelector('img');last=b;lbImg.src=i.src;lbImg.alt=i.alt;lb.hidden=false;document.body.style.overflow='hidden';lbX.focus()})});
+    function closeLb(){lb.hidden=true;lbImg.removeAttribute('src');document.body.style.overflow='';if(last)last.focus()}
+    lbX.addEventListener('click',closeLb);lb.addEventListener('click',function(e){if(e.target===lb)closeLb()});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!lb.hidden)closeLb()});}
+
+  /* reveal */
+  var rv=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});rv.forEach(function(el){io.observe(el)})}
+  else rv.forEach(function(el){el.classList.add('in')});
+  addEventListener('beforeprint',function(){rv.forEach(function(el){el.classList.add('in')})});
+
+  /* progress bar + top button */
+  var bar=document.getElementById('progress'),topBtn=document.querySelector('.fab-top');
+  function onScroll(){var h=document.documentElement,p=h.scrollTop/((h.scrollHeight-h.clientHeight)||1);
+    if(bar)bar.style.transform='scaleX('+Math.min(1,Math.max(0,p))+')';if(topBtn)topBtn.classList.toggle('on',scrollY>innerHeight*.8)}
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var pimgs=[].slice.call(document.querySelectorAll('.zoom img')),pt=false;
+  function para(){pt=false;if(html.classList.contains('still'))return;pimgs.forEach(function(i){var r=i.parentNode.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;
+    var k=((r.top+r.height/2)-innerHeight/2)/innerHeight;i.style.setProperty('--py',Math.max(-1,Math.min(1,k*-1.2)).toFixed(2)+'%')})}
+  addEventListener('scroll',function(){if(!pt){pt=true;requestAnimationFrame(para)}},{passive:true});para();
+
+  return {get:get,set:set,dkey:dkey,toast:toast,burst:burst,markDay:markDay,streak:streak,onTick:null};
+})();
+</script>
+<script>(function(){
+  var html=document.documentElement,slug=document.body.dataset.slug,main=document.getElementById('doc');
+  /* ---- vị trí đọc ---- */
+  function frac(){var r=main.getBoundingClientRect();return Math.min(1,Math.max(0,(innerHeight*0.3-r.top)/r.height))}
+  function goFrac(f,smooth){var r=main.getBoundingClientRect();scrollTo({top:Math.max(0,r.top+scrollY+f*r.height-innerHeight*0.3),behavior:smooth&&!html.classList.contains('still')?'smooth':'auto'})}
+  var saved=SM.get('pos.'+slug,null),lastSave=0;
+  var heads=[].slice.call(document.querySelectorAll('.sec-head h2,.sum-h h2')),now=document.getElementById('nowsec');
+  addEventListener('scroll',function(){var t=Date.now();
+    if(t-lastSave>700){lastSave=t;var f=frac();if(f>0.01){SM.set('pos.'+slug,{f:f});SM.set('last',{slug:slug,f:f})}}
+    if(now){var cur='';heads.forEach(function(h){if(h.getBoundingClientRect().top<innerHeight*0.3)cur=h.textContent});now.textContent=cur?'📍 '+cur:''}
+  },{passive:true});
+  if(saved&&saved.f>0.03){
+    if(location.hash==='#tiep'){setTimeout(function(){goFrac(saved.f,false)},60)}
+    else{var rs=document.getElementById('resume');document.getElementById('resume-t').textContent='📍 Lần trước bạn đọc phần này đến '+Math.round(saved.f*100)+'%.';
+      rs.hidden=false;rs.querySelector('.go').onclick=function(){rs.hidden=true;goFrac(saved.f,true)};rs.querySelector('.x').onclick=function(){rs.hidden=true};setTimeout(function(){rs.hidden=true},15000)}
+  }
+  /* ---- đánh dấu đã đọc ---- */
+  var mk=document.querySelector('.mark');
+  function syncMark(){mk.setAttribute('aria-pressed',SM.get('done',{})[slug]?'true':'false')}
+  syncMark();
+  mk.addEventListener('click',function(){var d=SM.get('done',{});if(d[slug])delete d[slug];else{d[slug]=SM.dkey();SM.markDay();SM.burst(mk);SM.toast('🎉 Đã ghi nhận bạn đọc xong phần này')}SM.set('done',d);syncMark()});
+  /* ---- số liệu đếm lên ---- */
+  [].forEach.call(document.querySelectorAll('.stat b[data-n]'),function(b,i){var n=+b.dataset.n;if(html.classList.contains('still')||!n){b.textContent=b.dataset.t||n;return}
+    var t0=null,dur=1100+i*140;function step(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/dur);k=1-Math.pow(1-k,3);b.textContent=Math.round(n*k)+(b.dataset.s||'');if(k<1)requestAnimationFrame(step);else b.textContent=b.dataset.t||n}requestAnimationFrame(step)});
+  /* ---- tìm trong trang ---- */
+  var fb=document.getElementById('findbar'),fi=fb.querySelector('input'),fc=document.getElementById('fcount'),hits=[],hi=-1,tm;
+  function clear(){hits.forEach(function(s){var p=s.parentNode;if(!p)return;p.replaceChild(document.createTextNode(s.textContent),s);p.normalize()});hits=[];hi=-1}
+  function find(q){clear();q=q.trim().toLowerCase();if(q.length<2){fc.textContent='0/0';return}
+    var w=document.createTreeWalker(main,NodeFilter.SHOW_TEXT,{acceptNode:function(n){return n.parentNode.closest('.prompt,button,script')?2:(n.nodeValue.toLowerCase().indexOf(q)>=0?1:2)}}),ns=[];
+    while(w.nextNode())ns.push(w.currentNode);
+    ns.forEach(function(n){var v=n.nodeValue,lv=v.toLowerCase(),i,pos=0,frag=document.createDocumentFragment();
+      while((i=lv.indexOf(q,pos))>=0){frag.appendChild(document.createTextNode(v.slice(pos,i)));var s=document.createElement('span');s.className='hit';s.textContent=v.slice(i,i+q.length);frag.appendChild(s);hits.push(s);pos=i+q.length}
+      frag.appendChild(document.createTextNode(v.slice(pos)));n.parentNode.replaceChild(frag,n)});
+    hi=hits.length?0:-1;show()}
+  function show(){hits.forEach(function(s,i){s.classList.toggle('cur',i===hi)});fc.textContent=(hits.length?hi+1:0)+'/'+hits.length;
+    if(hi>=0){var el=hits[hi];var rv=el.closest('.rv');if(rv)rv.classList.add('in');el.scrollIntoView({block:'center',behavior:html.classList.contains('still')?'auto':'smooth'})}}
+  document.getElementById('fabFind').addEventListener('click',function(){fb.hidden=!fb.hidden;this.setAttribute('aria-pressed',String(!fb.hidden));if(!fb.hidden)fi.focus();else clear()});
+  fi.addEventListener('input',function(){clearTimeout(tm);tm=setTimeout(function(){find(fi.value)},220)});
+  fi.addEventListener('keydown',function(e){if(e.key==='Enter'&&hits.length){hi=(hi+(e.shiftKey?-1:1)+hits.length)%hits.length;show()}if(e.key==='Escape'){fb.hidden=true;clear()}});
+  fb.addEventListener('click',function(e){var b=e.target.closest('[data-f]');if(!b)return;var f=b.dataset.f;
+    if(f==='close'){fb.hidden=true;clear();document.getElementById('fabFind').setAttribute('aria-pressed','false');return}
+    if(hits.length){hi=(hi+(f==='next'?1:-1)+hits.length)%hits.length;show()}});
+  /* ---- câu bôi vàng ---- */
+  var hb=document.getElementById('fabHl'),hs=document.getElementById('hlsheet');
+  if(hb){var marks=[].slice.call(main.querySelectorAll('mark')),ol=hs.querySelector('ol');
+    marks.forEach(function(m,i){var li=document.createElement('li');li.textContent=m.textContent;li.onclick=function(){var rv=m.closest('.rv');if(rv)rv.classList.add('in');m.scrollIntoView({block:'center',behavior:'smooth'});m.classList.remove('flash');void m.offsetWidth;m.classList.add('flash');hs.hidden=true;hb.setAttribute('aria-pressed','false')};ol.appendChild(li)});
+    hb.addEventListener('click',function(e){e.stopPropagation();hs.hidden=!hs.hidden;hb.setAttribute('aria-pressed',String(!hs.hidden))});
+    document.addEventListener('click',function(e){if(!hs.hidden&&!hs.contains(e.target)){hs.hidden=true;hb.setAttribute('aria-pressed','false')}});}
+})();</script>
+<script>window.__EMO={"📘": "1f4d8.png", "🗂️": "1f5c2-fe0f.png", "🌙": "1f319.png", "🖨️": "1f5a8-fe0f.png", "⬆️": "2b06-fe0f.png", "🌊": "1f30a.png", "☀️": "2600-fe0f.png", "💗": "1f497.png", "🌈": "1f308.png", "✨": "2728.png", "💫": "1f4ab.png", "🌟": "1f31f.png", "💖": "1f496.png", "🎨": "1f3a8.png", "📖": "1f4d6.png", "✍️": "270d-fe0f.png", "🧭": "1f9ed.png", "⏱️": "23f1-fe0f.png", "📄": "1f4c4.png", "🧩": "1f9e9.png", "💬": "1f4ac.png", "📋": "1f4cb.png", "🗝️": "1f5dd-fe0f.png", "✅": "2705.png", "🎉": "1f389.png", "⬅️": "2b05-fe0f.png", "➡️": "27a1-fe0f.png", "🖍️": "1f58d-fe0f.png", "🔍": "1f50d.png", "🔤": "1f524.png", "⏸️": "23f8-fe0f.png", "▶️": "25b6-fe0f.png", "🎊": "1f38a.png", "🥳": "1f973.png", "📍": "1f4cd.png"};</script><script>(function(){
+  var M=window.__EMO||{},ks=Object.keys(M).sort(function(a,b){return b.length-a.length});
+  if(!ks.length)return;
+  var RE=new RegExp(ks.map(function(k){return k.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}).join('|'),'g');
+  var SKIP=/^(SCRIPT|STYLE|TEXTAREA|INPUT|TITLE|PRE|CODE|OPTION)$/;
+  function fix(root){
+    if(!root)return;if(root.nodeType===3)root=root.parentNode;if(!root||SKIP.test(root.nodeName))return;
+    var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:function(n){var p=n.parentNode;if(!p||SKIP.test(p.nodeName))return 2;RE.lastIndex=0;return RE.test(n.nodeValue)?1:2}}),ns=[];
+    while(w.nextNode())ns.push(w.currentNode);
+    ns.forEach(function(n){var v=n.nodeValue,f=document.createDocumentFragment(),last=0,m;RE.lastIndex=0;
+      while((m=RE.exec(v))){f.appendChild(document.createTextNode(v.slice(last,m.index)));var i=document.createElement('img');i.className='em';i.src='emoji/'+M[m[0]];i.alt=m[0];i.draggable=false;f.appendChild(i);last=m.index+m[0].length}
+      f.appendChild(document.createTextNode(v.slice(last)));if(n.parentNode)n.parentNode.replaceChild(f,n)});
+  }
+  fix(document.body);
+  new MutationObserver(function(ms){ms.forEach(function(m){[].forEach.call(m.addedNodes,fix)})}).observe(document.body,{childList:true,subtree:true});
+})();</script>
+</body>
+</html>
