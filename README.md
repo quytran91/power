@@ -1,7 +1,9 @@
 # Sức Mạnh · bản đọc hằng ngày
 
 Bản web để đọc mỗi ngày cuốn *Sức Mạnh* (*The Power*) của Rhonda Byrne.
-Mở `index.html` để bắt đầu: bìa, lời đề từ, rồi mục lục dẫn tới từng phần.
+Đọc online: https://quytran91.github.io/power/
+
+Hoặc mở `index.html` trong thư mục này: bìa, lời đề từ, rồi mục lục dẫn tới từng phần.
 
 ## Bên trong có gì
 
@@ -13,10 +15,10 @@ Mở `index.html` để bắt đầu: bìa, lời đề từ, rồi mục lục 
 
 ## Tiến độ
 
-Đã có nội dung: Lời nói đầu, Giới thiệu, Chương 1 đến 5.
-Lời cảm ơn và Chương 6 đến 12 đang chờ nội dung.
+Đã có nội dung: Lời nói đầu, Giới thiệu, Chương 1 đến 8.
+Lời cảm ơn và Chương 9 đến 12 đang chờ nội dung.
 
 ## Lưu ý bản quyền
 
-Nội dung sách thuộc bản quyền của tác giả và nhà xuất bản.
-Repo này dùng để đọc cá nhân, nên để chế độ **Private**.
+Nội dung sách thuộc bản quyền của tác giả Rhonda Byrne và nhà xuất bản.
+Trang này làm ra để đọc cá nhân mỗi ngày.

@@ -4,6 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#fbf8f3">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Sức mạnh">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <script>try{var t=JSON.parse(localStorage.getItem("suc-manh.theme")||'"auto"');if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <title>Chương 05 · Cảm xúc chính là sự sáng tạo – Sức Mạnh</title>
 <style>
@@ -252,6 +259,12 @@ main>.body-card:first-of-type>p.lead:first-child::first-letter{float:none;font:i
 .sum ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 .sum li{position:relative;padding:12px 16px 12px 42px;border-radius:16px;background:var(--paper);border:1px solid var(--gold-bd);font-size:calc(var(--fs) - 1px);line-height:1.65;transition:box-shadow .3s}
 .sum li:hover{box-shadow:0 10px 26px rgba(255,150,0,.18)}
+.sum li.sub{padding:14px 4px 2px;background:none;border:0;font-weight:850;font-size:calc(var(--fs) + 1px);letter-spacing:.02em}
+.sum li.sub:first-child{padding-top:0}
+.sum li.sub:hover{box-shadow:none}
+.sum li.sub::before{display:none}
+.sum li.sub img.em{margin-right:4px}
+.sum li.sub span{background:linear-gradient(100deg,var(--h1),var(--h3));-webkit-background-clip:text;background-clip:text;color:transparent}
 .sum li::before{content:"";position:absolute;left:17px;top:calc(.82em + 6px);width:11px;height:11px;border-radius:50%;background:linear-gradient(145deg,#ffc400,#ff6a00);box-shadow:0 0 0 4px rgba(255,160,0,.2);animation:dotPulse 2.4s ease-in-out infinite;animation-delay:calc(var(--li)*-.2s)}
 @keyframes dotPulse{50%{box-shadow:0 0 0 7px rgba(255,160,0,.1)}}
 .totop{display:flex;justify-content:flex-end;margin:0 0 10px}
@@ -524,7 +537,7 @@ figure.inimg.tall{max-width:540px;margin-left:auto;margin-right:auto;margin-top:
 @keyframes dField{0%,100%{transform:scale(.92)}50%{transform:scale(1.06)}}
 .dia .a-shrinkin{animation:dShrinkIn 4.4s cubic-bezier(.6,0,.4,1) infinite both}
 @keyframes dShrinkIn{0%,20%{transform:none;opacity:1}75%{transform:translate(var(--dx),var(--dy)) scale(.05);opacity:.2}76%,100%{transform:translate(var(--dx),var(--dy)) scale(0);opacity:0}}
-.dia .a-check{animation:dCheck 7s ease infinite both}
+.dia .a-check{animation:dCheck 7s ease infinite both;transform-box:fill-box;transform-origin:center}
 @keyframes dCheck{0%,5%{opacity:0;transform:scale(.3)}12%,90%{opacity:1;transform:none}100%{opacity:0}}
 .dia .a-pour{animation:dPour 7s ease-in-out infinite}
 @keyframes dPour{0%,8%{transform:translateY(190px)}70%,90%{transform:translateY(0)}100%{transform:translateY(190px)}}
@@ -539,6 +552,26 @@ figure.inimg.tall{max-width:540px;margin-left:auto;margin-right:auto;margin-top:
 @keyframes dGrow{0%,100%{transform:scale(.8)}60%{transform:scale(1.25)}}
 .dia .a-shrink{animation:dShrink2 3.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
 @keyframes dShrink2{0%,15%{transform:scale(1);opacity:1}70%,90%{transform:scale(.3);opacity:.25}100%{transform:scale(1);opacity:1}}
+
+/* chương 7 */
+.dia .a-keyin{animation:dKeyIn 6s ease-in-out infinite both;transform-box:fill-box;transform-origin:center}
+@keyframes dKeyIn{0%{transform:translateY(40px);opacity:0}12%{opacity:1}35%{transform:translateY(0) rotate(0);opacity:1}48%{transform:translateY(0) rotate(80deg);opacity:1}56%,100%{transform:translateY(0) rotate(80deg);opacity:0}}
+.dia .a-unlock{animation:dUnlock 6s cubic-bezier(.3,1.6,.5,1) infinite both}
+@keyframes dUnlock{0%,48%{transform:translateY(0)}58%,88%{transform:translateY(-14px)}100%{transform:translateY(0)}}
+.dia .a-reveal{animation:dReveal 6s cubic-bezier(.3,1.6,.5,1) infinite both;transform-box:fill-box;transform-origin:center}
+@keyframes dReveal{0%,50%{transform:scale(.2);opacity:0}60%,88%{transform:scale(1);opacity:1}100%{transform:scale(.2);opacity:0}}
+.dia .a-seq5{animation:dSeq5 10s ease infinite both;transform-box:fill-box;transform-origin:center}
+@keyframes dSeq5{0%{opacity:0;transform:scale(.6)}3%{opacity:1;transform:scale(1.08)}6%{transform:scale(1)}18%{opacity:1;transform:scale(1)}21%,100%{opacity:0;transform:scale(1)}}
+.dia .a-break{animation:dBreak 6s cubic-bezier(.5,1.4,.5,1) infinite both}
+@keyframes dBreak{0%,30%{transform:none;opacity:1}55%,85%{transform:translate(var(--dx),var(--dy));opacity:.12}100%{transform:none;opacity:1}}
+.dia .a-lit{animation:dLit 8s ease infinite both}
+@keyframes dLit{0%{opacity:0}2%{opacity:1}75%{opacity:1}85%,100%{opacity:0}}
+
+/* chương 8 */
+.dia .a-billA{animation:dBillA 6s ease-in-out infinite both;transform-box:fill-box;transform-origin:center}
+.dia .a-billB{animation:dBillB 6s ease-in-out infinite both;transform-box:fill-box;transform-origin:center}
+@keyframes dBillA{0%,60%{transform:scaleX(1)}63%,85%{transform:scaleX(0)}88%,100%{transform:scaleX(1)}}
+@keyframes dBillB{0%,63%{transform:scaleX(0)}66%,82%{transform:scaleX(1)}85%,100%{transform:scaleX(0)}}
 
 
 @media (max-width:860px){#nowsec{display:none}}
