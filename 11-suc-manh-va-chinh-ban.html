@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="vi" data-theme="auto" class="chap">
+<html lang="vi" data-theme="dark" class="chap">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#fbf8f3">
+<meta name="theme-color" content="#13111b">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Sức mạnh">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<script>try{var t=JSON.parse(localStorage.getItem("suc-manh.theme")||'"auto"');if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
 <title>Chương 11 · Sức mạnh và chính bạn – Sức Mạnh</title>
 <style>
 :root{
@@ -642,8 +642,8 @@ figure.inimg.tall{max-width:540px;margin-left:auto;margin-right:auto;margin-top:
   <a class="tb-title" href="index.html"><img class="em" src="emoji/1f4d8.png" alt="📘" draggable="false"> Sức Mạnh</a>
   <span id="nowsec" aria-live="polite"></span>
   <a class="btn" href="index.html"><img class="em" src="emoji/1f5c2-fe0f.png" alt="🗂️" draggable="false"><span class="bl"> Mục lục sách</span></a>
-  <button class="btn" type="button" data-act="dark" aria-pressed="false"><img class="em" src="emoji/1f319.png" alt="🌙" draggable="false"><span class="bl"> Chế độ đọc tối</span></button>
-  <button class="btn" type="button" data-act="print"><img class="em" src="emoji/1f5a8-fe0f.png" alt="🖨️" draggable="false"><span class="bl"> In / Lưu PDF</span></button>
+  
+  
   <button class="btn" type="button" data-act="top"><img class="em" src="emoji/2b06-fe0f.png" alt="⬆️" draggable="false"><span class="bl"> Về đầu trang</span></button>
 </div></div>
 
@@ -737,7 +737,7 @@ figure.inimg.tall{max-width:540px;margin-left:auto;margin-right:auto;margin-top:
   <button type="button" id="fabHl" aria-label="Xem các câu bôi vàng"><img class="em" src="emoji/1f58d-fe0f.png" alt="🖍️" draggable="false"></button>
   <button type="button" data-act="font" aria-label="Đổi cỡ chữ"><img class="em" src="emoji/1f524.png" alt="🔤" draggable="false"></button>
   <button type="button" data-act="still" aria-label="Tạm dừng chuyển động"><img class="em" src="emoji/23f8-fe0f.png" alt="⏸️" draggable="false"></button>
-  <button type="button" data-act="dark" data-label="0" aria-label="Chế độ tối"><img class="em" src="emoji/1f319.png" alt="🌙" draggable="false"></button>
+  
   <button type="button" class="fab-top" data-act="top" aria-label="Về đầu trang"><img class="em" src="emoji/2b06-fe0f.png" alt="⬆️" draggable="false"></button>
 </div>
 <div id="resume" hidden role="status"><p id="resume-t"></p><button class="go" type="button">Đọc tiếp</button><button class="x" type="button" aria-label="Đóng">✕</button></div>
@@ -752,7 +752,7 @@ figure.inimg.tall{max-width:540px;margin-left:auto;margin-right:auto;margin-top:
 
   /* theme */
   var mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
-  function isDark(){var t=get('theme','auto');return t==='dark'||(t==='auto'&&!!mq&&mq.matches)}
+  function isDark(){return true}
   function applyTheme(){html.setAttribute('data-theme',isDark()?'dark':'light');var m=document.querySelector('meta[name=theme-color]');if(m)m.content=isDark()?'#13111b':'#fbf8f3';
     document.querySelectorAll('[data-act=dark]').forEach(function(b){b.setAttribute('aria-pressed',isDark()?'true':'false');if(b.dataset.label!=='0')b.innerHTML=isDark()?'☀️<span class="bl"> Chế độ đọc sáng</span>':'🌙<span class="bl"> Chế độ đọc tối</span>';else b.textContent=isDark()?'☀️':'🌙'})}
   function toggleDark(){set('theme',isDark()?'light':'dark');applyTheme()}
@@ -869,7 +869,7 @@ figure.inimg.tall{max-width:540px;margin-left:auto;margin-right:auto;margin-top:
     hb.addEventListener('click',function(e){e.stopPropagation();hs.hidden=!hs.hidden;hb.setAttribute('aria-pressed',String(!hs.hidden))});
     document.addEventListener('click',function(e){if(!hs.hidden&&!hs.contains(e.target)){hs.hidden=true;hb.setAttribute('aria-pressed','false')}});}
 })();</script>
-<script>window.__EMO={"📘": "1f4d8.png", "🗂️": "1f5c2-fe0f.png", "🌙": "1f319.png", "🖨️": "1f5a8-fe0f.png", "⬆️": "2b06-fe0f.png", "🪞": "1fa9e.png", "🌟": "1f31f.png", "🌷": "1f337.png", "💖": "1f496.png", "✨": "2728.png", "💫": "1f4ab.png", "🎨": "1f3a8.png", "📖": "1f4d6.png", "✍️": "270d-fe0f.png", "🧭": "1f9ed.png", "⏱️": "23f1-fe0f.png", "📄": "1f4c4.png", "🧩": "1f9e9.png", "💬": "1f4ac.png", "📋": "1f4cb.png", "🗝️": "1f5dd-fe0f.png", "✅": "2705.png", "🎉": "1f389.png", "⬅️": "2b05-fe0f.png", "➡️": "27a1-fe0f.png", "🖍️": "1f58d-fe0f.png", "🔍": "1f50d.png", "🔤": "1f524.png", "⏸️": "23f8-fe0f.png", "☀️": "2600-fe0f.png", "▶️": "25b6-fe0f.png", "🎊": "1f38a.png", "🌈": "1f308.png", "🥳": "1f973.png", "📍": "1f4cd.png"};</script><script>(function(){
+<script>window.__EMO={"📘": "1f4d8.png", "🗂️": "1f5c2-fe0f.png", "⬆️": "2b06-fe0f.png", "🪞": "1fa9e.png", "🌟": "1f31f.png", "🌷": "1f337.png", "💖": "1f496.png", "✨": "2728.png", "💫": "1f4ab.png", "🎨": "1f3a8.png", "📖": "1f4d6.png", "✍️": "270d-fe0f.png", "🧭": "1f9ed.png", "⏱️": "23f1-fe0f.png", "📄": "1f4c4.png", "🧩": "1f9e9.png", "💬": "1f4ac.png", "📋": "1f4cb.png", "🗝️": "1f5dd-fe0f.png", "✅": "2705.png", "🎉": "1f389.png", "⬅️": "2b05-fe0f.png", "➡️": "27a1-fe0f.png", "🖍️": "1f58d-fe0f.png", "🔍": "1f50d.png", "🔤": "1f524.png", "⏸️": "23f8-fe0f.png", "☀️": "2600-fe0f.png", "🌙": "1f319.png", "▶️": "25b6-fe0f.png", "🎊": "1f38a.png", "🌈": "1f308.png", "🥳": "1f973.png", "📍": "1f4cd.png"};</script><script>(function(){
   var M=window.__EMO||{},ks=Object.keys(M).sort(function(a,b){return b.length-a.length});
   if(!ks.length)return;
   var RE=new RegExp(ks.map(function(k){return k.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}).join('|'),'g');

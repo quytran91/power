@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="vi" data-theme="auto">
+<html lang="vi" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#fbf8f3">
+<meta name="theme-color" content="#13111b">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Sức mạnh">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<script>try{var t=JSON.parse(localStorage.getItem("suc-manh.theme")||'"auto"');if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
 <title>SỨC MẠNH – Đọc mỗi ngày</title>
 <style>
 :root{
@@ -295,7 +295,7 @@ footer{max-width:1020px;margin:0 auto;padding:10px 24px 120px}
   <div class="foot"><span><img class="em" src="emoji/1f4d6.png" alt="📖" draggable="false"> Mỗi ngày một chương</span><span><img class="em" src="emoji/1f331.png" alt="🌱" draggable="false"> Đọc chậm, cảm nhận sâu</span><span class="r"><img class="em" src="emoji/1f525.png" alt="🔥" draggable="false"> Đã bắt đầu thì đừng dừng lại</span></div>
   <p class="credit"><img class="em" src="emoji/1f4d8.png" alt="📘" draggable="false"> SỨC MẠNH — Rhonda Byrne. Bản trình bày để đọc riêng hằng ngày; bản quyền nội dung thuộc về tác giả và nhà xuất bản.</p>
 </footer>
-<div id="fabs"><button type="button" data-act="still" aria-label="Tạm dừng chuyển động"><img class="em" src="emoji/23f8-fe0f.png" alt="⏸️" draggable="false"></button><button type="button" data-act="dark" data-label="0" aria-label="Chế độ tối"><img class="em" src="emoji/1f319.png" alt="🌙" draggable="false"></button><button type="button" class="fab-top" data-act="top" aria-label="Về đầu trang"><img class="em" src="emoji/2b06-fe0f.png" alt="⬆️" draggable="false"></button></div>
+<div id="fabs"><button type="button" data-act="still" aria-label="Tạm dừng chuyển động"><img class="em" src="emoji/23f8-fe0f.png" alt="⏸️" draggable="false"></button><button type="button" class="fab-top" data-act="top" aria-label="Về đầu trang"><img class="em" src="emoji/2b06-fe0f.png" alt="⬆️" draggable="false"></button></div>
 <div id="lightbox" hidden><button class="lb-close" type="button" aria-label="Đóng">✕</button><img alt=""></div>
 <script>var SM=(function(){
   var html=document.documentElement,P='suc-manh.';
@@ -307,7 +307,7 @@ footer{max-width:1020px;margin:0 auto;padding:10px 24px 120px}
 
   /* theme */
   var mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
-  function isDark(){var t=get('theme','auto');return t==='dark'||(t==='auto'&&!!mq&&mq.matches)}
+  function isDark(){return true}
   function applyTheme(){html.setAttribute('data-theme',isDark()?'dark':'light');var m=document.querySelector('meta[name=theme-color]');if(m)m.content=isDark()?'#13111b':'#fbf8f3';
     document.querySelectorAll('[data-act=dark]').forEach(function(b){b.setAttribute('aria-pressed',isDark()?'true':'false');if(b.dataset.label!=='0')b.innerHTML=isDark()?'☀️<span class="bl"> Chế độ đọc sáng</span>':'🌙<span class="bl"> Chế độ đọc tối</span>';else b.textContent=isDark()?'☀️':'🌙'})}
   function toggleDark(){set('theme',isDark()?'light':'dark');applyTheme()}
