@@ -252,6 +252,23 @@ mark.flash{animation:flash 1.6s ease 2}
 .quote cite .cr{display:block;margin-top:2px;font-weight:600;font-size:14px;font-style:italic;color:var(--muted)}
 main>.body-card:first-of-type>p.lead:first-child::first-letter{float:none;font:inherit;margin:0}
 .body-card p.lead{font-size:calc(var(--fs) * 1.5);line-height:1.35;font-weight:850;letter-spacing:-.01em;background:linear-gradient(100deg,var(--h1),var(--h3),var(--h2));-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:.7em}
+.finale{display:flex;align-items:center;justify-content:center;gap:18px;margin:34px 0 10px;padding:8px 0}
+.finale .fin-t{font:900 clamp(30px,6vw,46px)/1.1 var(--sans);letter-spacing:.16em;padding-left:.16em;background:linear-gradient(100deg,var(--h1),var(--h3),var(--h2),var(--h4),var(--h1));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 18px color-mix(in srgb,var(--h1) 35%,transparent));animation:finShine 6s linear infinite}
+.finale .fin-l{flex:1 1 0;max-width:150px;height:3px;border-radius:3px;background:linear-gradient(90deg,transparent,var(--h3));transform-origin:right center}
+.finale .fin-l:last-child{background:linear-gradient(90deg,var(--h3),transparent);transform-origin:left center}
+.js .finale.rv:not(.in) .fin-l{transform:scaleX(0)}
+.js .finale.rv:not(.in) .fin-t{opacity:0;transform:scale(.7);letter-spacing:.5em}
+.finale .fin-l,.finale .fin-t{transition:transform 1.1s cubic-bezier(.2,1.4,.4,1),opacity .9s,letter-spacing 1.2s cubic-bezier(.2,1,.3,1)}
+@keyframes finShine{to{background-position:300% 0}}
+.bless{position:relative;margin:30px 0 26px;padding:34px 30px 24px;text-align:center;border-radius:28px;background:linear-gradient(var(--paper),var(--paper)) padding-box,linear-gradient(120deg,var(--h1),var(--h3),var(--h4),var(--h2)) border-box;border:2px solid transparent;box-shadow:var(--shadow)}
+.bless-ic{position:absolute;left:50%;top:0;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-size:28px;background:var(--paper);border:2px solid color-mix(in srgb,var(--h1) 40%,var(--line));animation:blessBeat 2.4s ease-in-out infinite}
+.bless-ic img.em{width:30px;height:30px}
+@keyframes blessBeat{0%,100%{transform:translate(-50%,-50%) scale(1)}15%{transform:translate(-50%,-50%) scale(1.14)}30%{transform:translate(-50%,-50%) scale(1)}45%{transform:translate(-50%,-50%) scale(1.08)}}
+.bless p{margin:.3em 0;font-size:calc(var(--fs) + 2px);line-height:1.6;font-weight:750;font-style:italic;color:var(--ink)}
+.bless p:first-of-type{font-size:calc(var(--fs) + 4px)}
+.js .bless.rv:not(.in) p{opacity:0;transform:translateY(12px)}
+.bless p{transition:opacity .8s calc(var(--pi,0) * .45s + .2s),transform .8s calc(var(--pi,0) * .45s + .2s)}
+.still .finale .fin-t,.still .bless-ic{animation:none}
 .sum{margin:44px 0 24px;padding:26px 26px 20px;border-radius:28px;background:linear-gradient(160deg,var(--gold-bg),var(--paper) 62%);border:2px solid var(--gold-bd);box-shadow:var(--shadow);scroll-margin-top:80px}
 .sum-h{display:flex;gap:14px;align-items:center;margin:0 0 18px}
 .sum-ic{flex:0 0 auto;width:54px;height:54px;border-radius:18px;display:grid;place-items:center;font-size:26px;background:linear-gradient(145deg,#ffc400,#ff7a00);box-shadow:0 8px 22px rgba(255,140,0,.35),0 0 30px rgba(255,190,0,.35)}
@@ -572,6 +589,14 @@ figure.inimg.tall{max-width:540px;margin-left:auto;margin-right:auto;margin-top:
 .dia .a-billB{animation:dBillB 6s ease-in-out infinite both;transform-box:fill-box;transform-origin:center}
 @keyframes dBillA{0%,60%{transform:scaleX(1)}63%,85%{transform:scaleX(0)}88%,100%{transform:scaleX(1)}}
 @keyframes dBillB{0%,63%{transform:scaleX(0)}66%,82%{transform:scaleX(1)}85%,100%{transform:scaleX(0)}}
+
+/* chương 10 */
+.dia .a-door{animation:dDoor 3.6s cubic-bezier(.5,1.3,.5,1) infinite both;transform-box:fill-box;transform-origin:0 50%}
+@keyframes dDoor{0%,20%{transform:scaleX(.25)}35%,90%{transform:scaleX(1)}100%{transform:scaleX(.25)}}
+
+/* chương 11 */
+.dia .a-shrinkin2{animation:dShrinkIn2 6s cubic-bezier(.6,0,.4,1) infinite both}
+@keyframes dShrinkIn2{0%,40%{transform:none;opacity:1}78%{transform:translate(var(--dx),var(--dy)) scale(.05);opacity:.2}79%,96%{transform:translate(var(--dx),var(--dy)) scale(0);opacity:0}100%{transform:none;opacity:0}}
 
 
 @media (max-width:860px){#nowsec{display:none}}

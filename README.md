@@ -15,8 +15,7 @@ Hoặc mở `index.html` trong thư mục này: bìa, lời đề từ, rồi m�
 
 ## Tiến độ
 
-Đã có nội dung: Lời nói đầu, Giới thiệu, Chương 1 đến 9.
-Lời cảm ơn và Chương 10 đến 12 đang chờ nội dung.
+Đã có đủ nội dung: Lời nói đầu, Giới thiệu, Chương 1 đến 12 và Lời cảm ơn.
 
 ## Lưu ý bản quyền
 
