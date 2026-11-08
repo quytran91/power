@@ -80,8 +80,10 @@
 .c-gold{--c:var(--gold);--cbg:var(--gold-bg);--cbd:var(--gold-bd)}
 
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.75 var(--sans);-webkit-font-smoothing:antialiased;transition:background .3s,color .3s;overflow-x:hidden}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:hidden}
+/* Safari iOS: chặn kéo ngang ở gốc mà không biến body thành khung cuộn (giữ thanh tiêu đề dính) */
+@supports (overflow:clip){html,body{overflow-x:clip}}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.75 var(--sans);-webkit-font-smoothing:antialiased;transition:background .3s,color .3s;overflow-wrap:break-word}
 a{color:var(--blue);text-underline-offset:3px}
 a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid #f0a020;outline-offset:3px;border-radius:6px}
 p{margin:0 0 1em}
@@ -144,7 +146,7 @@ img.em{display:inline-block;width:1.2em;height:1.2em;vertical-align:-.22em;margi
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes pop{0%{scale:.3;opacity:0}70%{scale:1.12;opacity:1}100%{scale:1}}
 @keyframes rise{0%{transform:translateY(0) rotate(0) scale(.6);opacity:0}12%{opacity:.8}85%{opacity:.7}100%{transform:translateY(-1100px) rotate(var(--r,200deg)) scale(1.05);opacity:0}}
-.fx{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
+.fx{position:absolute;inset:0;overflow:hidden;contain:paint;pointer-events:none;z-index:1}
 .fx i{position:absolute;bottom:-50px;left:var(--x);font-style:normal;font-size:var(--s,26px);line-height:1;filter:drop-shadow(0 0 10px rgba(255,255,255,.8));animation:rise var(--t,14s) linear var(--dl,0s) infinite}
 #progress{box-shadow:0 0 12px rgba(155,81,224,.7)}
 #fabs button{animation:pop .6s cubic-bezier(.2,1.6,.4,1) both}
@@ -160,7 +162,7 @@ html.still .fx{display:none}
 @media print{#fabs,#resume,#progress,.toast,#toolbar,.pic.empty,.cover.empty,#findbar{display:none!important}}
 
 /* ================= HERO ================= */
-.hero{position:relative;overflow:hidden;padding:64px 20px 70px;background:var(--hero),var(--bg);display:grid;gap:34px;justify-items:center}
+.hero{position:relative;overflow:hidden;contain:paint;padding:64px 20px 70px;background:var(--hero),var(--bg);display:grid;gap:34px;justify-items:center}
 .hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(42px);opacity:.5;pointer-events:none;animation:drift 20s ease-in-out infinite alternate}
 .hero::before{width:360px;height:360px;background:var(--blob1);left:-90px;top:60px}
 .hero::after{width:320px;height:320px;background:var(--blob2);right:-80px;bottom:-80px;animation-duration:26s}
